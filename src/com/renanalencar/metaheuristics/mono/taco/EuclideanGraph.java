@@ -136,7 +136,6 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
             this.euclidean_matrix = new DoubleMatrix(this.n_nodes);
 
             // carregando instância do arquivo:
-            // TODO Verificar carregamento
             FileInputStream fstream = new FileInputStream(this.file_name);
             DataInputStream in      = new DataInputStream(fstream);
             this.file_load          = new BufferedReader(new InputStreamReader(in));
@@ -276,7 +275,7 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
             System.out.print( "\r\n" + i);
 
             for (int j=0; j < this.n_nodes; j++) {
-                System.out.print("\t" + this.euclidean_matrix.get_value(i,j));
+                System.out.print("\t" + String.format("%."+FLOAT_PRECISION+"f",this.euclidean_matrix.get_value(i,j)));
             }
         }
 

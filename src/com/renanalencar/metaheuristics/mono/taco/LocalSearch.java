@@ -17,7 +17,6 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
 
     LocalSearch(double time_ini_execution, DoubleMatrix cost_matrix) {
         this.depot = DEPOT_INDEX;
-        //TODO Copiar a matrix de custo
         this.cost_matrix = cost_matrix;
         this.time_ini_execution = time_ini_execution;
     }

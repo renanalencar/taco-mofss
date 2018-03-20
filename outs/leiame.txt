@@ -1,1 +1,1 @@
-Diretório para os arquivos de resultado dos experimentos.
+DiretÃ³rio para os arquivos de resultado dos experimentos.

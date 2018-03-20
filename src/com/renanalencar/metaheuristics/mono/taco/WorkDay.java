@@ -31,8 +31,9 @@ public class WorkDay implements ControlExperiment {
     private RealMatrix real_matrix;       // acesso às matrizes de custos reais
     private ServiceOrder[] day_services;    // todos os serviços do dia (não inclui o depósito)
     private MtspInstance current_instance;     // Instância que será montada e passada como parâmetro para o algoritmo proposto
-    private DoubleMatrix real_distance_matrix; // distâncias reais entre os pontos, em kms, a partir de MapQuest
+    private DoubleMatrix real_distance_matrix; // distâncias reais entre os pontos, em metros, a partir de MapQuest
     private DoubleMatrix real_time_matrix;     // tempos reais de deslocamento, em segundos, a partir de MapQuest
+    private DoubleMatrix real_weight_matrix; // pesos reais entre os pontos, em gramas, a partir de MapQuest
 
     private MtspSolution real_solution;           // soluçao com as rotas fechadas reais executadas pelas equipes
     private MtspSolution complete_final_solution; // a solução para o dia tudo obtida pela simulação
@@ -45,7 +46,6 @@ public class WorkDay implements ControlExperiment {
     private double time_free_next_team;      // instante em que a equipe vai conluir o serviço atual
     private Route[] cur_executed_routes;      // as rotas das equipes em construção
 
-    private DecimalFormat df;
 
     public WorkDay(int current_id_work_day) throws IOException {
         this.id_work_day          = current_id_work_day;
@@ -55,6 +55,7 @@ public class WorkDay implements ControlExperiment {
         this.day_services         = new ServiceOrder[1];
         this.real_distance_matrix = new DoubleMatrix(1);
         this.real_time_matrix     = new DoubleMatrix(1);
+        this.real_weight_matrix   = new DoubleMatrix(1);
         this.current_instance     = new MtspInstance(1,0);
 
         this.real_solution           = new MtspSolution(1,1);
@@ -62,21 +63,13 @@ public class WorkDay implements ControlExperiment {
         this.current_aco_solution    = new MtspSolution(1,1);
 
         // arquivo para gravação das soluções reais para plotagem
-       // this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
-        //TODO Configurar precisão do float
-        //f_real_sols << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        //this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
 
         //this.f_longests = new BufferedWriter(new FileWriter("outs/longests.txt"));
-        //TODO Configurar precisão do float
-        //f_longests << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
 
-       // this.f_total_costs = new BufferedWriter(new FileWriter("outs/total_costs.txt"));
-        //TODO Configurar precisão do float
-        //f_total_costs << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        //this.f_total_costs = new BufferedWriter(new FileWriter("outs/total_costs.txt"));
         this.logExperiment = LogExperiment.getInstance();
 
-        this.df = new DecimalFormat();
-        this.df.setMaximumFractionDigits(FLOAT_PRECISION);
 
     }
 
@@ -119,12 +112,16 @@ public class WorkDay implements ControlExperiment {
         this.real_matrix.load_real_time_matrix(id_work_day, real_time_matrix);
 
         if (PRINT_COSTS_MATRIX == 1) {
-            //TODO Configurar precisão do float
-            //cout << setiosflags (ios::fixed) << setprecision(0);
             System.out.print("\r\nReal time ");
             real_time_matrix.print_matrix();
-            //TODO Configurar precisão do float
-            //cout << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        }
+        //delete real_weight_matrix;
+        this.real_weight_matrix = new DoubleMatrix(this.n_points);
+        this.real_matrix.load_real_weight_matrix(this.id_work_day, this.real_weight_matrix);
+
+        if (PRINT_COSTS_MATRIX == 1) {
+            System.out.print("\r\nReal weight ");
+            this.real_weight_matrix.print_matrix();
         }
 
         // criando estruturas com os dados de todos os serviços do dia
@@ -212,6 +209,16 @@ public class WorkDay implements ControlExperiment {
                             double time_displacement = this.real_time_matrix.get_value(i, j);
                             cost = time_exec_serv + time_displacement;
                         }
+                        this.current_instance.set_value_cost_matrix(i, j, cost);
+                    }
+                }
+                break;
+            }
+            case 5: {   // peso das entregas
+                for (int i = 0; i < this.n_points; i++){
+                    for (int j = 0; j < this.n_points; j++){
+                        double cost;
+                        cost = this.real_weight_matrix.get_value(i, j);
                         this.current_instance.set_value_cost_matrix(i, j, cost);
                     }
                 }
@@ -477,11 +484,7 @@ public class WorkDay implements ControlExperiment {
         double diff_total = total_real - total_proposed;
         double improvement_total = (diff_total / total_real) * 100;
 
-        //TODO Configurar precisão do float
-        //f_log_exper << setiosflags (ios::fixed) << setprecision(2);
-        f_log_exper.write("Melhoramento:\t\tmaior rota: " + df.format(improvement_longest) + "%\tcusto total: " + df.format(improvement_total) + "%\r\n");
-        //TODO Configurar precisão do float
-        //f_log_exper << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        f_log_exper.write("Melhoramento:\t\tmaior rota: " + String.format("%.2f", improvement_longest) + "%\tcusto total: " + String.format("%.2f", improvement_total) + "%\r\n");
 
         if (PRINT_EMERGENCY_CARE == 1){
             System.out.print("  Emergency care:\r\n");
@@ -525,7 +528,7 @@ public class WorkDay implements ControlExperiment {
 
     public void finalize_static_simulation(int counter_day_simulations, BufferedWriter f_log_exper, BufferedWriter f_simul_res) throws IOException {
         if (SAVE_DAY_STATE_CHANGES == 1) {
-            f_log_exper.write("\r\nResumo da simulacao:");
+            f_log_exper.write("\r\nResumo da simulação:");
         }
 
         f_log_exper.write("\r\nDia de trabalho: " + this.id_work_day + "\tserviços: " + (this.n_points-1) + "\tequipes: " + this.n_teams + "\r\n");
@@ -543,7 +546,7 @@ public class WorkDay implements ControlExperiment {
         	this.logExperiment.f_longests.write("\r\n" + this.id_work_day + "\t");
         	this.logExperiment.f_total_costs.write( "\r\n" + this.id_work_day + "\t");
         }
-        System.out.println("---------------------------------------------------------------- aqui ----------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
         this.complete_final_solution.save_longest_cost(this.logExperiment.f_longests);
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
 
@@ -565,11 +568,7 @@ public class WorkDay implements ControlExperiment {
         double diff_total = total_real - total_proposed;
         double improvement_total = (diff_total / total_real) * 100;
 
-        //TODO Configurar precisão do float
-        //f_log_exper << setiosflags (ios::fixed) << setprecision(2);
-        f_log_exper.write("Melhoramento:\t\tmaior rota: " + df.format(improvement_longest) + "%\tcusto total: " + df.format(improvement_total) + "%\r\n");
-        //TODO Configurar precisão do float
-        //f_log_exper << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        f_log_exper.write("Melhoramento:\t\tmaior rota: " + String.format("%.2f", improvement_longest) + "%\tcusto total: " + String.format("%.2f", improvement_total) + "%\r\n");
 
         if (PRINT_EMERGENCY_CARE == 1) {
             System.out.print("  Emergency care:\r\n");

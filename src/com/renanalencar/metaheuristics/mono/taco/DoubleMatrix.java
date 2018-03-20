@@ -4,6 +4,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import static com.renanalencar.metaheuristics.mono.taco.ControlExperiment.FLOAT_PRECISION;
+
 /**
  * @author renanalencar
  * @version 1.0
@@ -42,9 +44,9 @@ public class DoubleMatrix {
             System.out.print("\r\n" + i);
             for (int j = 0; j < dimension; j++) {
                 if (i == j) {
-                    System.out.print("\t" + 0.0);
+                    System.out.print("\t" + 0.00);
                 } else {
-                    System.out.print("\t" + matrix[i][j]);
+                    System.out.print("\t" + String.format("%."+FLOAT_PRECISION+"f", matrix[i][j]));
                 }
             }
         }

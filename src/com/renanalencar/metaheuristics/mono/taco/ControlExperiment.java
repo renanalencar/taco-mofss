@@ -18,7 +18,7 @@ public interface ControlExperiment {
     int STATIC_SIMULATION      = 1;  // simulação com instâncias estáticas com todos os serviços dos dias de trabalho
     int NEAREST_TEAM           = 0;  // não usa ACO: despacha o serviço que estiver mais próximo da equipe
     int N_SIMULATIONS_BY_DAY = 10;  // número de execuções para cada dia de trabalho
-    int TYPE_COST_MATRIX       = 1;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento
+    int TYPE_COST_MATRIX       = 1;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas
     int DESPATCH_REAL_SOL      = 1;  // definindo o horário de despacho do serviço a partir do momento que uma equipe inicia o deslocamento para ele na solução real calculada
     int INDEX_DAY_TEST        = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
 

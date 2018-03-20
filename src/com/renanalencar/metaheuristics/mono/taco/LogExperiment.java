@@ -11,7 +11,7 @@ public class LogExperiment {
 
   static BufferedWriter f_log_stand_exper;
   static BufferedWriter f_sols_aco; 
-  static BufferedWriter teste; 
+  //static BufferedWriter teste;
   
   	
   
@@ -33,25 +33,18 @@ public class LogExperiment {
  public void loadBuffersStandardExperiment() throws IOException {
 	 this.f_sols_aco = new BufferedWriter(new FileWriter("outs/plot_best_sols_aco.txt"));
 	 this.f_log_stand_exper = new BufferedWriter(new FileWriter("outs/log_stand_experiment.txt"));
-	 this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
+	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
  }
  public void loaBuffersdRealExperiment() throws IOException{
-	 this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
+	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
 	 // arquivo para gravação das soluções reais para plotagem
      this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
-     //TODO Configurar precisão do float
-     //f_real_sols << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
 
      this.f_longests = new BufferedWriter(new FileWriter("outs/longests.txt"));
-     //TODO Configurar precisão do float
-     //f_longests << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
 
      this.f_total_costs = new BufferedWriter(new FileWriter("outs/total_costs.txt"));
      this.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
      this.f_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
-
-     //TODO Configuração precisão do float
-     //f_simul_res << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
 
      this.f_time_execs = new BufferedWriter(new FileWriter("outs/time_execs.txt"));
  }
@@ -82,13 +75,13 @@ public void flushFilesRealExperiment() throws IOException {
 	this.f_log_exper.flush();
 	this.f_time_execs.flush();
 	this.f_simul_res.flush();
-	this.teste.flush();
+	//this.teste.flush();
 	
 }
 public void flushFilesStandardExperiment() throws IOException {
 	this.f_sols_aco.flush();
 	this.f_log_stand_exper.flush();
-	this.teste.flush();
+	//this.teste.flush();
 	
 }
 

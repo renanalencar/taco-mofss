@@ -24,9 +24,7 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         this.depot = DEPOT_INDEX;
         this.n = n;
         this.m = m;
-        //TODO clonar matrix
         this.cost_matrix = cost_matrix;
-        //TODO clonar matrix
         this.pheromone_matrix = pheromone_matrix;
         //util = new com.renanalencar.metaheuristics.mono.taco.Utilities();
         this.probability = new double[n - 1];  // vetor com os numeradores: tau^alfa * eta^beta
@@ -101,7 +99,17 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         } else {
             int raffled_prob = rand.raffle_double_vector(n_candidates, this.probability); // nó sorteado, de acordo com as probabilidades
 
-            if ((raffled_prob < 0) || (raffled_prob >= n_candidates)) {  // ERRO NO SORTEIO
+            try {
+
+                if ((raffled_prob < 0) || (raffled_prob >= n_candidates)) {  // ERRO NO SORTEIO
+                    throw new Exception();
+                } else {  // sorteio OK, procedimento normal
+                    choosed_node = candidate_list.value(raffled_prob);
+                }
+
+            } catch (Exception e) {
+                //e.printStackTrace();
+
                 System.out.print("\r\n\r\n---->>>> ERRO NO SORTEIO\r\n");
                 System.out.print("vertice atual: " + current_node + "\r\n");
                 System.out.print("lista de candidatos: ");
@@ -121,12 +129,9 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
                 this.pheromone_matrix.print_matrix();
                 System.out.print("\r\n");
 
-                //TODO Fazer o Try-Catch
                 //exit(4);
             }
-            else {  // sorteio OK, procedimento normal
-                choosed_node = candidate_list.value(raffled_prob);
-            }
+
         }
         return choosed_node;
     }
@@ -196,12 +201,8 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         return Cnn;
     }
 
-    //TODO Setar precisão
     public void print_pheromone_matrix() {
-        //streamsize prec = cout.precision();
-        //cout << setprecision(10);
-        System.out.print("pheromone_matrix (porcentagem de tau0)     tau0: " + tau0 + "\r\n");
-        //cout << setprecision(0);
+        System.out.print("pheromone_matrix (porcentagem de tau0)     tau0: " + String.format("%.10", tau0) + "\r\n");
         for (int i = 0; i < n; i++) {
             System.out.print("\t" + i);
         }

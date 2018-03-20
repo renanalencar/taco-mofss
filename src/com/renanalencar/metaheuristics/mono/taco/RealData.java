@@ -121,7 +121,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
            
@@ -160,7 +160,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -196,7 +196,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -227,7 +227,7 @@ public class RealData implements ControlExperiment {
 
         int current_team = 0;
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -266,7 +266,7 @@ public class RealData implements ControlExperiment {
         ServiceOrder[] day_services = new ServiceOrder[n_points];
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -297,7 +297,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -327,7 +327,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -354,7 +354,7 @@ public class RealData implements ControlExperiment {
         this.data_file = new BufferedReader(new InputStreamReader(in));
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
 
             this.read_next_register();
 
@@ -390,7 +390,7 @@ public class RealData implements ControlExperiment {
         boolean first_point_solution = true;
 
         boolean flag = true;
-        while (flag) {  // lendo todo o arquivo das matrizes
+        while (flag) {  // lendo to-do o arquivo das matrizes
             this.read_next_register();
             if (this.id_register != -1){ // fim do arquivo
                 if (this.id_work_day == selected_id_work_day){  // este serviço faz parte da solução real
