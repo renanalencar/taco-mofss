@@ -1,0 +1,49 @@
+
+-----------------------------------------------------
+Experiment objective:		minimize sum routes (basic MTSP)
+Type solutions:			basic MTSP: single depot and closed routes
+Model instance:			TSPLIB Eil51 (51 nodes)
+Salesmen number:		4
+Depot node:			0
+Independent executions:		10
+Stopping criterion:		10 cycles per execution
+
+Ant Colony System parameters:
+   N (iterations per cycle):	10
+   q0 (determinism level):	0.90
+   alfa (pheromone weight):	1
+   beta (visibility weight):	2
+   ksi (pheromone persit LPU):	0.10
+   ro (pheromone persit GPU):	0.10
+
+Experiment parameters:
+   Candidate list length:	20
+   Local Pheromone Update:	ON
+   Global Pheromone Update:	ON	--> best-so-far solution updating
+   Type cost matrix: 		double
+   Start node ants:		all starting from single depot
+   Check best ant repetitions:	1
+
+Local Search:
+   2-opt (all created solutions):		ON
+   3-opt (only best cycle solutions):		OFF
+
+Best solution of each execution:
+exec	longest		tsolut		cycle		time(ms)	seed execution
+1	159.56		589.86		8		187		1007159815
+2	164.20		558.44		6		76		731246707
+3	180.27		579.39		5		21		150515595
+4	172.38		584.43		8		43		377524616
+5	161.98		561.43		10		82		233550424
+6	154.98		550.06		6		30		1859398410
+7	155.50		576.61		10		191		1602270992
+8	150.41		532.36		9		109		985102761
+9	166.28		561.10		4		31		560112673
+10	172.15		558.42		10		123		757559568
+
+Avgs	163.77		565.21		7.60		89.30
+SDs	9.24		17.45		2.22		62.69
+
+Best cost:	532.36
+
+Total time experiment: 1216 miliseconds
