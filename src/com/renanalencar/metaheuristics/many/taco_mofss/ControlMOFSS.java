@@ -1,6 +1,6 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-public interface TACO_MOFSS_Settings {
+public interface ControlMOFSS {
 
     // Default problem
     int DEFAULT_PROBLEM         = 1;

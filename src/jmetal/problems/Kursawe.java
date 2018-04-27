@@ -62,16 +62,16 @@ public class Kursawe extends Problem {
       lowerLimit_[i] = -5.0 ;
       upperLimit_[i] = 5.0  ;
     } // for
-        
+
     if (solutionType.compareTo("BinaryReal") == 0)
-    	solutionType_ = new BinaryRealSolutionType(this) ;
+      solutionType_ = new BinaryRealSolutionType(this) ;
     else if (solutionType.compareTo("Real") == 0)
-    	solutionType_ = new RealSolutionType(this) ;
+      solutionType_ = new RealSolutionType(this) ;
     else if (solutionType.compareTo("ArrayReal") == 0)
-    	solutionType_ = new ArrayRealSolutionType(this) ;
+      solutionType_ = new ArrayRealSolutionType(this) ;
     else {
-    	System.out.println("Error: solution type " + solutionType + " invalid") ;
-    	System.exit(-1) ;
+      System.out.println("Error: solution type " + solutionType + " invalid") ;
+      System.exit(-1) ;
     }
   } // Kursawe
     

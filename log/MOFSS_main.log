@@ -1,4 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543665</millis>
+  <sequence>0</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Total execution time: 148380ms</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543763</millis>
+  <sequence>1</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Variables values have been written to file VAR</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543815</millis>
+  <sequence>2</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Objectives values have been written to file FUN</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543855</millis>
+  <sequence>3</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Quality indicators values have been writen to file IND</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543862</millis>
+  <sequence>4</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Quality indicators</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543871</millis>
+  <sequence>5</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Hypervolume    : 1393.9222568757566</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543873</millis>
+  <sequence>6</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>HypervolumePF  : 0.4974874371859295</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543883</millis>
+  <sequence>7</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>GD             : 4.15335426218693</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543889</millis>
+  <sequence>8</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>IGD            : 2.6140633958659367</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543892</millis>
+  <sequence>9</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Spread         : 0.6947274333485959</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543905</millis>
+  <sequence>10</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Epsilon        : 13.126112520619213</message>
+</record>
+<record>
+  <date>2018-04-26T14:42:23</date>
+  <millis>1524764543909</millis>
+  <sequence>11</sequence>
+  <logger>jMetal</logger>
+  <level>INFO</level>
+  <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Spacing        : 0.9310835991409707</message>
+</record>
 </log>

@@ -1,4 +1,6 @@
-package com.renanalencar.metaheuristics.mono.taco;
+package com.renanalencar.metaheuristics.many.taco_mofss;
+
+import com.renanalencar.metaheuristics.mono.taco.*;
 
 import java.io.IOException;
 
@@ -13,19 +15,23 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
     private long seed_random;           // semente dos randomicos do experimento
     private LogExperiment log;
 
-    public StandardExperiment() throws IOException {
+    private double [] variables_;
+
+    public StandardExperiment(double [] variables_) throws IOException {
     	log = LogExperiment.getInstance();
         depot = DEPOT_INDEX;
-        //this.log.f_log_stand_exper = new BufferedWriter(new FileWriter("outs/log_stand_experiment.txt"));
 
-        //this.log.f_sols_aco = new BufferedWriter(new FileWriter("outs/plot_best_sols_aco.txt"));
+        this.variables_ = variables_.clone();
 
     }
 
     /**
      * Método que carrega a instância de ControlACO.hpp
      */
-    public void run_standard_experiment() throws IOException {
+    public double[] run_standard_experiment() throws IOException {
+
+        double [] fitness = new double[2];
+
         // cada loop é um experimento independente
         for (int exper_counter = 0; exper_counter < 1; exper_counter++) {
 //        	System.out.println(++log.i + " aqui");
@@ -70,7 +76,7 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
                 //seed_random = (long)time(NULL);  // gerando semente aleatória
                 seed_random = System.currentTimeMillis();
 
-                AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, model_instance);  // carregando aplicação
+                AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, model_instance, variables_);  // carregando aplicação
                 MtspSolution aco_solution = aco_mtsp_app.execute();  // executando a aplicação. A melhor solução é armazenada em best_sol_exe
                 //delete aco_mtsp_app;
 
@@ -132,8 +138,12 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
             this.log.f_log_stand_exper.write("\r\nBest cost:\t");
             if (APP_OBJECTIVE == 1) {  // minimizar a longest_route
                 this.log.f_log_stand_exper.write(String.valueOf(String.format("%.2f", best_longest_exper)));
+                fitness[0] = best_longest_exper;
+                fitness[1] = 0.0;
             } else {
                 this.log.f_log_stand_exper.write(String.valueOf(String.format("%.2f", best_totsol_exper)));
+                fitness[0] = best_totsol_exper;
+                fitness[1] = 0.0;
             }
             this.log.f_log_stand_exper.write("\r\n");
 
@@ -150,6 +160,8 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
 
             //delete model_instance;
         }
+
+        return fitness;
     }
 
 
@@ -216,10 +228,10 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
 
         this.log.f_log_stand_exper.write("   N (iterations per cycle):\t" + N + "\r\n");
         this.log.f_log_stand_exper.write("   q0 (determinism level):\t" + String.format("%.2f", Q0) + "\r\n");
-        this.log.f_log_stand_exper.write( "   alfa (pheromone weight):\t" + ALFA + "\r\n");
-        this.log.f_log_stand_exper.write("   beta (visibility weight):\t" + BETA + "\r\n");
-        this.log.f_log_stand_exper.write("   ksi (pheromone persit LPU):\t" + String.format("%.2f", KSI) + "\r\n");
-        this.log.f_log_stand_exper.write("   ro (pheromone persit GPU):\t" + String.format("%.2f", RO) + "\r\n");
+        this.log.f_log_stand_exper.write( "   alfa (pheromone weight):\t" + this.variables_[0] + "\r\n");
+        this.log.f_log_stand_exper.write("   beta (visibility weight):\t" + this.variables_[1] + "\r\n");
+        this.log.f_log_stand_exper.write("   ksi (pheromone persit LPU):\t" + String.format("%.2f", this.variables_[2]) + "\r\n");
+        this.log.f_log_stand_exper.write("   ro (pheromone persit GPU):\t" + String.format("%.2f", this.variables_[3]) + "\r\n");
 
         this.log.f_log_stand_exper.write("\r\nExperiment parameters:\r\n");
 
