@@ -1,6 +1,6 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import com.renanalencar.metaheuristics.mono.taco.*;
+import java.io.IOException;
 
 /**
  * @author renanalencar
@@ -27,7 +27,9 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
     private double ksi;
     private double ro;
 
-    public AcsAlgorithm(int n, int m, DoubleMatrix cost_matrix, DoubleMatrix pheromone_matrix, double [] variables_) {
+    private IOSource iosource_;
+
+    public AcsAlgorithm(int n, int m, DoubleMatrix cost_matrix, DoubleMatrix pheromone_matrix) throws IOException {
         this.depot = DEPOT_INDEX;
         this.n = n;
         this.m = m;
@@ -36,10 +38,12 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         //util = new com.renanalencar.metaheuristics.mono.taco.Utilities();
         this.probability = new double[n - 1];  // vetor com os numeradores: tau^alfa * eta^beta
 
-        this.alpha  = variables_[0];
-        this.beta   = variables_[1];
-        this.ksi    = variables_[2];
-        this.ro     = variables_[3];
+        this.iosource_ = IOSource.getInstance();
+
+        this.alpha  = iosource_.variables_[0];
+        this.beta   = iosource_.variables_[1];
+        this.ksi    = iosource_.variables_[2];
+        this.ro     = iosource_.variables_[3];
     }
 
     /**

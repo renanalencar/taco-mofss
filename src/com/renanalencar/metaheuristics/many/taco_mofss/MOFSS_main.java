@@ -1,6 +1,3 @@
-/**
- *
- */
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
 import hidra.gui.MOPSOCDRSJFrame;

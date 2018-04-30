@@ -1,9 +1,5 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import com.renanalencar.metaheuristics.mono.taco.LogExperiment;
-import com.renanalencar.metaheuristics.mono.taco.RealExperiment;
-import com.renanalencar.metaheuristics.mono.taco.StandardExperiment;
-
 import java.io.IOException;
 
 /**

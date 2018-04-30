@@ -1,8 +1,3 @@
-/**
- * @author: renanalencar
- * @version: 1.0
- * @date: 2018-03-15
- */
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
 import hidra.gui.MOPSOCDRSJFrame;
@@ -25,6 +20,11 @@ import java.util.HashMap;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 
+/**
+ * @author: renanalencar
+ * @version: 1.0
+ * @date: 2018-03-15
+ */
 public class TACOMOFSS_main implements ControlMOFSS {
     public static Logger logger_ ;      // Logger object
     public static FileHandler fileHandler_ ; // FileHandler object
@@ -80,7 +80,7 @@ public class TACOMOFSS_main implements ControlMOFSS {
             //problem = new ConstrEx("Real");
             //problem = new Fonseca("Real");
             //problem = new Schaffer("Real");
-            problem = new MtspProblem("Real", 2);
+            problem = new MtspProblem("Real", N_OBJECTIVES);
         } // else
 
         /*
@@ -104,16 +104,16 @@ public class TACOMOFSS_main implements ControlMOFSS {
         parameters = new HashMap() ;
         parameters.put("probability", 0.9) ;
         parameters.put("distributionIndex", 20.0) ;
-        crossover = CrossoverFactory.getCrossoverOperator("SBXCrossover", parameters);
+        crossover = CrossoverFactory.getCrossoverOperator(CROSSOVER_OPERATOR, parameters);
 
         parameters = new HashMap() ;
         parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
         parameters.put("distributionIndex", 20.0) ;
-        mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);
+        mutation = MutationFactory.getMutationOperator(MUTATION_OPERATOR, parameters);
 
         // Selection Operator
         parameters = null ;
-        selection = SelectionFactory.getSelectionOperator("BinaryTournament2", parameters) ;
+        selection = SelectionFactory.getSelectionOperator(SELECTION_OPERATOR, parameters) ;
 
         // Add the operators to the algorithm
         algorithm.addOperator("crossover",crossover);

@@ -1,6 +1,6 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import com.renanalencar.metaheuristics.mono.taco.*;
+import java.io.IOException;
 
 /**
  * @author renanalencar
@@ -42,9 +42,8 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
     private int non_improved_counter_cycles;  // contador de ciclos sem melhora da best_so_far_solution da execução
     private int created_sols_counter;  // contador de soluções criadas
 
-    private double [] variables_;
 
-    public AcoMtspAlgorithm(long seed_random, MtspInstance instance, double [] variables_) {
+    public AcoMtspAlgorithm(long seed_random, MtspInstance instance) throws IOException {
         this.depot = DEPOT_INDEX;
         this.n = instance.get_n_nodes();
         this.m = instance.get_n_salesmen();
@@ -54,7 +53,6 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         this.positions_teams = instance.get_positions_teams();
         this.valid_nodes_instance = instance.get_valid_nodes_instance();
 
-        this.variables_ = variables_.clone();
 
         // criando matriz de feromônio:
         this.pheromone_matrix = new DoubleMatrix(n);
@@ -65,7 +63,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         this.candidate_list = colony.candidate_list_colony();
 
         // para acessar as rotinas ACS:
-        this.AntColonySystem = new AcsAlgorithm(n, m, cost_matrix, pheromone_matrix, variables_);
+        this.AntColonySystem = new AcsAlgorithm(n, m, cost_matrix, pheromone_matrix);
 
         // para acessar as rotinas TACO:
         this.TACOAlgorithm = new TacoAlgorithm(m, cost_matrix, ants);

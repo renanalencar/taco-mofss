@@ -1,9 +1,10 @@
+package com.renanalencar.metaheuristics.many.taco_mofss;
+
 /**
  * @author: renanalencar
  * @version: 1.0
  * @date: 2018-03-15
  */
-package com.renanalencar.metaheuristics.many.taco_mofss;
 
 import jmetal.core.Problem;
 import jmetal.core.Solution;
@@ -20,6 +21,8 @@ import java.io.IOException;
  */
 public class MtspProblem extends Problem implements ControlExperiment {
     private static final int K = 3;
+
+    private IOSource iosource_;
 
     /**
      * Constructor.
@@ -41,7 +44,7 @@ public class MtspProblem extends Problem implements ControlExperiment {
      * @param numberOfVariables Number of variables
      * @throws ClassNotFoundException
      */
-    public MtspProblem(String solutionType, Integer numberOfObjectives, Integer numberOfVariables) throws ClassNotFoundException {
+    public MtspProblem(String solutionType, Integer numberOfVariables, Integer numberOfObjectives) throws ClassNotFoundException {
         numberOfVariables_   = numberOfVariables.intValue() ;
         numberOfObjectives_  = numberOfObjectives.intValue();
         numberOfConstraints_ = 0                            ;
@@ -110,6 +113,12 @@ public class MtspProblem extends Problem implements ControlExperiment {
         for (int i = 0; i < numberOfVariables_; i++)
             x[i] = gen[i].getValue();
 
+        iosource_.variables_ = new double[numberOfVariables_];
+        iosource_.variables_ = x.clone();
+
+        iosource_.objectives_ = new double[numberOfObjectives_];
+
+
         LogExperiment log = null;
         try {
             log = LogExperiment.getInstance();
@@ -125,12 +134,12 @@ public class MtspProblem extends Problem implements ControlExperiment {
             }
             StandardExperiment se = null;
             try {
-                se = new StandardExperiment(x);
+                se = new StandardExperiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                f = se.run_standard_experiment().clone();  // sem uma instância como parâmetro é carregada a instância modelo defida em control.cpp
+                se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo defida em control.cpp
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -148,12 +157,12 @@ public class MtspProblem extends Problem implements ControlExperiment {
             }
             RealExperiment re = null;
             try {
-                re = new RealExperiment(x);
+                re = new RealExperiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                f = re.run_real_experiment().clone();
+                re.run_real_experiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -166,7 +175,7 @@ public class MtspProblem extends Problem implements ControlExperiment {
         }
 
         for (int i = 0; i < numberOfObjectives_; i++)
-            solution.setObjective(i,f[i]);
+            solution.setObjective(i,iosource_.objectives_[i]);
 
     } // evaluate
 

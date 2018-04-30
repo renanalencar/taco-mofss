@@ -1,7 +1,5 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import com.renanalencar.metaheuristics.mono.taco.*;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 
@@ -23,17 +21,19 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
     private BufferedWriter f_time_execs;
     private LogExperiment logExperiment;
     private LogExperiment log;
+    private IOSource iosource_;
 
-    private double [] variables_;
-    public RealExperiment(double [] variables_) throws IOException {
+//    private double [] variables_;
+    public RealExperiment() throws IOException {
     	 this.logExperiment = LogExperiment.getInstance();
          this.logExperiment.writeF_REAL_SOLS("\r\nDia de trabalho: ");
+         this.iosource_ = IOSource.getInstance();
          //this.log.teste.write(++log.i + " aqui");
         // criando apenas estruturas, com tamanhos mínimos
         this.list_id_work_days = new IntList(1);
         this.current_work_day  = new WorkDay(-1);
 
-        this.variables_ = variables_.clone();
+//        this.variables_ = variables_.clone();
 
         // abrindo arquivos de resultados
         //this.log.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
@@ -47,9 +47,9 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         //f_time_execs << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
     }
 
-    public double [] run_real_experiment() throws IOException {
+    public void run_real_experiment() throws IOException {
 
-        double [] fitness = new double[2];
+//        double [] fitness = new double[2];
 
         this.time_ini_experiment = (int) System.currentTimeMillis();  // instante do início do experimento
         RealData real_data = new RealData();
@@ -84,9 +84,9 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
                 this.save_aco_parameters();
 
                 if (STATIC_SIMULATION == 1) {
-                    this.current_work_day.execute_static_simulation(this.seed_random, counter_day_simulations, this.log.f_log_exper, this.log.f_simul_res, this.variables_);
+                    this.current_work_day.execute_static_simulation(this.seed_random, counter_day_simulations, this.log.f_log_exper, this.log.f_simul_res);
                 } else {
-                    this.current_work_day.execute_simulation(this.seed_random, counter_day_simulations, this.log.f_log_exper, this.log.f_simul_res, this.variables_);
+                    this.current_work_day.execute_simulation(this.seed_random, counter_day_simulations, this.log.f_log_exper, this.log.f_simul_res);
                 }
 
                 // gravando o tempo total da simulação:
@@ -109,9 +109,9 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         double time_experiment = System.currentTimeMillis() - time_ini_experiment;
         this.log.f_log_exper.write("\r\n------------------------------\r\nTempo total do experimento: " + (int)time_experiment + " milissegundos\r\n");
 
-        fitness[0] = 0.0;
-        fitness[1] = 0.0;
-        return fitness;
+        this.iosource_.variables_[0] = 0.0;
+        this.iosource_.variables_[1] = 0.0;
+
     }
 
     public void save_aco_parameters() throws IOException {
@@ -133,10 +133,10 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
 
         this.log.f_log_exper.write("   N (soluções geradas a cada ciclo):\t" + N + "\r\n");
         this.log.f_log_exper.write("   q0 (nível de determinismo):\t\t" + String.format("%.2f", Q0) + "\r\n");
-        this.log.f_log_exper.write("   alfa (peso do feromonio):\t\t" + ALFA + "\r\n");
-        this.log.f_log_exper.write("   beta (peso da visibilidade):\t\t" + BETA + "\r\n");
-        this.log.f_log_exper.write("   ksi (persitencia do feromonio nas atualizações locais):\t" + String.format("%.2f", KSI) + "\r\n");
-        this.log.f_log_exper.write("   ro (persitencia do feromonio nas atualizações globais):\t" + String.format("%.2f", RO) + "\r\n");
+        this.log.f_log_exper.write("   alfa (peso do feromonio):\t\t" + this.iosource_.variables_[0] + "\r\n");
+        this.log.f_log_exper.write("   beta (peso da visibilidade):\t\t" + this.iosource_.variables_[1] + "\r\n");
+        this.log.f_log_exper.write("   ksi (persitencia do feromonio nas atualizações locais):\t" + String.format("%.2f", this.iosource_.variables_[2]) + "\r\n");
+        this.log.f_log_exper.write("   ro (persitencia do feromonio nas atualizações globais):\t" + String.format("%.2f", this.iosource_.variables_[3]) + "\r\n");
 
         this.log.f_log_exper.write("\r\nBusca Local:\r\n");
         this.log.f_log_exper.write("   2-opt (todas as soluções criadas):\t\t");

@@ -1,7 +1,5 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import com.renanalencar.metaheuristics.mono.taco.*;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -246,7 +244,7 @@ public class WorkDay implements ControlExperiment {
         }
     }
 
-    public void execute_simulation(long seed_random, int counter_day_simulations, BufferedWriter f_log_exper, BufferedWriter f_simul_res, double [] variables_) throws IOException {
+    public void execute_simulation(long seed_random, int counter_day_simulations, BufferedWriter f_log_exper, BufferedWriter f_simul_res) throws IOException {
         this.seed_simulation = seed_random;
 
         this.current_time = 0.0; // relógio da simulação em segundos, definindo 0.0 como 08:00 hs do dia de trabalho atual
@@ -344,7 +342,7 @@ public class WorkDay implements ControlExperiment {
                             this.update_positions_teams();
 
                             // gerando uma solução com o algoritmo ACO para a instância atual e salvando em current_best_solution
-                            AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, this.current_instance, variables_);
+                            AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, this.current_instance);
                             //delete current_aco_solution;
                             this.current_aco_solution = aco_mtsp_app.execute();
                             //delete aco_mtsp_app;
@@ -506,7 +504,7 @@ public class WorkDay implements ControlExperiment {
         //delete [] cur_executed_routes;
     }
 
-    public void execute_static_simulation(long seed_random, int counter_day_simulations, BufferedWriter f_log_exper, BufferedWriter f_simul_res, double [] variables_) throws IOException {
+    public void execute_static_simulation(long seed_random, int counter_day_simulations, BufferedWriter f_log_exper, BufferedWriter f_simul_res) throws IOException {
 
         this.seed_simulation = seed_random;
 
@@ -517,7 +515,7 @@ public class WorkDay implements ControlExperiment {
         this.position_teams_depot();
 
         // gerando uma solução com o algoritmo ACO para a instância completa e salvando em complete_final_solution
-        AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, this.current_instance, variables_);
+        AcoMtspAlgorithm aco_mtsp_app = new AcoMtspAlgorithm(seed_random, this.current_instance);
         //delete complete_final_solution;
         this.complete_final_solution = aco_mtsp_app.execute();
         //delete aco_mtsp_app;
