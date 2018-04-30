@@ -23,7 +23,6 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
     private LogExperiment log;
     private IOSource iosource_;
 
-//    private double [] variables_;
     public RealExperiment() throws IOException {
     	 this.logExperiment = LogExperiment.getInstance();
          this.logExperiment.writeF_REAL_SOLS("\r\nDia de trabalho: ");
@@ -32,8 +31,6 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         // criando apenas estruturas, com tamanhos mínimos
         this.list_id_work_days = new IntList(1);
         this.current_work_day  = new WorkDay(-1);
-
-//        this.variables_ = variables_.clone();
 
         // abrindo arquivos de resultados
         //this.log.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
@@ -108,9 +105,6 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         
         double time_experiment = System.currentTimeMillis() - time_ini_experiment;
         this.log.f_log_exper.write("\r\n------------------------------\r\nTempo total do experimento: " + (int)time_experiment + " milissegundos\r\n");
-
-        this.iosource_.variables_[0] = 0.0;
-        this.iosource_.variables_[1] = 0.0;
 
     }
 

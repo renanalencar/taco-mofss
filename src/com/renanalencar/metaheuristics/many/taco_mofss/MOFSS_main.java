@@ -15,6 +15,7 @@ import jmetal.problems.ProblemFactory;
 import jmetal.util.Configuration;
 import jmetal.util.JMException;
 
+import javax.naming.ldap.Control;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.logging.FileHandler;
@@ -38,7 +39,7 @@ import java.util.logging.Logger;
  *                  April 2009)
  */
 
-public class MOFSS_main {
+public class MOFSS_main implements ControlExperiment, ControlMOFSS {
   public static Logger      logger_ ;      // Logger object
   public static FileHandler fileHandler_ ; // FileHandler object
 

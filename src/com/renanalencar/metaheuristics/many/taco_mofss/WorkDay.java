@@ -18,6 +18,7 @@ public class WorkDay implements ControlExperiment {
     private BufferedWriter f_total_costs;
     
     private LogExperiment logExperiment;
+    private IOSource iosource_;
 
     private long seed_simulation;     // semente randomica da simulção
 
@@ -465,6 +466,9 @@ public class WorkDay implements ControlExperiment {
 
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
 
+        this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
+        this.iosource_.objectives_[1] = 0.0;
+
         // salvando em plot_final_created_sols_day.txt a solução final para o dia de trabalho
         BufferedWriter f_day_aco_final_sols;
         f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
@@ -540,6 +544,9 @@ public class WorkDay implements ControlExperiment {
         f_simul_res.write(id_work_day + "\t");
         this.complete_final_solution.save_longest_cost(f_simul_res);
         this.complete_final_solution.save_total_cost(f_simul_res);
+
+        this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
+        this.iosource_.objectives_[1] = 0.0;
 
         if (counter_day_simulations == 1) {
         	this.logExperiment.f_longests.write("\r\n" + this.id_work_day + "\t");
@@ -668,7 +675,7 @@ public class WorkDay implements ControlExperiment {
         // realizando o despacho do serviço à equipe escolhida:
         this.dispatch_service_order(best_team, emergency_order);
         if (SAVE_DAY_STATE_CHANGES == 1) {
-            f_log_exper.write("\r\nDespacho emergencial: relogio da simulacao = " + (int)this.current_time + " segundos\r\n");
+            f_log_exper.write("\r\nDespacho emergencial: relógio da simulação = " + (int)this.current_time + " segundos\r\n");
             f_log_exper.write("Ordem de serviço despachada: " + emergency_order + "\t");
             this.day_services[emergency_order].save_service_order(f_log_exper);
             this.save_executed_routes(f_log_exper);
