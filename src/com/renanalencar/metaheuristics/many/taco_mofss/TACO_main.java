@@ -8,11 +8,22 @@ import java.io.IOException;
  * @since 2017-11-01
  *
  */
-public class TACO_main implements ControlExperiment {
+public class TACO_main implements ControlExperiment, ControlSTACS {
 
     public static void main(String[] args) throws IOException {
     	
     	LogExperiment log = LogExperiment.getInstance();
+
+    	IOSource iosource_ = IOSource.getInstance();
+
+        iosource_.variables_    = new double[N_VARIABLES];
+    	iosource_.variables_[0] = ALFA;
+        iosource_.variables_[1] = BETA;
+        iosource_.variables_[2] = KSI;
+        iosource_.variables_[3] = RO;
+
+        iosource_.objectives_   = new double[N_OBJECTIVES];
+
 
         if (MODE_EXECUTION == 1) { // experimento padrão
         	log.loadBuffersStandardExperiment();

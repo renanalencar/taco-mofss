@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  * @version: 1.0
  * @date: 2018-03-15
  */
-public class TACOMOFSS_main implements ControlMOFSS {
+public class TACOMOFSS_main implements ControlExperiment, ControlMOFSS {
     public static Logger logger_ ;      // Logger object
     public static FileHandler fileHandler_ ; // FileHandler object
 

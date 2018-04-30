@@ -17,10 +17,10 @@ public interface ControlSTACS {
     // parâmetros ACO:
     int N               = 10;  // ACS = 10 (número de formigas que geram soluções simultaneamente). Aqui, número de soluções geradas num ciclo
     double Q0           = 0.9; // ACS = 0.9 (1: apenas escolhas determinísticas; 0: apenas escolhas aleatórias; os nós iniciais continuam aleatórios, se configurado)
-//    int ALFA            = 1;   // ACS = 1  relevância do feromônio
-//    int BETA            = 2;   // ACS = 2  relevância da visibilidade
-//    double KSI          = 0.1; // ACS = 0.1 (persistência do feromônio, local update)
-//    double RO           = 0.1; // ACS = 0.1 (persistência do feromônio, global update)
+    int ALFA            = 1;   // ACS = 1  relevância do feromônio
+    int BETA            = 2;   // ACS = 2  relevância da visibilidade
+    double KSI          = 0.1; // ACS = 0.1 (persistência do feromônio, local update)
+    double RO           = 0.1; // ACS = 0.1 (persistência do feromônio, global update)
     int CL_LENGTH       = 20;  // TACO = 20 (número de itens da candidate list (max = n-1))
     int CBA_REPET       = 1;   // TACO = 1 (CBA = check beter ant) número máximo de repetições da escolha por uma formiga melhor em cada iteração)
 

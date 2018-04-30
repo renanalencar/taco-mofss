@@ -4,7 +4,6 @@ public interface ControlMOFSS {
 
     // Default problem
     int DEFAULT_PROBLEM         = 1;
-    int N_OBJECTIVES            = 2;    // Número de objetivos
 
     // Algorithm parameters
 

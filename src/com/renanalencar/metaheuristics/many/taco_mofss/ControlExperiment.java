@@ -12,6 +12,9 @@ public interface ControlExperiment {
     int DEPOT_INDEX            = 0;  // índice da instância que corresponde ao depósito
     int FLOAT_PRECISION        = 2;  // precisão decimal de impressão de pontos flutuantes
 
+    int N_VARIABLES            = 4;    // Número de objetivos
+    int N_OBJECTIVES           = 2;    // Número de objetivos
+
 
     // Parâmetros para experimentos com dados reais:
 
