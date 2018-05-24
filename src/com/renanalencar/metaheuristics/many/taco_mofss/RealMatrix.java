@@ -9,7 +9,7 @@ import java.util.Vector;
  * @since 2017-11-01
  *
  */
-public class RealMatrix {
+public class RealMatrix implements ControlExperiment {
 
     private String matrix_file_name; // para carregar a instância de arquivo
     private BufferedReader matrix_file; // nome do arquivo
@@ -28,7 +28,7 @@ public class RealMatrix {
 
     //TODO Verificar carregamento
     public RealMatrix() throws FileNotFoundException {
-        this.matrix_file_name   = "data/many_costs.txt";
+        this.matrix_file_name   = COST_FILE;
         FileInputStream fstream = new FileInputStream(this.matrix_file_name);
         DataInputStream in      = new DataInputStream(fstream);
         this.matrix_file        = new BufferedReader(new InputStreamReader(in));
@@ -100,6 +100,8 @@ public class RealMatrix {
                 flag = false;
             }
         }
+        //TODO Verificar se cost.txt está sendo fechado
+        this.matrix_file.close();
     }
 
     //TODO Está alterando um variável externa
@@ -121,6 +123,8 @@ public class RealMatrix {
                 flag = false;
             }
         }
+        //TODO Verificar se cost.txt está sendo fechado
+        this.matrix_file.close();
     }
 
     //TODO Está alterando um variável externa
@@ -142,6 +146,8 @@ public class RealMatrix {
                 flag = false;
             }
         }
+        //TODO Verificar se cost.txt está sendo fechado
+        this.matrix_file.close();
     }
 
 }

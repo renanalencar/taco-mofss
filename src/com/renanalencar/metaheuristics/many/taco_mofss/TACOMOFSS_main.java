@@ -157,7 +157,7 @@ public class TACOMOFSS_main implements ControlExperiment, ControlMOFSS {
         name[4] = "Hypervolume PF";
         value[4] = indicators.getTrueParetoFrontHypervolume();
         logger_.info("Quality indicators values have been writen to file IND");
-        population.printQualityIndicatorToFile("results/IND"+"-MOFSS-"+problem.getName()+"-"+
+        population.printQualityIndicatorToFile("results/IND"+"-TACOMOFSS-"+problem.getName()+"-"+
                 algorithm.getInputParameter("swarmSize").toString()+"|"+
                 algorithm.getInputParameter("maxIterations").toString(), name, value);
 

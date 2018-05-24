@@ -10,7 +10,9 @@ public class LogExperiment {
   static LogExperiment logExperiment;
 
   static BufferedWriter f_log_stand_exper;
-  static BufferedWriter f_sols_aco; 
+  static BufferedWriter f_sols_aco;
+  static BufferedWriter f_day_aco_final_sols;
+
   //static BufferedWriter teste;
   
   	
@@ -33,10 +35,12 @@ public class LogExperiment {
  public void loadBuffersStandardExperiment() throws IOException {
 	 this.f_sols_aco = new BufferedWriter(new FileWriter("outs/plot_best_sols_aco.txt"));
 	 this.f_log_stand_exper = new BufferedWriter(new FileWriter("outs/log_stand_experiment.txt"));
+
 	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
  }
  public void loaBuffersdRealExperiment() throws IOException{
 	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
+
 	 // arquivo para gravação das soluções reais para plotagem
      this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
 
@@ -47,6 +51,8 @@ public class LogExperiment {
      this.f_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
 
      this.f_time_execs = new BufferedWriter(new FileWriter("outs/time_execs.txt"));
+
+     this.f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
  }
  
  public static synchronized LogExperiment getInstance() throws IOException {
@@ -75,6 +81,7 @@ public void flushFilesRealExperiment() throws IOException {
 	this.f_log_exper.flush();
 	this.f_time_execs.flush();
 	this.f_simul_res.flush();
+	this.f_day_aco_final_sols.flush();
 	//this.teste.flush();
 	
 }

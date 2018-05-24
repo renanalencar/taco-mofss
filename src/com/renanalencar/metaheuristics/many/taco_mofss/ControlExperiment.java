@@ -15,15 +15,18 @@ public interface ControlExperiment {
     int N_VARIABLES            = 4;    // Número de variaveis
     int N_OBJECTIVES           = 2;    // Número de objetivos
 
+    String DATA_FILE            ="data/many_data.txt";
+    String COST_FILE            ="data/many_costs.txt";
+
 
     // Parâmetros para experimentos com dados reais:
-
+    //TODO Verificar NullPointerException para valor < 1
     int STATIC_SIMULATION      = 1;  // simulação com instâncias estáticas com todos os serviços dos dias de trabalho
     int NEAREST_TEAM           = 0;  // não usa ACO: despacha o serviço que estiver mais próximo da equipe
-    int N_SIMULATIONS_BY_DAY = 10;  // número de execuções para cada dia de trabalho
-    int TYPE_COST_MATRIX       = 1;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas
+    int N_SIMULATIONS_BY_DAY   = 30;  // número de execuções para cada dia de trabalho
+    int TYPE_COST_MATRIX       = 6;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas, 6: distância + peso (multi-objetivo)
     int DESPATCH_REAL_SOL      = 1;  // definindo o horário de despacho do serviço a partir do momento que uma equipe inicia o deslocamento para ele na solução real calculada
-    int INDEX_DAY_TEST        = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
+    int INDEX_DAY_TEST         = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
 
     // parametros de resultados opcionais a salvar:
     int SAVE_DAY_STATE_CHANGES      = 1;  // salva todas as mudanças de estado dos dias de trabalho no log do experimento
@@ -36,10 +39,10 @@ public interface ControlExperiment {
 
 
     // Parâmetros para experimentos com instâncias modelo:
-    int N_EXECUTIONS         = 10;  // número de execuções independentes do algorimto ACO
-    int TYPE_MTSP_SOLS        = 1;  // 1: finais fechados; 2: finais abertos (determina o tipo da solução alterando a posição inicial das formigas)
-    int MODEL_INSTANCE        = 1;  // 1: eil51, 2: eil76, 3: eil101, 4: pr76, 5: pr1002, 6: sgb128, 0: grids para testes
-    int N_SALESMEN            = 4;  // número de equipes do experimento
+    int N_EXECUTIONS         = 1000;  // número de execuções independentes do algorimto ACO
+    int TYPE_MTSP_SOLS       = 1;  // 1: finais fechados; 2: finais abertos (determina o tipo da solução alterando a posição inicial das formigas)
+    int MODEL_INSTANCE       = 1;  // 1: eil51, 2: eil76, 3: eil101, 4: pr76, 5: pr1002, 6: sgb128, 0: grids para testes
+    int N_SALESMEN           = 4;  // número de equipes do experimento
     int TEST                 = -1;  // para diminuir o número de nós da instância em testes. -1 = todos os nós
 
     // parâmetros de impressão:

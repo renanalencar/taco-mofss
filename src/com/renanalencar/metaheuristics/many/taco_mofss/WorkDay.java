@@ -171,6 +171,7 @@ public class WorkDay implements ControlExperiment {
                 }
                 break;
             }
+            case 6:     // distâncias + pesos (multi-objetivo)
             case 2: {   // distâncias reais
                 for (int i = 0; i < this.n_points; i++){
                     for (int j = 0; j < this.n_points; j++){
@@ -467,7 +468,25 @@ public class WorkDay implements ControlExperiment {
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
 
         this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
-        this.iosource_.objectives_[1] = 0.0;
+
+        // salvando o peso total da solução
+        if (TYPE_COST_MATRIX == 6) {
+            //TODO Verificar se final_sol não é vazio
+            int[] final_sol = this.complete_final_solution.get_prop_sol();
+            //TODO Verificar peso de cada mochila
+            double[] bag_weights = new double[N_SALESMEN];
+            double total_weight = 0.0;
+
+            for (int x = 0; x < final_sol.length; x++) {
+                if ((x + 1) != final_sol.length)
+                    total_weight = this.real_weight_matrix.get_value(final_sol[x], final_sol[x + 1]) + total_weight;
+            }
+
+            this.iosource_.objectives_[1] = total_weight;
+            //TODO Verificar impressão do peso no arquivo
+            System.out.println("\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+            System.out.print("\t\t\t\t\t\t\t\t\tpeso por rota: " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+        }
 
         // salvando em plot_final_created_sols_day.txt a solução final para o dia de trabalho
         BufferedWriter f_day_aco_final_sols;
@@ -546,7 +565,22 @@ public class WorkDay implements ControlExperiment {
         this.complete_final_solution.save_total_cost(f_simul_res);
 
         this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
-        this.iosource_.objectives_[1] = 0.0;
+
+        // salvando o peso total da solução
+        if (TYPE_COST_MATRIX == 6) {
+            //TODO Verificar se final_sol não é vazio
+            int[] final_sol = this.complete_final_solution.get_prop_sol();
+            double total_weight = 0.0;
+
+            for (int x = 0; x < final_sol.length; x++) {
+                if ((x + 1) != final_sol.length)
+                    total_weight = this.real_weight_matrix.get_value(final_sol[x], final_sol[x + 1]) + total_weight;
+            }
+
+            this.iosource_.objectives_[1] = total_weight;
+            //TODO Verificar impressão do peso no arquivo
+            System.out.println("\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+        }
 
         if (counter_day_simulations == 1) {
         	this.logExperiment.f_longests.write("\r\n" + this.id_work_day + "\t");
@@ -557,12 +591,12 @@ public class WorkDay implements ControlExperiment {
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
 
         // salvando em plot_final_created_sols_day.txt a solução final para o dia de trabalho
-        BufferedWriter f_day_aco_final_sols;
-        f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
+//        BufferedWriter f_day_aco_final_sols;
+//        f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
         Node[] plan_nodes_vector = this.current_instance.get_plan_nodes_vector();
-        f_day_aco_final_sols.write("\r\nDia de trabalho: " + this.id_work_day + "\tSimulação: " + counter_day_simulations + "\r\n");
-        this.complete_final_solution.save_to_plot(f_day_aco_final_sols, plan_nodes_vector);
-        f_day_aco_final_sols.close();
+        this.logExperiment.f_day_aco_final_sols.write("\r\nDia de trabalho: " + this.id_work_day + "\tSimulação: " + counter_day_simulations + "\r\n");
+        this.complete_final_solution.save_to_plot(this.logExperiment.f_day_aco_final_sols, plan_nodes_vector);
+//        f_day_aco_final_sols.close();
 
         double longest_real = this.real_solution.get_longest_route();
         double longest_proposed = this.complete_final_solution.get_longest_route();

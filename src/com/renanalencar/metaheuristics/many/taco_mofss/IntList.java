@@ -250,4 +250,19 @@ public class IntList {
             }
         }
     }
+
+    /**
+     * Método que retorna a lista
+     */
+    public int[] getValues_list() {
+        int[] aux = new int[index+1];
+        if (this.index == -1) {
+            System.out.print("--> EMPTY LIST");
+        } else {
+            for (int i = 0; i <= this.index; i++) {
+                aux[i] = this.values_list[i];
+            }
+        }
+        return aux;
+    }
 }

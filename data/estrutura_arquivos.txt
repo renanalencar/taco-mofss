@@ -28,5 +28,5 @@ coluna
 7	lat do ponto B
 8	lng do ponto B
 9	distancia	(em kms, calculada a partir das vias reais)
-10	custo_temporal	(em segundos, calculado a partir das vias reais)
+10		(em segundos, calculado a partir das vias reais)
 --------------------------

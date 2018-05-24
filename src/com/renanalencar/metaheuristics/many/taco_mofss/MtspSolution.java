@@ -233,6 +233,10 @@ public class MtspSolution implements ControlExperiment {
         System.out.print("\r\n");
     }
 
+    public int[] get_prop_sol() {
+        return this.nodes_list.getValues_list();
+    }
+
 
     public void save_to_plot(BufferedWriter file_out, Node nodes[]) throws IOException {
 

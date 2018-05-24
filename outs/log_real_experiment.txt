@@ -4,17 +4,17 @@ Dia de Trabalho: 1
 
 ----------
 Simulação: 1
-Semente rândomica utilizada: 1525125345999
+Semente rândomica utilizada: 1527092323125
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -22,25 +22,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.42	custo total: 19.83  	solução:  0  6  3  4  5 11  0  1 16  2  0 12 10  9  0 15  8  7 14 13  0 
-Melhoramento:		maior rota: 9.05%	custo total: 10.64%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  8 16 14 11 12 15  0  7  9 10 13  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
 
-Tempo total da simulação: 31 milissegundos
+Tempo total da simulação: 908 milissegundos
 
 ----------
 Simulação: 2
-Semente rândomica utilizada: 1525125346055
+Semente rândomica utilizada: 1527092323977
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -48,25 +48,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.42	custo total: 20.26  	solução:  0  3  2  1 16  0  6 12 10  9  0  4  5 11  0 15  8  7 14 13  0 
-Melhoramento:		maior rota: 9.05%	custo total: 8.71%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  7  8 16 14 13  0  9 10 11 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
 
-Tempo total da simulação: 54 milissegundos
+Tempo total da simulação: 503 milissegundos
 
 ----------
 Simulação: 3
-Semente rândomica utilizada: 1525125346078
+Semente rândomica utilizada: 1527092324525
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -74,25 +74,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.43	custo total: 20.36  	solução:  0  3  6  2  1 16  0  4 12 10  9  0  5 11  0 15  8 14  7 13  0 
-Melhoramento:		maior rota: 9.05%	custo total: 8.24%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 746.00	custo total: 1648.00  	solução:  0  6  4  5  0  7  9 10 15  0  8 16 13 14 11 12  0  1  2  3  0 
+Melhoramento:		maior rota: 8.35%	custo total: 18.21%
 
-Tempo total da simulação: 31 milissegundos
+Tempo total da simulação: 607 milissegundos
 
 ----------
 Simulação: 4
-Semente rândomica utilizada: 1525125346108
+Semente rândomica utilizada: 1527092325065
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -100,25 +100,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 8.24	custo total: 21.11  	solução:  0  1  2 15  0  3 12 11 10  9  0  6  4  5 16  0  7 14  8 13  0 
-Melhoramento:		maior rota: -0.88%	custo total: 4.85%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  7  9 10 13  0  8 16 14 11 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
 
-Tempo total da simulação: 16 milissegundos
+Tempo total da simulação: 389 milissegundos
 
 ----------
 Simulação: 5
-Semente rândomica utilizada: 1525125346127
+Semente rândomica utilizada: 1527092325450
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -126,25 +126,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.42	custo total: 20.57  	solução:  0  3  2  1 16  0  4  5 12 11  0  6  9 10  0 15  8  7 14 13  0 
-Melhoramento:		maior rota: 9.05%	custo total: 7.28%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 13 14  0  1  2  3  0  9 10 11 12 15  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
 
-Tempo total da simulação: 19 milissegundos
+Tempo total da simulação: 453 milissegundos
 
 ----------
 Simulação: 6
-Semente rândomica utilizada: 1525125346148
+Semente rândomica utilizada: 1527092325906
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -152,25 +152,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.43	custo total: 20.26  	solução:  0  3  2  1 16  0 15  8 14  7 13  0  6 12 10  9  0  4  5 11  0 
-Melhoramento:		maior rota: 9.05%	custo total: 8.71%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 755.00	custo total: 1612.00  	solução:  0  6  5  0  7  4  0  1  2  3  8  9  0 15 13 12 11 14 16 10  0 
+Melhoramento:		maior rota: 7.25%	custo total: 20.00%
 
-Tempo total da simulação: 25 milissegundos
+Tempo total da simulação: 417 milissegundos
 
 ----------
 Simulação: 7
-Semente rândomica utilizada: 1525125346171
+Semente rândomica utilizada: 1527092326323
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -178,25 +178,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.37	custo total: 21.38  	solução:  0  3  2  1 16 15  0  8 14  7 13  0  6 12 10  9  0  4  5 11  0 
-Melhoramento:		maior rota: 9.78%	custo total: 3.65%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1650.00  	solução:  0  6  4  5  0  8 11 12 13 14  0  7 16  9 10 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.11%
 
-Tempo total da simulação: 21 milissegundos
+Tempo total da simulação: 376 milissegundos
 
 ----------
 Simulação: 8
-Semente rândomica utilizada: 1525125346191
+Semente rândomica utilizada: 1527092326701
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -204,25 +204,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.41	custo total: 21.47  	solução:  0  3  2  1 16 15  0  6 11  0 14  8  7 13  0  4  5 12 10  9  0 
-Melhoramento:		maior rota: 9.28%	custo total: 3.22%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 746.00	custo total: 1648.00  	solução:  0  6  4  5  0  7  9 10 15  0  8 16 11 14 13 12  0  1  2  3  0 
+Melhoramento:		maior rota: 8.35%	custo total: 18.21%
 
-Tempo total da simulação: 20 milissegundos
+Tempo total da simulação: 340 milissegundos
 
 ----------
 Simulação: 9
-Semente rândomica utilizada: 1525125346211
+Semente rândomica utilizada: 1527092327035
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -230,25 +230,25 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.61	custo total: 20.86  	solução:  0  3 11  0 10  9  0  6  4  5 12  0  2  1 16 15  8 14  7 13  0 
-Melhoramento:		maior rota: 6.84%	custo total: 6.01%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 14  0  1  2  3  0  9 10 13 12 15  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
 
-Tempo total da simulação: 28 milissegundos
+Tempo total da simulação: 448 milissegundos
 
 ----------
 Simulação: 10
-Semente rândomica utilizada: 1525125346237
+Semente rândomica utilizada: 1527092327483
 Parametros ACO:
    Objetivo MTSP:	minimizar custo total
-   Critério de parada:	10 ciclos por execução
+   Critério de parada:	1000 ciclos por execução
    Tamanho da lista de candidatos:	20
    N (soluções geradas a cada ciclo):	10
    q0 (nível de determinismo):		0.90
-   alfa (peso do feromonio):		0.5780982358949358
-   beta (peso da visibilidade):		0.2545605960507653
-   ksi (persitencia do feromonio nas atualizações locais):	0.57
-   ro (persitencia do feromonio nas atualizações globais):	0.85
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
 
 Busca Local:
    2-opt (todas as soluções criadas):		ON
@@ -256,11 +256,531 @@ Busca Local:
 
 Resumo da simulação:
 Dia de trabalho: 1	serviços: 16	equipes: 4
-Solução real:		maior rota: 8.16	custo total: 22.19  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
-Solução proposta:	maior rota: 7.43	custo total: 20.02  	solução:  0 15  8 14  7 13  0  3  2  1 16  0 11  0  6  4  5 12 10  9  0 
-Melhoramento:		maior rota: 8.94%	custo total: 9.78%
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 14  0  1  2  3  0 15 12 13 10  9  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
 
-Tempo total da simulação: 22 milissegundos
+Tempo total da simulação: 345 milissegundos
+
+----------
+Simulação: 11
+Semente rândomica utilizada: 1527092327828
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 751.00	custo total: 1652.00  	solução:  0  6  4  5  0  8 10 13 12 15  0  7 16 11 14  9  0  1  2  3  0 
+Melhoramento:		maior rota: 7.74%	custo total: 18.01%
+
+Tempo total da simulação: 357 milissegundos
+
+----------
+Simulação: 12
+Semente rândomica utilizada: 1527092328186
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 14  0  9 10 13 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
+
+Tempo total da simulação: 397 milissegundos
+
+----------
+Simulação: 13
+Semente rândomica utilizada: 1527092328583
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 13 12 15  0  1  2  3  0  9 10 11 14  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 330 milissegundos
+
+----------
+Simulação: 14
+Semente rândomica utilizada: 1527092328911
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 12 15  0  1  2  3  0  9 10 13 14  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 320 milissegundos
+
+----------
+Simulação: 15
+Semente rândomica utilizada: 1527092329231
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 14  0  1  2  3  0  9 10 13 12 15  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
+
+Tempo total da simulação: 332 milissegundos
+
+----------
+Simulação: 16
+Semente rândomica utilizada: 1527092329565
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 745.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 13 10  9  0  1  2  3  0 14 11 12 15  0 
+Melhoramento:		maior rota: 8.48%	custo total: 18.26%
+
+Tempo total da simulação: 341 milissegundos
+
+----------
+Simulação: 17
+Semente rândomica utilizada: 1527092329904
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 745.00	custo total: 1647.00  	solução:  0 14 13 12 15  0  7  8 16 11 10  9  0  6  4  5  0  1  2  3  0 
+Melhoramento:		maior rota: 8.48%	custo total: 18.26%
+
+Tempo total da simulação: 328 milissegundos
+
+----------
+Simulação: 18
+Semente rândomica utilizada: 1527092330233
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 12 15  0  1  2  3  0 14 13 10  9  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 330 milissegundos
+
+----------
+Simulação: 19
+Semente rândomica utilizada: 1527092330565
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  6  4  5  0  9 10 13 14  0  7  8 16 11 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 329 milissegundos
+
+----------
+Simulação: 20
+Semente rândomica utilizada: 1527092330894
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 746.00	custo total: 1601.00  	solução:  0  6  5  0  7  4  0 15 14 11 12 16 13 10  0  1  2  3  8  9  0 
+Melhoramento:		maior rota: 8.35%	custo total: 20.55%
+
+Tempo total da simulação: 407 milissegundos
+
+----------
+Simulação: 21
+Semente rândomica utilizada: 1527092331299
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  7  8 16 14 13  0  1  2  3  0  9 10 11 12 15  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
+
+Tempo total da simulação: 326 milissegundos
+
+----------
+Simulação: 22
+Semente rândomica utilizada: 1527092331625
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 13 14  0  1  2  3  0  9 10 11 12 15  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
+
+Tempo total da simulação: 323 milissegundos
+
+----------
+Simulação: 23
+Semente rândomica utilizada: 1527092331948
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  6  4  5  0 14 11 10  9  0  7  8 16 13 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 344 milissegundos
+
+----------
+Simulação: 24
+Semente rândomica utilizada: 1527092332291
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 787.00	custo total: 1644.00  	solução:  0  6  5  0  7  4  0  1  2  3  8  9  0 15 10 13 12 11 14 16  0 
+Melhoramento:		maior rota: 3.32%	custo total: 18.41%
+
+Tempo total da simulação: 384 milissegundos
+
+----------
+Simulação: 25
+Semente rândomica utilizada: 1527092332675
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 743.00	custo total: 1651.00  	solução:  0  8 11 10 13 12 15  0  6  4  5  0  7 16 14  9  0  1  2  3  0 
+Melhoramento:		maior rota: 8.72%	custo total: 18.06%
+
+Tempo total da simulação: 313 milissegundos
+
+----------
+Simulação: 26
+Semente rândomica utilizada: 1527092332988
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1650.00  	solução:  0  6  4  5  0  7 16 13 14 15  0  8 12 11 10  9  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.11%
+
+Tempo total da simulação: 313 milissegundos
+
+----------
+Simulação: 27
+Semente rândomica utilizada: 1527092333301
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  7  9 10 13  0  8 16 14 11 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
+
+Tempo total da simulação: 418 milissegundos
+
+----------
+Simulação: 28
+Semente rândomica utilizada: 1527092333721
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1647.00  	solução:  0  9 10 11 14  0  6  4  5  0  7  8 16 13 12 15  0  1  2  3  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.26%
+
+Tempo total da simulação: 321 milissegundos
+
+----------
+Simulação: 29
+Semente rândomica utilizada: 1527092334041
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 738.00	custo total: 1646.00  	solução:  0  6  4  5  0  7  8 16 14 13  0  1  2  3  0  9 10 11 12 15  0 
+Melhoramento:		maior rota: 9.34%	custo total: 18.31%
+
+Tempo total da simulação: 324 milissegundos
+
+----------
+Simulação: 30
+Semente rândomica utilizada: 1527092334367
+Parametros ACO:
+   Objetivo MTSP:	minimizar custo total
+   Critério de parada:	1000 ciclos por execução
+   Tamanho da lista de candidatos:	20
+   N (soluções geradas a cada ciclo):	10
+   q0 (nível de determinismo):		0.90
+   alfa (peso do feromonio):		1.0
+   beta (peso da visibilidade):		2.0
+   ksi (persitencia do feromonio nas atualizações locais):	0.10
+   ro (persitencia do feromonio nas atualizações globais):	0.10
+
+Busca Local:
+   2-opt (todas as soluções criadas):		ON
+   3-opt (somente nas melhores soluções dos ciclos):		OFF
+
+Resumo da simulação:
+Dia de trabalho: 1	serviços: 16	equipes: 4
+Solução real:		maior rota: 814.00	custo total: 2015.00  	solução:  0  1  2  3  4  0  5  6  7  8  0  9 10 11 12  0 13 14 15 16  0 
+Solução proposta:	maior rota: 739.00	custo total: 1647.00  	solução:  0  6  4  5  0  7  8 16 11 14  0  1  2  3  0  9 10 13 12 15  0 
+Melhoramento:		maior rota: 9.21%	custo total: 18.26%
+
+Tempo total da simulação: 359 milissegundos
 
 ------------------------------
 Tempo total do experimento: 2147483647 milissegundos

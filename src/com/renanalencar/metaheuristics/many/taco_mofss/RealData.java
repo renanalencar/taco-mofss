@@ -33,7 +33,7 @@ public class RealData implements ControlExperiment {
     //TODO Abrir e salvar arquivo
     public RealData() throws FileNotFoundException {
         this.depot = DEPOT_INDEX;
-        this.data_file_name = "data/data.txt";
+        this.data_file_name = DATA_FILE;
 
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
@@ -139,6 +139,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return counter_days;
     }
 
@@ -180,7 +182,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
-
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return list_id_work_days;
     }
 
@@ -210,7 +213,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
-
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return counter_services;
     }
 
@@ -251,6 +255,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return counter_teams;
     }
 
@@ -284,7 +290,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
-
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return day_services;
     }
 
@@ -314,6 +321,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
     }
 
     //TODO Abrir e salvar arquivo
@@ -340,6 +349,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return coord_x;
     }
 
@@ -367,6 +378,8 @@ public class RealData implements ControlExperiment {
                 flag = false;
             }
         }
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return coord_y;
     }
 
@@ -428,7 +441,8 @@ public class RealData implements ControlExperiment {
             }
         }
         real_solution.recalculate_solution(cost_matrix);  // recalculando os custos (redundante)
-
+        //TODO Verificar se data.txt está sendo fechado
+        this.data_file.close();
         return real_solution;
 
     }
