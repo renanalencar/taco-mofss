@@ -136,10 +136,12 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
             if (APP_OBJECTIVE == 1) {  // minimizar a longest_route
                 this.log.f_log_stand_exper.write(String.valueOf(String.format("%.2f", best_longest_exper)));
                 this.iosource_.objectives_[0] = best_longest_exper;
+                //TODO Copiar código de WorkDay.java para o objetivo do peso
                 this.iosource_.objectives_[1] = 0.0;
             } else {
                 this.log.f_log_stand_exper.write(String.valueOf(String.format("%.2f", best_totsol_exper)));
                 this.iosource_.objectives_[0] = best_totsol_exper;
+                //TODO Copiar código de WorkDay.java para o objetivo do peso
                 this.iosource_.objectives_[1] = 0.0;
             }
             this.log.f_log_stand_exper.write("\r\n");

@@ -29,14 +29,14 @@ public class TACO_main implements ControlExperiment, ControlSTACS {
         	log.loadBuffersStandardExperiment();
             StandardExperiment se = new StandardExperiment();
             se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo defida em control.cpp
-            log.flushFilesStandardExperiment();
+            log.closeFilesStandardExperiment();
 
         } else { // experimento com dados reais
         	log.loaBuffersdRealExperiment();
             RealExperiment re = new RealExperiment();
             re.run_real_experiment();
             
-            log.flushFilesRealExperiment();
+            log.closeFilesRealExperiment();
         }
 
     }
