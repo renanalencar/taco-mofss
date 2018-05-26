@@ -474,18 +474,39 @@ public class WorkDay implements ControlExperiment {
             //TODO Verificar se final_sol não é vazio
             int[] final_sol = this.complete_final_solution.get_prop_sol();
             //TODO Verificar peso de cada mochila
+            double[] route_dists = new double[N_SALESMEN];
             double[] bag_weights = new double[N_SALESMEN];
+            for (int i = 0; i < N_SALESMEN; i++)
+                bag_weights[i] = 0.0;
+
+            int bi = 0;
             double total_weight = 0.0;
 
-            for (int x = 0; x < final_sol.length; x++) {
-                if ((x + 1) != final_sol.length)
-                    total_weight = this.real_weight_matrix.get_value(final_sol[x], final_sol[x + 1]) + total_weight;
+            for (int i = 0; i < final_sol.length; i++) {
+                if ((i + 1) < final_sol.length) {
+                    bag_weights[bi] = this.real_weight_matrix.get_value(0, final_sol[i + 1]) + bag_weights[bi];
+                    route_dists[bi] = this.real_distance_matrix.get_value(final_sol[i], final_sol[i + 1]) + route_dists[bi];
+                    if (final_sol[i + 1] == 0) {
+                        total_weight = bag_weights[bi] + total_weight;
+                        bi++;
+                    }
+                }
+
             }
 
             this.iosource_.objectives_[1] = total_weight;
             //TODO Verificar impressão do peso no arquivo
-            System.out.println("\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
-            System.out.print("\t\t\t\t\t\t\t\t\tpeso por rota: " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+            System.out.print("\n\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+            System.out.print("\t\t\tpeso por rota : ");
+            for (double w: bag_weights) {
+                System.out.print(String.format("%." + FLOAT_PRECISION + "f", w) + " ");
+            }
+
+            System.out.print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdistância por rota: ");
+            for (double d: route_dists) {
+                System.out.print(String.format("%." + FLOAT_PRECISION + "f", d) + " ");
+            }
+            System.out.println("\n");
         }
 
         // salvando em plot_final_created_sols_day.txt a solução final para o dia de trabalho
@@ -570,16 +591,40 @@ public class WorkDay implements ControlExperiment {
         if (TYPE_COST_MATRIX == 6) {
             //TODO Verificar se final_sol não é vazio
             int[] final_sol = this.complete_final_solution.get_prop_sol();
+            //TODO Verificar peso de cada mochila
+            double[] route_dists = new double[N_SALESMEN];
+            double[] bag_weights = new double[N_SALESMEN];
+            for (int i = 0; i < N_SALESMEN; i++)
+                bag_weights[i] = 0.0;
+
+            int bi = 0;
             double total_weight = 0.0;
 
-            for (int x = 0; x < final_sol.length; x++) {
-                if ((x + 1) != final_sol.length)
-                    total_weight = this.real_weight_matrix.get_value(final_sol[x], final_sol[x + 1]) + total_weight;
+            for (int i = 0; i < final_sol.length; i++) {
+                if ((i + 1) < final_sol.length) {
+                    bag_weights[bi] = this.real_weight_matrix.get_value(0, final_sol[i + 1]) + bag_weights[bi];
+                    route_dists[bi] = this.real_distance_matrix.get_value(final_sol[i], final_sol[i + 1]) + route_dists[bi];
+                    if (final_sol[i + 1] == 0) {
+                        total_weight = bag_weights[bi] + total_weight;
+                        bi++;
+                    }
+                }
+
             }
 
             this.iosource_.objectives_[1] = total_weight;
             //TODO Verificar impressão do peso no arquivo
-            System.out.println("\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+            System.out.print("\n\t\t\t\t\t\t\t\t\tpeso total : " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+            System.out.print("\t\t\tpeso por rota : ");
+            for (double w: bag_weights) {
+                System.out.print(String.format("%." + FLOAT_PRECISION + "f", w) + " ");
+            }
+
+            System.out.print("\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tdistância por rota: ");
+            for (double d: route_dists) {
+                System.out.print(String.format("%." + FLOAT_PRECISION + "f", d) + " ");
+            }
+            System.out.println("\n");
         }
 
         if (counter_day_simulations == 1) {

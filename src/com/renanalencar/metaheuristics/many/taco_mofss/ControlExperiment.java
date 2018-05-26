@@ -23,7 +23,7 @@ public interface ControlExperiment {
     //TODO Verificar NullPointerException para valor < 1
     int STATIC_SIMULATION      = 1;  // simulação com instâncias estáticas com todos os serviços dos dias de trabalho
     int NEAREST_TEAM           = 0;  // não usa ACO: despacha o serviço que estiver mais próximo da equipe
-    int N_SIMULATIONS_BY_DAY   = 30;  // número de execuções para cada dia de trabalho
+    int N_SIMULATIONS_BY_DAY   = 1;  // número de execuções para cada dia de trabalho
     int TYPE_COST_MATRIX       = 6;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas, 6: distância + peso (multi-objetivo)
     int DESPATCH_REAL_SOL      = 1;  // definindo o horário de despacho do serviço a partir do momento que uma equipe inicia o deslocamento para ele na solução real calculada
     int INDEX_DAY_TEST         = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
@@ -39,7 +39,7 @@ public interface ControlExperiment {
 
 
     // Parâmetros para experimentos com instâncias modelo:
-    int N_EXECUTIONS         = 1000;  // número de execuções independentes do algorimto ACO
+    int N_EXECUTIONS         = 30;  // número de execuções independentes do algorimto ACO
     int TYPE_MTSP_SOLS       = 1;  // 1: finais fechados; 2: finais abertos (determina o tipo da solução alterando a posição inicial das formigas)
     int MODEL_INSTANCE       = 1;  // 1: eil51, 2: eil76, 3: eil101, 4: pr76, 5: pr1002, 6: sgb128, 0: grids para testes
     int N_SALESMEN           = 4;  // número de equipes do experimento

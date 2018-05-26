@@ -63,7 +63,7 @@ public class ServiceOrder {
         return executed;
     }
 
-    // retorna true se o serviço for uma emregencia
+    // retorna true se o serviço for uma emergencia
     public boolean is_emergency() {
         if (this.type_service == 0)
             return true;
