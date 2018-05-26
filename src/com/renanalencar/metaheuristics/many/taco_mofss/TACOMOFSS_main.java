@@ -91,8 +91,9 @@ public class TACOMOFSS_main implements ControlExperiment, ControlMOFSS {
          */
 
         algorithm = new MOFSSv9s1s2(problem);
-//        String paretoFrontFile = new String("paretofront/MTSP.2D.pf");
-
+        //TODO Como gerar indicadores sem ter o Pareto Front verdadeiro
+//        String paretoFrontFile = new String("");
+//
 //        indicators = new QualityIndicator(problem, paretoFrontFile);
 
         // Algorithm parameters
@@ -144,34 +145,34 @@ public class TACOMOFSS_main implements ControlExperiment, ControlMOFSS {
 									algorithm.getInputParameter("swarmSize").toString()+"|"+
 									algorithm.getInputParameter("maxIterations").toString()*/);
 
-        String[] name = new String[5];
-        double[] value = new double[5];
-        name[0] = "Hypervolume";
-        value[0] = indicators.getHypervolume(population);
-        name[1] = "Spread";
-        value[1] = indicators.getSpread(population);
-        name[2] = "Spacing";
-        value[2] = indicators.getSpacing(population);
-        name[3] = "Convergence";
-        value[3] = indicators.getConvergenceMeasure(population, true);
-        name[4] = "Hypervolume PF";
-        value[4] = indicators.getTrueParetoFrontHypervolume();
-        logger_.info("Quality indicators values have been writen to file IND");
-        population.printQualityIndicatorToFile("results/IND"+"-TACOMOFSS-"+problem.getName()+"-"+
-                algorithm.getInputParameter("swarmSize").toString()+"|"+
-                algorithm.getInputParameter("maxIterations").toString(), name, value);
+//        String[] name = new String[5];
+//        double[] value = new double[5];
+//        name[0] = "Hypervolume";
+//        value[0] = indicators.getHypervolume(population);
+//        name[1] = "Spread";
+//        value[1] = indicators.getSpread(population);
+//        name[2] = "Spacing";
+//        value[2] = indicators.getSpacing(population);
+//        name[3] = "Convergence";
+//        value[3] = indicators.getConvergenceMeasure(population, true);
+//        name[4] = "Hypervolume PF";
+//        value[4] = indicators.getTrueParetoFrontHypervolume();
+//        logger_.info("Quality indicators values have been writen to file IND");
+//        population.printQualityIndicatorToFile("results/IND"+"-TACOMOFSS-"+problem.getName()+"-"+
+//                algorithm.getInputParameter("swarmSize").toString()+"|"+
+//                algorithm.getInputParameter("maxIterations").toString(), name, value);
 
-/*        if (indicators != null) {
-            logger_.info("Quality indicators") ;
-            logger_.info("Hypervolume    : " + indicators.getHypervolume(population)) ;
-            logger_.info("HypervolumePF  : " + indicators.getTrueParetoFrontHypervolume());
-            logger_.info("GD             : " + indicators.getGD(population)) ;
-            logger_.info("IGD            : " + indicators.getIGD(population)) ;
-            logger_.info("Spread         : " + indicators.getSpread(population)) ;
-            logger_.info("Epsilon        : " + indicators.getEpsilon(population)) ;
-            logger_.info("Spacing        : " + indicators.getSpacing(population));
-
-        }*/ // if
+//        if (indicators != null) {
+//            logger_.info("Quality indicators") ;
+//            logger_.info("Hypervolume    : " + indicators.getHypervolume(population)) ;
+//            logger_.info("HypervolumePF  : " + indicators.getTrueParetoFrontHypervolume());
+//            logger_.info("GD             : " + indicators.getGD(population)) ;
+//            logger_.info("IGD            : " + indicators.getIGD(population)) ;
+//            logger_.info("Spread         : " + indicators.getSpread(population)) ;
+//            logger_.info("Epsilon        : " + indicators.getEpsilon(population)) ;
+//            logger_.info("Spacing        : " + indicators.getSpacing(population));
+//
+//        } // if
 
     } //main
 
