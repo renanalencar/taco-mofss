@@ -18,7 +18,7 @@ public interface ControlMOFSS {
     double MAX_STEP_IND         = 0.005;    // Passo Individual Final (Sf)
     int SWARM_SIZE              = 100;      // Tamanho do cardume
     int ARCHIVE_SIZE            = 100;      // Tamanho do arquivo externo (AE)
-    int MAX_INTERATIONS         = 10;       // Quantidade de iterações. Default: 2500
+    int MAX_INTERATIONS         = 2500;       // Quantidade de iterações. Default: 2500
 
 
 

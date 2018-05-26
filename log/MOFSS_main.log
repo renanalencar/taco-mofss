@@ -2,19 +2,19 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2018-04-30T11:41:33</date>
-  <millis>1525099293330</millis>
+  <date>2018-05-26T09:53:00</date>
+  <millis>1527339180411</millis>
   <sequence>0</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Total execution time: 141292ms</message>
+  <message>Total execution time: 114557ms</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300567</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182688</millis>
   <sequence>1</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -24,8 +24,8 @@
   <message>Variables values have been written to file VAR</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300587</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182715</millis>
   <sequence>2</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -35,8 +35,8 @@
   <message>Objectives values have been written to file FUN</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300595</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182744</millis>
   <sequence>3</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -46,8 +46,8 @@
   <message>Quality indicators values have been writen to file IND</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300598</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182753</millis>
   <sequence>4</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -57,19 +57,19 @@
   <message>Quality indicators</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300599</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182760</millis>
   <sequence>5</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Hypervolume    : 5.613373921276661</message>
+  <message>Hypervolume    : 100.54466847027533</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300601</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182762</millis>
   <sequence>6</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
@@ -79,58 +79,58 @@
   <message>HypervolumePF  : 0.4974874371859295</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300604</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182772</millis>
   <sequence>7</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>GD             : 80.58295696620279</message>
+  <message>GD             : 1.061891744661287</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300606</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182776</millis>
   <sequence>8</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>IGD            : 0.2381505213672177</message>
+  <message>IGD            : 0.6535907411324255</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300609</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182781</millis>
   <sequence>9</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Spread         : 0.9847453369837649</message>
+  <message>Spread         : 0.670129508609632</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300614</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182795</millis>
   <sequence>10</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Epsilon        : 1.8309242866105024</message>
+  <message>Epsilon        : 3.2928771576144986</message>
 </record>
 <record>
-  <date>2018-04-30T11:41:40</date>
-  <millis>1525099300616</millis>
+  <date>2018-05-26T09:53:02</date>
+  <millis>1527339182800</millis>
   <sequence>11</sequence>
   <logger>jMetal</logger>
   <level>INFO</level>
   <class>com.renanalencar.metaheuristics.many.taco_mofss.MOFSS_main</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Spacing        : 137.777778798259</message>
+  <message>Spacing        : 0.08781746890808885</message>
 </record>
 </log>

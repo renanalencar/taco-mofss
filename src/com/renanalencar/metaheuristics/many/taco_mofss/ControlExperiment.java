@@ -17,6 +17,7 @@ public interface ControlExperiment {
 
     String DATA_FILE            ="data/many_data.txt";
     String COST_FILE            ="data/many_costs.txt";
+    String ORDER_FILE           ="";
 
 
     // Parâmetros para experimentos com dados reais:

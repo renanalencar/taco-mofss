@@ -118,7 +118,7 @@ public class MtspProblem extends Problem implements ControlExperiment {
                 e.printStackTrace();
             }
             try {
-                log.flushFilesStandardExperiment();
+                log.closeFilesStandardExperiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -142,7 +142,7 @@ public class MtspProblem extends Problem implements ControlExperiment {
             }
 
             try {
-                log.flushFilesRealExperiment();
+                log.closeFilesRealExperiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }

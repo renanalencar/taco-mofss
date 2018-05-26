@@ -24,76 +24,91 @@ public class LogExperiment {
   static BufferedWriter f_total_costs;
   static BufferedWriter f_simul_res; // arquivo com o resumo das simulações
   static BufferedWriter f_time_execs;
- public static BufferedWriter f_log_exper;
- static int i = 0;
- 
- private LogExperiment() throws IOException{
-	
-	 
-	
- }
- public void loadBuffersStandardExperiment() throws IOException {
-	 this.f_sols_aco = new BufferedWriter(new FileWriter("outs/plot_best_sols_aco.txt"));
-	 this.f_log_stand_exper = new BufferedWriter(new FileWriter("outs/log_stand_experiment.txt"));
+     public static BufferedWriter f_log_exper;
+     static int i = 0;
 
-	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
- }
- public void loaBuffersdRealExperiment() throws IOException{
-	 //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
-
-	 // arquivo para gravação das soluções reais para plotagem
-     this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
-
-     this.f_longests = new BufferedWriter(new FileWriter("outs/longests.txt"));
-
-     this.f_total_costs = new BufferedWriter(new FileWriter("outs/total_costs.txt"));
-     this.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
-     this.f_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
-
-     this.f_time_execs = new BufferedWriter(new FileWriter("outs/time_execs.txt"));
-
-     this.f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
- }
- 
- public static synchronized LogExperiment getInstance() throws IOException {
-		if (logExperiment == null)
-			logExperiment = new LogExperiment();
-
-		return logExperiment;
-	}
- public void writeF_LONGESTS(String data) throws IOException{
-	 this.f_longests.write(data);
- }
- 
- public void writeF_TOTAL_COSTS(String data) throws IOException{
-	 this.f_total_costs.write(data);
- }
- 
- public void writeF_REAL_SOLS(String data) throws IOException{
-	 this.f_real_sols.write(data);
-	
- }
-
-public void flushFilesRealExperiment() throws IOException {
-	this.f_longests.flush();
-	this.f_real_sols.flush();
-	this.f_total_costs.flush();
-	this.f_log_exper.flush();
-	this.f_time_execs.flush();
-	this.f_simul_res.flush();
-	this.f_day_aco_final_sols.flush();
-	//this.teste.flush();
-	
-}
-public void flushFilesStandardExperiment() throws IOException {
-	this.f_sols_aco.flush();
-	this.f_log_stand_exper.flush();
-	//this.teste.flush();
-	
-}
+     private LogExperiment() throws IOException{
 
 
- 
 
+     }
+     public void loadBuffersStandardExperiment() throws IOException {
+         this.f_sols_aco = new BufferedWriter(new FileWriter("outs/plot_best_sols_aco.txt"));
+         this.f_log_stand_exper = new BufferedWriter(new FileWriter("outs/log_stand_experiment.txt"));
+
+         //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
+     }
+     public void loaBuffersdRealExperiment() throws IOException{
+         //this.teste = new BufferedWriter(new FileWriter("outs/teste.txt"));
+
+         // arquivo para gravação das soluções reais para plotagem
+         this.f_real_sols = new BufferedWriter(new FileWriter("outs/plot_real_sols.txt"));
+
+         this.f_longests = new BufferedWriter(new FileWriter("outs/longests.txt"));
+
+         this.f_total_costs = new BufferedWriter(new FileWriter("outs/total_costs.txt"));
+         this.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
+         this.f_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
+
+         this.f_time_execs = new BufferedWriter(new FileWriter("outs/time_execs.txt"));
+
+         this.f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
+     }
+
+     public static synchronized LogExperiment getInstance() throws IOException {
+            if (logExperiment == null)
+                logExperiment = new LogExperiment();
+
+            return logExperiment;
+        }
+     public void writeF_LONGESTS(String data) throws IOException{
+         this.f_longests.write(data);
+     }
+
+     public void writeF_TOTAL_COSTS(String data) throws IOException{
+         this.f_total_costs.write(data);
+     }
+
+     public void writeF_REAL_SOLS(String data) throws IOException{
+         this.f_real_sols.write(data);
+
+     }
+
+    public void flushFilesRealExperiment() throws IOException {
+        this.f_longests.flush();
+        this.f_real_sols.flush();
+        this.f_total_costs.flush();
+        this.f_log_exper.flush();
+        this.f_time_execs.flush();
+        this.f_simul_res.flush();
+        this.f_day_aco_final_sols.flush();
+        //this.teste.flush();
+
+    }
+
+    public void closeFilesRealExperiment() throws IOException {
+        this.f_longests.close();
+        this.f_real_sols.close();
+        this.f_total_costs.close();
+        this.f_log_exper.close();
+        this.f_time_execs.close();
+        this.f_simul_res.close();
+        this.f_day_aco_final_sols.close();
+
+    }
+
+    public void flushFilesStandardExperiment() throws IOException {
+        this.f_sols_aco.flush();
+        this.f_log_stand_exper.flush();
+        //this.teste.flush();
+
+    }
+
+    public void closeFilesStandardExperiment() throws IOException {
+        this.f_sols_aco.close();
+        this.f_log_stand_exper.close();
+        //this.teste.flush();
+
+    }
  
 }

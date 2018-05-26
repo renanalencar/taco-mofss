@@ -36,10 +36,10 @@ public class RealData implements ControlExperiment {
         this.data_file_name = DATA_FILE;
 
         //data_file.open(data_file_name, ios::in);
-        FileInputStream fstream = new FileInputStream(this.data_file_name);
-        DataInputStream in = new DataInputStream(fstream);
+//        FileInputStream fstream = new FileInputStream(this.data_file_name);
+//        DataInputStream in = new DataInputStream(fstream);
 
-        this.data_file = new BufferedReader(new InputStreamReader(in));
+//        this.data_file = new BufferedReader(new InputStreamReader(in));
         this.id_register = 0;  // o final do arquivo é -1
     }
 
@@ -114,7 +114,7 @@ public class RealData implements ControlExperiment {
         int counter_days = 0;
         int current_day = 0;
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -155,7 +155,7 @@ public class RealData implements ControlExperiment {
         int counter_days = 0;
         int current_day = 0;
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -192,7 +192,7 @@ public class RealData implements ControlExperiment {
     public int count_services(int selected_id_work_day) throws IOException {
         int counter_services = 0;
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -223,7 +223,7 @@ public class RealData implements ControlExperiment {
     public int count_teams(int selected_id_work_day) throws IOException {
         int counter_teams = 0;
 
-        data_file.close();
+//        data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -263,7 +263,7 @@ public class RealData implements ControlExperiment {
     //TODO Abrir e salvar arquivo
 //  public void load_service_orders(int selected_id_work_day, day_services) throws IOException {
     public ServiceOrder[] load_service_orders(int selected_id_work_day, int n_points) throws IOException {
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -297,7 +297,7 @@ public class RealData implements ControlExperiment {
 
     //TODO Abrir e salvar arquivo
     public void load_euclidean_graph(int selected_id_work_day, MtspInstance instance) throws IOException {
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -329,7 +329,7 @@ public class RealData implements ControlExperiment {
     public int x_depot() throws IOException {
         int coord_x = -1;
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -358,7 +358,7 @@ public class RealData implements ControlExperiment {
     public int y_depot() throws IOException {
         int coord_y = -1;
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);
@@ -393,7 +393,7 @@ public class RealData implements ControlExperiment {
 
         real_solution.reset(); // a solução real é do tipo de finais fechados
 
-        this.data_file.close();
+//        this.data_file.close();
         //data_file.open(data_file_name, ios::in);
         FileInputStream fstream = new FileInputStream(this.data_file_name);
         DataInputStream in = new DataInputStream(fstream);

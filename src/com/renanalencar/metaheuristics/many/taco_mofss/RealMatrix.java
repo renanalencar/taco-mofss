@@ -29,9 +29,9 @@ public class RealMatrix implements ControlExperiment {
     //TODO Verificar carregamento
     public RealMatrix() throws FileNotFoundException {
         this.matrix_file_name   = COST_FILE;
-        FileInputStream fstream = new FileInputStream(this.matrix_file_name);
-        DataInputStream in      = new DataInputStream(fstream);
-        this.matrix_file        = new BufferedReader(new InputStreamReader(in));
+//        FileInputStream fstream = new FileInputStream(this.matrix_file_name);
+//        DataInputStream in      = new DataInputStream(fstream);
+//        this.matrix_file        = new BufferedReader(new InputStreamReader(in));
     }
 
     //TODO Verificar carregamento
@@ -83,7 +83,7 @@ public class RealMatrix implements ControlExperiment {
 
     //TODO Está alterando um variável externa
     public void load_real_distance_matrix(int selected_id_work_day, DoubleMatrix real_distance_matrix) throws IOException {
-        this.matrix_file.close();
+//        this.matrix_file.close();
 
         FileInputStream fstream = new FileInputStream(this.matrix_file_name);
         DataInputStream in      = new DataInputStream(fstream);
@@ -106,7 +106,7 @@ public class RealMatrix implements ControlExperiment {
 
     //TODO Está alterando um variável externa
     public void load_real_time_matrix(int selected_id_work_day, DoubleMatrix real_time_matrix) throws IOException {
-        this.matrix_file.close();
+//        this.matrix_file.close();
 
         FileInputStream fstream = new FileInputStream(this.matrix_file_name);
         DataInputStream in      = new DataInputStream(fstream);
@@ -129,7 +129,7 @@ public class RealMatrix implements ControlExperiment {
 
     //TODO Está alterando um variável externa
     public void load_real_weight_matrix(int selected_id_work_day, DoubleMatrix real_weight_matrix) throws IOException {
-        this.matrix_file.close();
+//        this.matrix_file.close();
 
         FileInputStream fstream = new FileInputStream(this.matrix_file_name);
         DataInputStream in      = new DataInputStream(fstream);
