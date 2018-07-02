@@ -92,6 +92,10 @@ public class MtspProblem extends Problem implements ControlExperiment {
 
         iosource_.objectives_ = new double[numberOfObjectives_];
 
+        iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
+
 
         LogExperiment log = null;
         try {

@@ -7,7 +7,7 @@ package com.renanalencar.metaheuristics.mono.taco;
  *
  */
 public interface ControlExperiment {
-    int MODE_EXECUTION         = 1;  // 1: experimento com instâncias modelo; 2: experimento com dados reais
+    int MODE_EXECUTION         = 2;  // 1: experimento com instâncias modelo; 2: experimento com dados reais
     int TYPE_EUCLID_MATRIX     = 0;  // tipo de dados da matriz de distâncias euclidianas: (0)double, (1)int
     int DEPOT_INDEX            = 0;  // índice da instância que corresponde ao depósito
     int FLOAT_PRECISION        = 2;  // precisão decimal de impressão de pontos flutuantes
@@ -18,7 +18,7 @@ public interface ControlExperiment {
     int STATIC_SIMULATION      = 1;  // simulação com instâncias estáticas com todos os serviços dos dias de trabalho
     int NEAREST_TEAM           = 0;  // não usa ACO: despacha o serviço que estiver mais próximo da equipe
     int N_SIMULATIONS_BY_DAY = 10;  // número de execuções para cada dia de trabalho
-    int TYPE_COST_MATRIX       = 1;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas
+    int TYPE_COST_MATRIX       = 2;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas
     int DESPATCH_REAL_SOL      = 1;  // definindo o horário de despacho do serviço a partir do momento que uma equipe inicia o deslocamento para ele na solução real calculada
     int INDEX_DAY_TEST        = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
 

@@ -9,10 +9,16 @@ import java.io.IOException;
  */
 public class IOSource {
 
-    static IOSource ioSource;
+    public static IOSource ioSource;
 
-    static double [] objectives_;
-    static double [] variables_;
+    public static double [] objectives_;
+    public static double [] variables_;
+
+    public static double [] total_cost_r;
+    public static double [] max_cost_r;
+
+    public static double [] max_cost_w;
+    public static int sim_counter;
 
     private IOSource() throws IOException {
 

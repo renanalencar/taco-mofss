@@ -73,19 +73,7 @@ public class Utilities {
             sorted_list.add(i_next_insert);
 
             System.out.print("");
-/*        for(int i=0; i<n_items; i++){
-//            cout << double_vector[i] << "\r\n";
-        }
-//        cout << "\r\n";
-        for(int i=0; i<n_items; i++){
-//            cout << sorted_list.value(i) << "\t";
-        }
-//        cout << "\r\n";
 
-        if (i_next_insert == n_items){
-            cout << "\r\n ERRO";
-        }
-*/
         } // end while
     }
 
@@ -158,4 +146,4 @@ public class Utilities {
         return st_dv;
     }
 
-}
+} // Utilities

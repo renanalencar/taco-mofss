@@ -12,5 +12,17 @@
     <orderEntry type="library" name="swing-layout-1.0.1" level="project" />
     <orderEntry type="library" name="jcommon-1.0.17" level="project" />
     <orderEntry type="library" name="jfreechart-1.0.14" level="project" />
+    <orderEntry type="library" name="matlabcontrol-4.1.0" level="project" />
+    <orderEntry type="library" name="matlabcontrol-4.1.0-javadoc" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="commons-math-2.1" level="project" />
   </component>
 </module>

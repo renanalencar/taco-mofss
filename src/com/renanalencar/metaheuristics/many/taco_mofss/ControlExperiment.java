@@ -47,11 +47,13 @@ public interface ControlExperiment {
     int TEST                 = -1;  // para diminuir o número de nós da instância em testes. -1 = todos os nós
 
     // parâmetros de impressão:
-    int PISO    = 1;  // imprimir todas as soluções melhoradas em cada execução
+    int PISO    = 0;  // imprimir todas as soluções melhoradas em cada execução
     int PDMT    = 0;  // imprimir a matriz de distâncias no início da execução
     int PASO    = 0;  // imprimir todas as melhores soluções de cada ciclo
     int PDCR    = 0;  // imprimir detalhes da construção das rotas
     int PART    = 0;  // imprimir todas as rotas geradas em todas as soluções
+
+    int PRM     = 0;  // imprimir resumo das métricas utilizadas
 
     int PRLS    = 0;  // imprimir melhoramento pelas buscas locais
     int PDNO    = 0;  // imprimir detalhes da busca local no cross

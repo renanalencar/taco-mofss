@@ -7,12 +7,12 @@ package com.renanalencar.metaheuristics.many.taco_mofss;
  *
  */
 public interface ControlSTACS {
-    int APP_OBJECTIVE    = 2;  // objetivo da aplicação: (1)minimizar rota mais longa (workload balance), (2)minimizar total da solução (soma das rotas)
+    int APP_OBJECTIVE    = 1;  // objetivo da aplicação: (1)minimizar rota mais longa (workload balance), (2)minimizar total da solução (soma das rotas)
 
     // Critérios de parada de cada execução (o que ocorrer primeiro; se todos = -1, loop infinito):
     int NO_IMP_CYCLES   = -1;  // ciclos sem que a solução seja melhorada. Se -1, não há limitação de não melhoramento
     int MAX_TIME_EXEC   = -1;  // tempo máximo de execução, em segundos. Se -1, não há limitação de tempo
-    int MAX_CYCLES      = 1000;  // número máximo de iterações por execução do algorimto ACO. Se -1, não há limitação de número de iterações
+    int MAX_CYCLES      = 1;  // número máximo de iterações por execução do algorimto ACO. Se -1, não há limitação de número de iterações
 
     // parâmetros ACO:
     int N               = 10;  // ACS = 10 (número de formigas que geram soluções simultaneamente). Aqui, número de soluções geradas num ciclo

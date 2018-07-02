@@ -12,7 +12,7 @@ import java.io.IOException;
  *
  */
 public class RealExperiment implements ControlExperiment, ControlSTACS {
-    private int time_ini_experiment; // instante de referẽncia do início do experimento
+    private double time_ini_experiment; // instante de referẽncia do início do experimento
     private IntList list_id_work_days; // lista com os códigos dos dias de trabalho da base de dados
     private WorkDay current_work_day; // dia de trabalho atual
     private long seed_random; // semente dos randomicos do experimento
@@ -48,7 +48,7 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
 
 //        double [] fitness = new double[2];
 
-        this.time_ini_experiment = (int) System.currentTimeMillis();  // instante do início do experimento
+        this.time_ini_experiment = System.currentTimeMillis();  // instante do início do experimento
         RealData real_data = new RealData();
         int n_work_days = real_data.count_work_days();  // contando número de dias de trabalho na base de dados
         this.list_id_work_days = real_data.load_ids_work_days(n_work_days);  // criado a lista com as ids dos dias de trabalho
@@ -63,6 +63,9 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
             this.log.f_log_exper.write("\r\n------------------------------\r\nDia de Trabalho: " + this.list_id_work_days.value(current_day) + "\r\n");
 
             for (int counter_day_simulations = 1; counter_day_simulations <= N_SIMULATIONS_BY_DAY; counter_day_simulations++) {
+
+                //TODO
+                iosource_.sim_counter = counter_day_simulations - 1;
 
                 double time_ini_execution_day = (double) System.currentTimeMillis();  // instante do início do experimento
 
@@ -95,6 +98,7 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
                     this.log.f_time_execs.write("\r\n" + current_id_work_day + "\t");
                 }
                 this.log.f_time_execs.write((int)time_simulation + "\t");
+
             }
 
             if (INDEX_DAY_TEST != -1) {
@@ -102,9 +106,19 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
             }
         }
         LogExperiment log = LogExperiment.getInstance();
-        
+        //TODO Verificar tempo de execucao do experimento
         double time_experiment = System.currentTimeMillis() - time_ini_experiment;
         this.log.f_log_exper.write("\r\n------------------------------\r\nTempo total do experimento: " + (int)time_experiment + " milissegundos\r\n");
+
+        //TODO checar desvio padrão
+        double dv_ctp = Utilities.std_dev(iosource_.total_cost_r, N_SIMULATIONS_BY_DAY);
+        double dv_mrp = Utilities.std_dev(iosource_.max_cost_r, N_SIMULATIONS_BY_DAY);
+        double dv_mpp = Utilities.std_dev(iosource_.max_cost_w, N_SIMULATIONS_BY_DAY);
+
+//        iosource_.objectives_[0] = dv_ctp;
+//        System.out.println(dv_ctp);
+
+        this.log.f_log_exper.write("\r\nDP Custo Total: " + String.format("%."+FLOAT_PRECISION+"f", dv_ctp) +"\tDP Maior Rota: "  + String.format("%."+FLOAT_PRECISION+"f", dv_mrp) +"\tDP Maior Peso: "  + String.format("%."+FLOAT_PRECISION+"f", dv_mpp));
 
     }
 
