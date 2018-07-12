@@ -104,4 +104,5 @@ public class ServiceOrder {
             file_out.write("C");
         file_out.write("\t\thorario de despacho: " + time_dispatch + "  \ttempo de execução da ordem: " + time_execution + " segundos\r\n");
     }
-}
+
+} // ServiceOrder

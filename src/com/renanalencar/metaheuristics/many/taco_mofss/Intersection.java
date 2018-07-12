@@ -11,6 +11,11 @@ public class Intersection {
     int n;
     Node nodes_vector[];
 
+    /**
+     *
+     * @param n
+     * @param nodes_vector
+     */
     public Intersection(int n, Node nodes_vector[]) {
         this.n = n;
         this.nodes_vector = nodes_vector.clone();
@@ -33,7 +38,6 @@ public class Intersection {
         double bi_y = nodes_vector[bi].y();
         double bj_x = nodes_vector[bj].x();
         double bj_y = nodes_vector[bj].y();
-//-----          cout << "  " << ai << " -> " << aj << "  X  " << bi << " -> " << bj << "  =  ";
 
         boolean intersect = true;
 
@@ -139,6 +143,6 @@ public class Intersection {
             }
         }
         return intersect;
-    }
+    } // verify
 
-}
+} // Intersection

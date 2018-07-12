@@ -12,13 +12,18 @@ import java.io.IOException;
 public class MtspSolution implements ControlExperiment {
     private int depot;
     private int size;                  // número de nós da solução
-    private IntList nodes_list;       // lista com os nós da solução ordenados
+    private IntList nodes_list;        // lista com os nós da solução ordenados
     private double total_cost;         // custo da soma das rotas
     private double longest_route_cost; // custo da maior rota
     private int iteration;             // ciclo em que a solução foi gerada
     private double time_exec;          // tempo de execução, em milissegundos
     private long random_seed;          // semente dos randômicos utilizada para criar a solução
 
+    /**
+     *
+     * @param n
+     * @param m
+     */
     public MtspSolution(int n, int m) {
         this.depot              = DEPOT_INDEX;
         this.size               = n + (m * 2);  // tamanho máximo para soluções com finais fechados (para o caso de posições atuais iguais)
@@ -30,6 +35,10 @@ public class MtspSolution implements ControlExperiment {
         this.random_seed        = -1;
     }
 
+    /**
+     *
+     * @param size
+     */
     public MtspSolution(int size) {
         this.depot              = DEPOT_INDEX;
         this.size               = size;
@@ -49,6 +58,12 @@ public class MtspSolution implements ControlExperiment {
         this.time_exec          = -1;
         this.random_seed        = -1;
     }
+
+    /**
+     *
+     * @param node
+     * @param cost
+     */
     public void add(int node, double cost) {
         this.nodes_list.add(node);
         this.total_cost = this.total_cost + cost;
@@ -219,16 +234,22 @@ public class MtspSolution implements ControlExperiment {
         return this.nodes_list.next_value(current_node);
     }
 
-
+    /**
+     *
+     * @param file_out
+     * @throws IOException
+     */
     public void save_how_list(BufferedWriter file_out) throws IOException {
         file_out.write("maior rota: " + String.format("%."+FLOAT_PRECISION+"f", this.longest_route_cost) + "\tcusto total: " + String.format("%."+FLOAT_PRECISION+"f", this.total_cost) + "  \tsolução: ");
         nodes_list.save(file_out);
         file_out.write("\r\n");
     }
 
+    /**
+     *
+     */
     public void print() {
         System.out.print("maior rota: " + String.format("%."+FLOAT_PRECISION+"f", this.longest_route_cost) + "\tcusto total: " + String.format("%."+FLOAT_PRECISION+"f", this.total_cost) + "  \tsolução:");
-//-----        nodes_list->print_add1();
         this.nodes_list.print();
         System.out.print("\r\n");
     }
@@ -237,7 +258,12 @@ public class MtspSolution implements ControlExperiment {
         return this.nodes_list.getValues_list();
     }
 
-
+    /**
+     *
+     * @param file_out
+     * @param nodes
+     * @throws IOException
+     */
     public void save_to_plot(BufferedWriter file_out, Node nodes[]) throws IOException {
 
         if (this.random_seed != -1)
@@ -251,11 +277,22 @@ public class MtspSolution implements ControlExperiment {
 
     }
 
+    /**
+     *
+     * @param file_out
+     * @throws IOException
+     */
     public void save_longest_cost(BufferedWriter file_out) throws IOException {
         file_out.write(String.format("%."+FLOAT_PRECISION+"f", this.longest_route_cost)  + "\t");
     }
 
+    /**
+     *
+     * @param file_out
+     * @throws IOException
+     */
     public void save_total_cost(BufferedWriter file_out) throws IOException {
         file_out.write(String.format("%."+FLOAT_PRECISION+"f", this.total_cost) + "\t");
     }
-}
+
+} // MtspSolution

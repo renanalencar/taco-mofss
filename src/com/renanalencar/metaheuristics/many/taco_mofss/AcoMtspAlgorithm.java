@@ -9,40 +9,45 @@ import java.io.IOException;
  *
  */
 public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
+
     // variáveis do ambiente:
     private int depot;
-    private int n;                      // número de nós da instância
-    private int m;                      // número de caixeiros
-    private double time_ini_execution;  // instante de início da execução
-    private DoubleMatrix cost_matrix;  // matriz de custos
-    private Node plan_nodes_vector[];    // vetor com as coordenadas planas dos nós
-    private IntList positions_teams;   // posiçoes atuais das equipes
+    private int n;                        // número de nós da instância
+    private int m;                        // número de caixeiros
+    private double time_ini_execution;    // instante de início da execução
+    private DoubleMatrix cost_matrix;     // matriz de custos
+    private Node plan_nodes_vector[];     // vetor com as coordenadas planas dos nós
+    private IntList positions_teams;      // posiçoes atuais das equipes
     private IntList valid_nodes_instance; // índices das matrizes que fazem parte da isntância corrente
 
     // variávies da aplicação:
     private int type_solution;             // tipo de solução que está senddo gerada, defina a partir de positions_teams
-    private DoubleMatrix pheromone_matrix;// matriz de feromônio
-    private Colony colony;                // colônia
-    private Ant ants[];                     // formigas
-    private IntList candidate_list;       // lista de nós candidatos
-    private AcsAlgorithm AntColonySystem; // rotinas do algoritmo com.renanalencar.metaheuristics.mono.taco.Ant com.renanalencar.metaheuristics.mono.taco.Colony System
-    private TacoAlgorithm TACOAlgorithm;  // rotinas do algoritmo de Vallivaara 2008
-    private Random rand;                     // gerador de números pseudo randômicos
-    //private com.renanalencar.metaheuristics.mono.taco.Utilities util;                  // funções auxiliares
-    private IntList sorted_lists[];            // listas para todos os nós com as distâncias ordenadas
-    private LocalSearch local_search;   // busca local aplicada às soluções geradas
-    private Intersection intersec;      // busca local proposta que tenta retirar intersecções de soluções simétricas planas
-    private MtspNearestNeighbor nn_app; // aplicação para criação da solução do vizinho mais próximo
+    private DoubleMatrix pheromone_matrix; // matriz de feromônio
+    private Colony colony;                 // colônia
+    private Ant ants[];                    // formigas
+    private IntList candidate_list;        // lista de nós candidatos
+    private AcsAlgorithm AntColonySystem;  // rotinas do algoritmo
+    private TacoAlgorithm TACOAlgorithm;   // rotinas do algoritmo de Vallivaara 2008
+    private Random rand;                   // gerador de números pseudo randômicos
+    private IntList sorted_lists[];        // listas para todos os nós com as distâncias ordenadas
+    private LocalSearch local_search;      // busca local aplicada às soluções geradas
+    private Intersection intersec;         // busca local proposta que tenta retirar intersecções de soluções simétricas planas
+    private MtspNearestNeighbor nn_app;    // aplicação para criação da solução do vizinho mais próximo
 
     private int moving_ant;    // formiga escolhida para se mover
     private int current_node;  // nó atual da formiga escolhida para se mover
     private int next_node;     // nó pra o qual a formiga escolhida se moverá
 
-    private int cycle_counter;     // contador de ciclos
+    private int cycle_counter;                // contador de ciclos
     private int non_improved_counter_cycles;  // contador de ciclos sem melhora da best_so_far_solution da execução
-    private int created_sols_counter;  // contador de soluções criadas
+    private int created_sols_counter;         // contador de soluções criadas
 
-
+    /**
+     *
+     * @param seed_random
+     * @param instance
+     * @throws IOException
+     */
     public AcoMtspAlgorithm(long seed_random, MtspInstance instance) throws IOException {
         this.depot = DEPOT_INDEX;
         this.n = instance.get_n_nodes();
@@ -52,7 +57,6 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         this.plan_nodes_vector = instance.get_plan_nodes_vector();
         this.positions_teams = instance.get_positions_teams();
         this.valid_nodes_instance = instance.get_valid_nodes_instance();
-
 
         // criando matriz de feromônio:
         this.pheromone_matrix = new DoubleMatrix(n);
@@ -68,7 +72,6 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         // para acessar as rotinas TACO:
         this.TACOAlgorithm = new TacoAlgorithm(m, cost_matrix, ants);
         this.rand = new Random (seed_random);
-        //util = new com.renanalencar.metaheuristics.mono.taco.Utilities();
 
         // criando as listas com os nós ordenados pelas distâncias:
         this.sorted_lists = new IntList[n];
@@ -82,7 +85,9 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         this.intersec = new Intersection(n, plan_nodes_vector);
     }
 
-
+    /**
+     *
+     */
     public void update_type_solution() {
         this.type_solution = 1; // finais fechados
         for (int k = 0; k < this.m; k++) {
@@ -136,12 +141,14 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
 
                 if (LS2O == 1) { // 2-opt em todas as soluções criadas
                     boolean updated = this.local_search.two_opt(created_solution);
+                    //TODO
 //                if (updated) cout << "\r\n  updated 2-opt";
                 }
 
                 // atualizando melhor solução do ciclo:
                 if (this.created_sols_counter == 0) {
                     best_solution_cycle = created_solution;
+
                 } else {
                     double created_cost;
                     double best_cost;
@@ -154,10 +161,11 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
                         best_cost = best_solution_cycle.get_total_cost();
                     }
                     if (created_cost < best_cost) { // atualizar a melhor do ciclo:
-                        //delete best_solution_cycle;
                         best_solution_cycle = created_solution;
+
                     }
                     else {
+                        //TODO
                         //delete created_solution;
                     }
                 }
@@ -165,6 +173,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
 
             if (LS3O == 1) { // 3-opt nas melhores soluções dos ciclos
                 boolean updated = this.local_search.three_opt(best_solution_cycle);
+                //TODO
 //            if (updated) cout << "\r\n  updated 3-opt";
             }
 
@@ -198,11 +207,9 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
                 }
 
                 if (cycle_cost < best_cost){ // atualizar a melhor da execução
-                    //delete best_solution_execution;
                     best_solution_execution = best_solution_cycle;
                     updated_best_exec = true;
                 } else {
-                    //delete best_solution_cycle;
                     updated_best_exec = false;
                 }
             }
@@ -211,13 +218,65 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
                 this.non_improved_counter_cycles = 0;
                 if(PISO == 1){  // imprimir todas as soluções melhoradas
                     if (cycle_counter == 0) {
-                        System.out.print("Improvement by ACO Algorithm:\r\n");
+                        System.out.print("Melhoria pelo algoritmo ACO:\r\n");
                     }
-                    System.out.print("  cycle: " + (cycle_counter+1) + "  \t");
+                    System.out.print("  ciclo: " + (cycle_counter+1) + "  \t");
                     best_solution_execution.print();
+
+                    //
+
                 }
             } else {  // a solução não foi atualizada
                 this.non_improved_counter_cycles++;
+            }
+
+            //TODO Gráfico de convergência
+            IOSource iosource = null;
+            try {
+                iosource = IOSource.getInstance();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            int sim_counter = iosource.sim_counter;
+
+            LogExperiment logExperiment = null;
+            try {
+                logExperiment = LogExperiment.getInstance();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            //TODO código copiado de WorkDay
+            int [] final_sol    = best_solution_execution.get_prop_sol().clone();
+            double[] bag_weights = new double[N_SALESMEN];
+            int bi = 0;
+            double total_weight = 0.0;
+
+            for (int i = 0; i < final_sol.length; i++) {
+                if ((i + 1) < final_sol.length) {
+                    bag_weights[bi] = iosource.real_weight_matrix.get_value(0, final_sol[i + 1])/1000 + bag_weights[bi];
+                    if (final_sol[i + 1] == 0) {
+                        total_weight = bag_weights[bi] + total_weight;
+                        bi++;
+                    }
+                }
+
+            }
+
+            int max_w_index = Utilities.argmax(bag_weights.length, bag_weights);
+
+            try {
+                if (sim_counter == 0) { // pegar a convergência de uma única simulação.
+                    //TODO colocar um if para determinar qual melhor pegar: maior rota ou custo total
+                    logExperiment.f_m_convergency.write((sim_counter + 1) + ";" +
+                            (cycle_counter + 1) + ";" +
+                            String.format("%." + FLOAT_PRECISION + "f", best_solution_execution.get_total_cost()) + ";" +
+                            String.format("%." + FLOAT_PRECISION + "f", best_solution_execution.get_longest_route()) + ";" +
+                            String.format("%." + FLOAT_PRECISION + "f", bag_weights[max_w_index]) + "\n");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
             if (GPU == 1) {  // atualização global de feromônio ativada
@@ -235,7 +294,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
             }
         }
         return best_solution_execution;
-    }
+    } // execute
 
     /**
      * Método que construção de uma solução
@@ -280,11 +339,10 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
                     System.out.print("\r\n");
                 }
 
-
                 this.next_node = this.AntColonySystem.state_transation_rule(this.current_node, this.candidate_list, this.rand);  // escolha do próximo nó como no ACS
 
                 if (PDCR == 1) {
-                    System.out.print("choosed_node: " + this.next_node + "\r\n");
+                    System.out.print("chosen_node: " + this.next_node + "\r\n");
                 }
 
                 // se REPCH == 0, não checa nenhuma vez; se REPCH == 1, igual a val08
@@ -313,7 +371,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
 
         // imprimir todas as rotas criadas:
         if (PART == 1) {
-            System.out.print("\r\n---> criated routes:\r\n");
+            System.out.print("\r\n---> created routes:\r\n");
             for (int k = 0; k < this.m; k++) {
                 System.out.print("ant: " + k + "   ");
                 this.ants[k].print_route();
@@ -367,7 +425,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         created_solution.set_random_seed(this.rand.seed_used());
 
         return created_solution;
-    }
+    } // solution_construction
 
     /**
      * Método que executado no início da construção de cada solução
@@ -384,7 +442,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
     }
 
     /**
-     * Método que finaliando as rotas de todas as formigas
+     * Método que finaliza as rotas de todas as formigas
      */
     public void finalize_routes_ants() {
         this.check_depot();  // caso alguma formiga não tenha visitado o depósito, ele é incuído no final da rota
@@ -457,4 +515,4 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
         this.AntColonySystem.print_pheromone_matrix();
     }
 
-}
+} // AcoMtspAlgorithm

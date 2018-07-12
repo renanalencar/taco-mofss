@@ -37,6 +37,10 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         this.euclidean_matrix           = new DoubleMatrix(this.n_nodes);
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void load_model_graph() throws IOException {
         switch (MODEL_INSTANCE){
 
@@ -44,12 +48,11 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
                 int grid_dim = 3;  // dimensão do grid
                 this.n_nodes = grid_dim * grid_dim;
                 this.index_last_nodes_vector = -1;
-                //delete [] plan_nodes_vector;
                 this.plan_nodes_vector = new Node[this.n_nodes];
                 for (int i = 0; i < this.n_nodes; i++) {
                     this.plan_nodes_vector[i] = new Node();
                 }
-                //delete euclidean_matrix;  // criando matriz de distâncias
+                // criando matriz de distâncias
                 this.euclidean_matrix = new DoubleMatrix(this.n_nodes);
 
                 for (int i = 0; i < grid_dim; i++) { // criando os nós do grafo
@@ -127,12 +130,11 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
 
         if (MODEL_INSTANCE > 0) { // excluindo grids de testes
             this.index_last_nodes_vector = -1;
-            //delete [] plan_nodes_vector;
             this.plan_nodes_vector = new Node[this.n_nodes];
             for (int i = 0; i < this.n_nodes; i++) {
                 this.plan_nodes_vector[i] = new Node();
             }
-            //delete euclidean_matrix;  // criando matriz de distâncias
+            // criando matriz de distâncias
             this.euclidean_matrix = new DoubleMatrix(this.n_nodes);
 
             // carregando instância do arquivo:
@@ -161,12 +163,23 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
             file_load.close();
             this.calcule_euclidean_distances();  // calculando a matriz de distâncias euclidianas
         }
-    }
+    } //load_modal_graph
 
+    /**
+     *
+     * @param s
+     * @return
+     */
     private String trim(String s) {
         return s.trim();
     }
 
+    /**
+     *
+     * @param input
+     * @param regex
+     * @return
+     */
     private Vector<String> split (final String input, final String regex) {
         String[] words = input.split(regex);
         Vector<String> result = new Vector<>();
@@ -177,18 +190,26 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         return result;
     }
 
+    /**
+     *
+     * @param n_nodes
+     */
     public void create_empty_graph(int n_nodes) {
         this.n_nodes = n_nodes;
         this.index_last_nodes_vector = -1;
-        //delete [] plan_nodes_vector;
         this.plan_nodes_vector = new Node[n_nodes];
         for (int i = 0; i < this.n_nodes; i++) {
             this.plan_nodes_vector[i] = new Node();
         }
-        //delete euclidean_matrix;  // criando matriz de distâncias
+        // criando matriz de distâncias
         this.euclidean_matrix = new DoubleMatrix(n_nodes);
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     */
     public void add_vertex(double x, double y) {
         this.index_last_nodes_vector++;
         this.plan_nodes_vector[this.index_last_nodes_vector].create(x, y);
@@ -218,7 +239,7 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
     }
 
     /**
-     * Método que preenche a matriz de distâncias
+     * Método que preenche a matriz de distâncias dividindo por 1000
      */
     public void calcule_euclidean_distances_div1000() {
         double aux1;
@@ -241,22 +262,43 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int n_nodes_graph() {
         return this.n_nodes;
     }
 
+    /**
+     *
+     * @return
+     */
     public Node[] get_nodes_vector() {
         return this.plan_nodes_vector;
     }
 
+    /**
+     *
+     * @return
+     */
     public DoubleMatrix get_euclidean_matrix() {
         return this.euclidean_matrix;
     }
 
+    /**
+     *
+     * @param i
+     * @param j
+     * @return
+     */
     public double get_value_euclidean_matrix(int i, int j) {
         return this.euclidean_matrix.get_value(i,j);
     }
 
+    /**
+     *
+     */
     public void print_nodes() {
         for (int i=0; i <= this.index_last_nodes_vector; i++) {
             System.out.print(i+1 + "\t" + this.plan_nodes_vector[i].x() + "\t");
@@ -264,6 +306,9 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         }
     }
 
+    /**
+     *
+     */
     public void print_euclidean_matrix() {
         System.out.print("\r\nEuclidean matrix:\r\n");
 
@@ -282,6 +327,10 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     * @param col
+     */
     public void print_col_dist_matrix(int col) {
         for (int i = 0; i < this.n_nodes; i++) {
             if (i == col) System.out.print("\t" + i);
@@ -300,6 +349,9 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     */
     public void print_visibility_matrix() {
         for (int i = 0; i < this.n_nodes; i++) {
             System.out.print("\t" + i);
@@ -314,4 +366,4 @@ public class EuclideanGraph implements ControlExperiment, ControlSTACS {
 
         System.out.print("\r\n");
     }
-}
+} // EuclideanGraph

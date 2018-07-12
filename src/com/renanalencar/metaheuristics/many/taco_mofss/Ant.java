@@ -7,19 +7,23 @@ package com.renanalencar.metaheuristics.many.taco_mofss;
  *
  */
 public class Ant implements ControlExperiment, ControlSTACS {
-    private int depot; // nó de início da rota da formiga
-    private int start_node; // nó em que a formiga se encontra
-    private int curr_node; // a formiga já incluiu o depósito na sua rota?
-    private boolean dep_visit; // rota executada pela formiga
+    private int depot;          // nó de início da rota da formiga
+    private int start_node;     // nó em que a formiga se encontra
+    private int curr_node;      // a formiga já incluiu o depósito na sua rota?
+    private boolean dep_visit;  // rota executada pela formiga
     private Route route;
 
     public Ant() {
 
     }
 
+    /**
+     *
+     * @param n
+     */
     public void create(int n) {
         this.depot = DEPOT_INDEX;
-        route = new Route(n+1); // tamanho máximo para m=1 com retorno ao depósito
+        route = new Route(n+1); // tamanho máximo para m = 1 com retorno ao depósito
     }
 
     public int starting_node() {
@@ -42,10 +46,19 @@ public class Ant implements ControlExperiment, ControlSTACS {
         return this.route.n_nodes();
     }
 
+    /**
+     *
+     * @param index
+     * @return
+     */
     int node_route(int index) {
         return this.route.node(index);
     }
 
+    /**
+     *
+     * @param starting_node
+     */
     void reset (int starting_node) {
         this.start_node = starting_node;
         this.curr_node = this.start_node;
@@ -56,12 +69,21 @@ public class Ant implements ControlExperiment, ControlSTACS {
         this.route.add_node(this.start_node, 0.0); // adicionando nó inicial
     }
 
+    /**
+     *
+     * @param next_node
+     * @param cost
+     */
     void move (int next_node, double cost) {
         this.curr_node = next_node;
         if(next_node == this.depot) this.dep_visit = true; // verificando se a formiga está se movendo para o depósito
         this.route.add_node(next_node, cost);
     }
 
+    /**
+     *
+     * @param type_solution
+     */
     void sort_route (int type_solution) {
         this.route.sort(this.depot, type_solution);
     }
@@ -70,6 +92,10 @@ public class Ant implements ControlExperiment, ControlSTACS {
         this.route.print_short();
     }
 
+    /**
+     *
+     * @param id_ant
+     */
     void print_ant(int id_ant) {
         System.out.print("ant: " + id_ant);
         System.out.print(" n_star: " + this.start_node);

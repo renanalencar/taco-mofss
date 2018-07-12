@@ -28,4 +28,5 @@ public class Node {     // vértice de uma grafo euclidiano
     public double y() {
         return this.cy;
     }
-}
+
+} // Node

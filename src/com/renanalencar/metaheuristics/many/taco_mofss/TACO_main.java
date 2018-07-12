@@ -24,6 +24,12 @@ public class TACO_main implements ControlExperiment, ControlSTACS {
 
         iosource_.objectives_   = new double[N_OBJECTIVES];
 
+        iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
+
+        iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
+        iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
+
 
         if (MODE_EXECUTION == 1) { // experimento padrão
         	log.loadBuffersStandardExperiment();
@@ -40,4 +46,5 @@ public class TACO_main implements ControlExperiment, ControlSTACS {
         }
 
     }
-}
+
+} // TACO_main

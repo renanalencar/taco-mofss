@@ -15,6 +15,11 @@ public class MtspNearestNeighbor implements ControlSTACS, ControlExperiment {
     private MtspSolution nn_solution;
     private DoubleMatrix cost_matrix;
 
+    /**
+     *
+     * @param n_nodes
+     * @param m_salesmen
+     */
     public MtspNearestNeighbor(int n_nodes, int m_salesmen) {
         this.n      = n_nodes;
         this.m      = m_salesmen;
@@ -30,6 +35,11 @@ public class MtspNearestNeighbor implements ControlSTACS, ControlExperiment {
         this.nn_solution  = new MtspSolution(n, m);
     }
 
+    /**
+     *
+     * @param cost_matrix
+     * @param valid_nodes_instance
+     */
     public void create_solution_workload_balance(DoubleMatrix cost_matrix, IntList valid_nodes_instance) {
         this.cost_matrix = cost_matrix;
         // todos os caixeiros partem do depósito:
@@ -123,6 +133,11 @@ public class MtspNearestNeighbor implements ControlSTACS, ControlExperiment {
         nn_solution.set_longest_route(this.larger_route_sol());
     }
 
+    /**
+     *
+     * @param cost_matrix
+     * @param valid_nodes_instance
+     */
     public void create_solution_one_by_one(DoubleMatrix cost_matrix, IntList valid_nodes_instance) {
         this.cost_matrix = cost_matrix;
         // todos os caixeiros partem do depósito:
@@ -234,7 +249,10 @@ public class MtspNearestNeighbor implements ControlSTACS, ControlExperiment {
         return l_route;
     }
 
-    // retorna o total da solução (soma das rotas)
+    /**
+     *
+     * @return retorna o total da solução (soma das rotas)
+     */
     public double total_sol() {
         double t_sol = 0.0;
         for (int k=0; k<m; k++){
@@ -246,4 +264,5 @@ public class MtspNearestNeighbor implements ControlSTACS, ControlExperiment {
     public MtspSolution get_nn_solution() {
         return nn_solution;
     }
-}
+
+} // MtspNearestNeighbor

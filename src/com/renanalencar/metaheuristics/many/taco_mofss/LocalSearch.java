@@ -21,13 +21,17 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
         this.time_ini_execution = time_ini_execution;
     }
 
-    // realiza a busca local 2-opt e atualiza solution com a melhor encontrada
-    // realiza a busca local 2-opt e atualiza solution se houver ganho em alguma troca
-    // retorna verdadeiro de atualizar a solução
+    /**
+     * realiza a busca local 2-opt e atualiza solution com a melhor encontrada
+     * realiza a busca local 2-opt e atualiza solution se houver ganho em alguma troca
+     * @param solution
+     * @return retorna verdadeiro de atualizar a solução
+     */
     boolean two_opt(MtspSolution solution) {
         size_sol = solution.n_nodes();  // número de nós da solução
         index_first = 0;                 // primeiro índice da solução
         index_last = size_sol - 2;       // o último nó da solução é o retorno ao nó inicial
+        //TODO
 //-----        cout << "original solution (2-opt): "; solution->print();
         boolean updated_solution = false;
 
@@ -113,6 +117,7 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
                                 solution.print();
                             }
                         } else {
+                            //TODO
                             //delete new_sol;  // liberando a memória de new_sol
 //-----                            cout << "--> not changed: worst objective cost\r\n";
                         }
@@ -121,11 +126,14 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
             }
         }
         return updated_solution;
-    }
+    } // two_opt
 
-    // realiza a busca local 3-opt e atualiza solution com a melhor encontrada
-    // realiza a busca local 3-opt e atualiza solution se houver ganho em alguma troca
-    // retorna verdadeiro de atualizar a solução
+    /**
+     * realiza a busca local 3-opt e atualiza solution com a melhor encontrada
+     * realiza a busca local 3-opt e atualiza solution se houver ganho em alguma troca
+     * @param solution
+     * @return retorna verdadeiro de atualizar a solução
+     */
     boolean three_opt(MtspSolution solution) {
         boolean updated_solution = false;
         updated_solution = this.two_opt(solution);  // atualiza solution para o ótimo local 2-opt
@@ -409,23 +417,30 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
         return updated_solution;
     }
 
+    /**
+     *
+     * @param index_a
+     * @param index_b
+     * @param solution
+     * @return
+     */
     double gain_change_two_nodes(int index_a, int index_b, MtspSolution solution) {
         double gain;
 
-        int index_before_a;                                      // índice do nó anterior a i
+        int index_before_a;               // índice do nó anterior a i
         if (index_a == index_first)
             index_before_a = index_last;  // a é o primeiro nó da solução
         else
-            index_before_a = index_a - 1;                         // a é qualquer outro nó
+            index_before_a = index_a - 1; // a é qualquer outro nó
 
-        int index_after_a = index_a + 1;                           // a não vai até o último índice
+        int index_after_a = index_a + 1;  // a não vai até o último índice
 
-        int index_before_b = index_b - 1;                        // j nunca é o primeiro nó
-        int index_after_b;                                       // índice do nó posterior a j
+        int index_before_b = index_b - 1; // j nunca é o primeiro nó
+        int index_after_b;                // índice do nó posterior a j
         if (index_b == index_last)
-            index_after_b = index_first;   // j é o último nó da solução
+            index_after_b = index_first;  // j é o último nó da solução
         else
-            index_after_b = index_b + 1;                        // j é qualquer outro nó
+            index_after_b = index_b + 1;  // j é qualquer outro nó
 
         // verificando se a troca gera uma solução com menor custo total:
         double partial_cost_a       = this.partial_cost(index_before_a, index_a, index_after_a, solution);
@@ -439,8 +454,16 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
         gain = cost_before_change - cost_after_change;
 
         return gain;
-    }
+    } //gain_change_two_nodes
 
+    /**
+     *
+     * @param before
+     * @param current
+     * @param after
+     * @param solution
+     * @return
+     */
     double partial_cost(int before, int current, int after, MtspSolution solution) {
         double p_cost       = 0.0; // retorno
         int before_node     = solution.node(before);
@@ -453,4 +476,4 @@ public class LocalSearch implements ControlExperiment, ControlSTACS {
         return p_cost;
     }
 
-}
+} // LocalSearch

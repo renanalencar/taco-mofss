@@ -42,20 +42,22 @@ public class TACOFSS_Problem extends Problem implements ControlExperiment, Contr
         iosource_.variables_ = solution.clone();
 
         //TODO Corrigir o problema NaN gerado pelo FSS
-        for (int i = 0; i < iosource_.variables_.length; i++) {
-            if (Math.abs(iosource_.variables_[i]) < TOLERANCE || Math.abs(iosource_.variables_[i]) == Double.POSITIVE_INFINITY)  // TOLERANCE = 0.00001
-                iosource_.variables_[i] = TOLERANCE;
-        }
+//        for (int i = 0; i < iosource_.variables_.length; i++) {
+//            if (Math.abs(iosource_.variables_[i]) < TOLERANCE || Math.abs(iosource_.variables_[i]) == Double.POSITIVE_INFINITY)  // TOLERANCE = 0.00001
+//                iosource_.variables_[i] = TOLERANCE;
+//        }
 
-//        System.out.print("alfa: " + iosource_.variables_[0]);
-//        System.out.print("\tbeta: " + iosource_.variables_[1]);
-//        System.out.print("\tksi: " + iosource_.variables_[2]);
-//        System.out.println("\tro: " + iosource_.variables_[3]);
+        System.out.print("alfa: " + iosource_.variables_[0]);
+        System.out.print("\tbeta: " + iosource_.variables_[1]);
+        System.out.print("\tksi: " + iosource_.variables_[2]);
+        System.out.println("\tro: " + iosource_.variables_[3]);
 
         iosource_.objectives_ = new double[numberOfObjectives_];
 
         iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
+
+        iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
 
 		double standard_deviation = 0.0;

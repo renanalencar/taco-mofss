@@ -119,6 +119,10 @@ public class WorkDay implements ControlExperiment {
         this.real_weight_matrix = new DoubleMatrix(this.n_points);
         this.real_matrix.load_real_weight_matrix(this.id_work_day, this.real_weight_matrix);
 
+        //TODO
+        iosource_.real_weight_matrix = new DoubleMatrix(this.n_points);
+        this.real_matrix.load_real_weight_matrix(this.id_work_day, iosource_.real_weight_matrix);
+
         if (PRINT_COSTS_MATRIX == 1) {
             System.out.print("\r\nReal weight ");
             this.real_weight_matrix.print_matrix();
@@ -171,7 +175,6 @@ public class WorkDay implements ControlExperiment {
                 }
                 break;
             }
-            case 6:     // distâncias + pesos (multi-objetivo)
             case 2: {   // distâncias reais
                 for (int i = 0; i < this.n_points; i++){
                     for (int j = 0; j < this.n_points; j++){
@@ -222,6 +225,18 @@ public class WorkDay implements ControlExperiment {
                     for (int j = 0; j < this.n_points; j++){
                         double cost;
                         cost = this.real_weight_matrix.get_value(i, j);
+                        this.current_instance.set_value_cost_matrix(i, j, cost);
+                    }
+                }
+                break;
+            }
+            case 6: {     // distâncias + pesos (multi-objetivo)
+                for (int i = 0; i < this.n_points; i++){
+                    for (int j = 0; j < this.n_points; j++){
+                        double cost;
+                        cost = this.real_distance_matrix.get_value(i, j);
+                        //TODO checar se é metros ou quilomêtros
+                        cost = cost/1000;
                         this.current_instance.set_value_cost_matrix(i, j, cost);
                     }
                 }
@@ -487,6 +502,7 @@ public class WorkDay implements ControlExperiment {
             int bi = 0;
             double total_weight = 0.0;
 
+            //TODO código duplicado em AcoMtspAlgorithm
             for (int i = 0; i < final_sol.length; i++) {
                 if ((i + 1) < final_sol.length) {
                     bag_weights[bi] = this.real_weight_matrix.get_value(0, final_sol[i + 1]) + bag_weights[bi];
@@ -599,27 +615,31 @@ public class WorkDay implements ControlExperiment {
         this.complete_final_solution.save_longest_cost(f_simul_res);
         this.complete_final_solution.save_total_cost(f_simul_res);
 
-//        this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
         //TODO
-        double sd_distance = 0.0;
-        double max_cost = 0.0;
+        double total_weight = 0.0;
+        double sd_weight    = 0.0;
+        double sd_distance  = 0.0;
+        double max_cost_w   = 0.0;
+        double max_cost_r   = 0.0;
+
+        //TODO Verificar peso de cada mochila
+        double[] route_dists = new double[N_SALESMEN];
+        double[] bag_weights = new double[N_SALESMEN];
 
         // salvando o peso total da solução
-        if (TYPE_COST_MATRIX == 6 || TYPE_COST_MATRIX == 1 || TYPE_COST_MATRIX == 2) {
+        if (TYPE_COST_MATRIX == 1 || TYPE_COST_MATRIX == 2 || TYPE_COST_MATRIX == 6) {
             //TODO Verificar se final_sol não é vazio
             int[] final_sol = this.complete_final_solution.get_prop_sol();
-            //TODO Verificar peso de cada mochila
-            double[] route_dists = new double[N_SALESMEN];
-            double[] bag_weights = new double[N_SALESMEN];
+
             for (int i = 0; i < N_SALESMEN; i++)
                 bag_weights[i] = 0.0;
 
             int bi = 0;
-            double total_weight = 0.0;
 
             for (int i = 0; i < final_sol.length; i++) {
                 if ((i + 1) < final_sol.length) {
                     //TODO Verificar se é gramas ou quilos
+                    // peso é divido por 1000 aso o sistema métrico seja Kg
                     bag_weights[bi] = (this.real_weight_matrix.get_value(0, final_sol[i + 1])/1000) + bag_weights[bi];
                     route_dists[bi] = this.current_instance.get_value_cost_matrix(final_sol[i], final_sol[i + 1]) + route_dists[bi];
                     if (final_sol[i + 1] == 0) {
@@ -630,57 +650,67 @@ public class WorkDay implements ControlExperiment {
 
             }
 
-
-            int max_index = Utilities.argmax(bag_weights.length, bag_weights);
-            max_cost = bag_weights[max_index];
+            int max_index;
+            // calculando as métricas para o percurso
+            max_index   = Utilities.argmax(route_dists.length, route_dists);
+            max_cost_r  = route_dists[max_index];
             sd_distance = Utilities.std_dev(route_dists, route_dists.length);
-//            this.iosource_.objectives_[1] = total_weight;
             this.iosource_.objectives_[0] = sd_distance;
-//            System.out.println(sd_distance);
-            this.iosource_.objectives_[1] = max_cost;
-//            System.out.println(max_cost);
 
-            //TODO
-            this.iosource_.total_cost_r[this.iosource_.sim_counter] = this.complete_final_solution.get_total_cost();
-            this.iosource_.max_cost_r[this.iosource_.sim_counter] = this.complete_final_solution.get_longest_route();
-            this.iosource_.max_cost_w[this.iosource_.sim_counter] = max_cost;
+            // calculando as métricas para o peso
+            max_index   = Utilities.argmax(bag_weights.length, bag_weights);
+            sd_weight   = Utilities.std_dev(bag_weights, bag_weights.length);
+            max_cost_w  = bag_weights[max_index];
+            this.iosource_.objectives_[1] = max_cost_r;
 
-            //TODO Verificar impressão do peso no arquivo
             if (PRM == 1) {
-//                System.out.println("\nMetrics Resume:");
-//
-//                System.out.print("  peso total: " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
-//
-//                System.out.print("\tpeso por rota: ");
-//                for (double w : bag_weights) {
-//                    System.out.print(String.format("%." + FLOAT_PRECISION + "f", w) + " ");
-//                }
-//
-//                System.out.print("\tmáximo custo: " + max_cost);
-//
-//                System.out.print("\tdistância por rota: ");
-//                for (double d : route_dists) {
-//                    System.out.print(String.format("%." + FLOAT_PRECISION + "f", d) + " ");
-//                }
-//
-//                System.out.println("\tdesvio padrão: " + String.format("%." + FLOAT_PRECISION + "f", sd_distance));
+                System.out.println("\nDados estatísticos da simulação:");
+                // imprime dados relativos ao percurso
+                System.out.print("  distância por rota:\t");
+                for (double d : route_dists) {
+                    System.out.print(String.format("%." + FLOAT_PRECISION + "f", d) + " ");
+                }
+                System.out.print("\tmáximo custo rota: " + String.format("%." + FLOAT_PRECISION + "f", max_cost_r));
+                System.out.println("\tD.P. rota: " + String.format("%." + FLOAT_PRECISION + "f", sd_distance));
+
+                // imprime dados relativos ao peso
+                System.out.print("  peso por rota:\t\t");
+                for (double w : bag_weights) {
+                    System.out.print(String.format("%." + FLOAT_PRECISION + "f", w) + " ");
+                }
+                System.out.print("\tmáximo custo peso: " + String.format("%." + FLOAT_PRECISION + "f", max_cost_w));
+                System.out.print("\tD.P. peso: " + String.format("%." + FLOAT_PRECISION + "f", sd_weight));
+                System.out.println("\tpeso total: " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
             }
-        }
+
+            //TODO verificar as metricas
+            this.iosource_.total_cost_r[this.iosource_.sim_counter] = this.complete_final_solution.get_total_cost();
+            this.iosource_.max_cost_r[this.iosource_.sim_counter]   = this.complete_final_solution.get_longest_route();
+
+            this.iosource_.total_cost_w[this.iosource_.sim_counter] = total_weight;
+            this.iosource_.max_cost_w[this.iosource_.sim_counter]   = max_cost_w;
+
+        } // end if
 
         if (counter_day_simulations == 1) {
         	this.logExperiment.f_longests.write("\r\n" + this.id_work_day + "\t");
         	this.logExperiment.f_total_costs.write( "\r\n" + this.id_work_day + "\t");
         	//TODO
-        	this.logExperiment.f_m_standard_deviation.write( "\r\n" + this.id_work_day + "\t");
-        	this.logExperiment.f_m_max_cost.write( "\r\n" + this.id_work_day + "\t");
+//        	this.logExperiment.f_m_standard_deviation.write( "\r\n" + this.id_work_day + "\t");
+//        	this.logExperiment.f_m_max_cost.write( "\r\n" + this.id_work_day + "\t");
         }
-        //TODO
-//        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
+
         this.complete_final_solution.save_longest_cost(this.logExperiment.f_longests);
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
         //TODO
-        this.logExperiment.f_m_standard_deviation.write(String.format("%."+FLOAT_PRECISION+"f", sd_distance)  + "\t");
-        this.logExperiment.f_m_max_cost.write(String.format("%."+FLOAT_PRECISION+"f", max_cost)  + "\t");
+        this.logExperiment.f_m_standard_deviation.write(this.id_work_day + ";" +
+                String.format("%."+FLOAT_PRECISION+"f", sd_distance)  + ";" +
+                String.format("%."+FLOAT_PRECISION+"f", sd_weight) + "\n");
+        this.logExperiment.f_m_max_cost.write(this.id_work_day + ";" +
+                String.format("%."+FLOAT_PRECISION+"f", max_cost_r)  + ";" +
+                String.format("%."+FLOAT_PRECISION+"f", max_cost_w) + "\n");
 
         // salvando em plot_final_created_sols_day.txt a solução final para o dia de trabalho
 //        BufferedWriter f_day_aco_final_sols;
@@ -701,8 +731,26 @@ public class WorkDay implements ControlExperiment {
         double improvement_total = (diff_total / total_real) * 100;
 
         f_log_exper.write("Melhoramento:\t\tmaior rota: " + String.format("%.2f", improvement_longest) + "%\tcusto total: " + String.format("%.2f", improvement_total) + "%\r\n");
-        //TODO
-        f_log_exper.write("\nMétricas:\n  desvio padrão: " + String.format("%.2f", sd_distance) + "\n  máximo custo: " + String.format("%.2f", max_cost) + "\r\n");
+
+        //TODO verificar impressão de métricas no arquivo resumo
+        f_log_exper.write("\nDados estatísticos da simulação:\n");
+        // imprime dados relativos ao percurso
+        f_log_exper.write("  distância por rota:\t");
+        for (double d : route_dists) {
+            f_log_exper.write(String.format("%." + FLOAT_PRECISION + "f", d) + " ");
+        }
+        f_log_exper.write("\tmáximo custo rota: " + String.format("%." + FLOAT_PRECISION + "f", max_cost_r));
+        f_log_exper.write("\tD.P. rota: " + String.format("%." + FLOAT_PRECISION + "f", sd_distance) + "\n");
+
+        // imprime dados relativos ao peso
+        f_log_exper.write("  peso por rota:\t");
+        for (double w : bag_weights) {
+            f_log_exper.write(String.format("%." + FLOAT_PRECISION + "f", w) + " ");
+        }
+        f_log_exper.write("\tmáximo custo peso: " + String.format("%." + FLOAT_PRECISION + "f", max_cost_w));
+        f_log_exper.write("\tD.P. peso: " + String.format("%." + FLOAT_PRECISION + "f", sd_weight));
+        f_log_exper.write("\tpeso total: " + String.format("%." + FLOAT_PRECISION + "f", total_weight) + "\n");
+
         if (PRINT_EMERGENCY_CARE == 1) {
             System.out.print("  Emergency care:\r\n");
             for (int s = 0; s < this.n_points; s++) {
@@ -920,4 +968,5 @@ public class WorkDay implements ControlExperiment {
             }
         }
     }
+
 } //WorkDay

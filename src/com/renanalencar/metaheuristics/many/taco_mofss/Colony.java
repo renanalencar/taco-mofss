@@ -15,6 +15,12 @@ public class Colony implements ControlExperiment, ControlSTACS {
     private IntList candidate_list;  // lista de nós permitidos a uma formiga em um movimento
     private Ant ants[];              // formigas da colônia
 
+    /**
+     *
+     * @param n
+     * @param m
+     * @param cost_matrix
+     */
     public Colony(int n, int m, DoubleMatrix cost_matrix) {
         this.depot              = DEPOT_INDEX;
         this.n                  = n;

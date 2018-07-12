@@ -21,8 +21,6 @@ public class Random {
         this.seed = s;
     }
 
-
-
     /**
      * Método que retorna a semente utilizada
      * @return
@@ -106,4 +104,4 @@ public class Random {
         return raffled;
     }
 
-}
+} // Random

@@ -11,16 +11,15 @@ import java.io.IOException;
 public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
     // variáveis do ambiente:
     private int depot;
-    private int n;                      // número de nós da instância
-    private int m;                      // número de caixeiros
+    private int n;                          // número de nós da instância
+    private int m;                          // número de caixeiros
     private DoubleMatrix cost_matrix;       // ponteiro para a matriz de distâncias
     private DoubleMatrix pheromone_matrix;  // ponteiro para a matriz de feromônio
 
     // variáveis locais:
-    private double tau0;                // qtde inicial de feromônio
-    private double Cnn;                 // custo da solução nearest neighbor (total ou longest, de acordo com o objetivo)
-    //private com.renanalencar.metaheuristics.mono.taco.Utilities util;            // funções auxiliares
-    private double probability[];        // vetor com os numeradores: tau^alfa * eta^beta
+    private double tau0;            // qtde inicial de feromônio
+    private double Cnn;             // custo da solução nearest neighbor (total ou longest, de acordo com o objetivo)
+    private double probability[];   // vetor com os numeradores: tau^alfa * eta^beta
 
     private double alpha;
     private double beta;
@@ -35,10 +34,9 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         this.m = m;
         this.cost_matrix = cost_matrix;
         this.pheromone_matrix = pheromone_matrix;
-        //util = new com.renanalencar.metaheuristics.mono.taco.Utilities();
         this.probability = new double[n - 1];  // vetor com os numeradores: tau^alfa * eta^beta
 
-        this.iosource_ = IOSource.getInstance();
+        this.iosource_ = IOSource.getInstance(); // singleton para as variáveis do TACO
 
         this.alpha  = iosource_.variables_[0];
         this.beta   = iosource_.variables_[1];
@@ -61,7 +59,6 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
         else {
             this.Cnn = nn_app.total_sol();
         }  // minimizar a soluçao total
-        //delete nn_app;
 
         this.tau0 = 1/(this.n*this.Cnn);  // dorigo04, pg 71
 
@@ -96,15 +93,6 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
             double visibility = 1 / cost;
             this.probability[i] = Math.pow(trail, this.alpha) * Math.pow(visibility, this.beta);
 
-//            if (probability[i] > 9999999999){
-//                cout << "\r\n\r\n---->>>> PROBABILIDADE INFINITA\r\n";
-//                cout << "vertice atual: " << current_node << "\r\n";
-//                cout << "vertice candidato: " << candidate_node << "\r\n";
-//                cout << "feromonio: " << trail << "\r\n";
-//                cout << "custo: " << visibility << "\r\n";
-//                cout << "visibilidade: " << visibility << "\r\n";
-//            }
-
         }
 
         // psedorandom proportional rule:
@@ -124,7 +112,6 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
                 }
 
             } catch (Exception e) {
-                //e.printStackTrace();
 
                 System.out.print("\r\n\r\n---->>>> ERRO NO SORTEIO\r\n");
                 System.out.print("vertice atual: " + current_node + "\r\n");
@@ -141,11 +128,10 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
                 this.cost_matrix.print_matrix();
                 System.out.print("\r\n");
 
-                System.out.print("\r\nmatriz de feromonio: ");
+                System.out.print("\r\nmatriz de feromõnio: ");
                 this.pheromone_matrix.print_matrix();
                 System.out.print("\r\n");
 
-                //exit(4);
             }
 
         }
@@ -199,7 +185,6 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
             double new_tau = ((1-this.ro)*current_tau) + (this.ro*delta_tau); // fórmula da atualização global do ACS (2)
 
             if (!((GPUNODEP == 1) && ((a == this.depot) || (b == this.depot)))){
-//-----                cout << "a = " << a << "   b = " << b << "\r\n";
                 this.pheromone_matrix.set_value(a,b,new_tau);
             }
         }
@@ -236,7 +221,6 @@ public class AcsAlgorithm implements ControlSTACS, ControlExperiment {
             }
         }
         System.out.print("\r\n");
-        //cout << setprecision(prec);
     }
 
-}
+} // AcsAlgorithm.java

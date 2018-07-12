@@ -1,4 +1,4 @@
-package com.renanalencar.scenarios;
+package com.renanalencar.metaheuristics.scenarios;
 
 import com.renanalencar.metaheuristics.many.taco_mofss.*;
 import com.renanalencar.metaheuristics.many.taco_mofss.IOSource;

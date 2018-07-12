@@ -39,7 +39,7 @@ import java.util.logging.Logger;
 public class NSGAIIStudy extends Experiment {
   /**
    * Configures the algorithms in each independent run
-   * @param problem The problem to solve
+   * @param problemName The problem to solve
    * @param problemIndex
    * @param algorithm Array containing the algorithms to run
    * @throws ClassNotFoundException 
@@ -87,18 +87,19 @@ public class NSGAIIStudy extends Experiment {
     exp.algorithmNameList_   = new String[] {
       "NSGAIIa", "NSGAIIb", "NSGAIIc", "NSGAIId"} ;
     exp.problemList_     = new String[] {
-      "Kursawe", "ZDT2", "ZDT3", "ZDT4", "DTLZ1", "WFG2"} ;
+//      "Kursawe", "ZDT2", "ZDT3", "ZDT4", "DTLZ1", "WFG2"} ;
+      "Kursawe", "ZDT2", "ZDT3", "ZDT4", "WFG2"} ;
     exp.paretoFrontFile_ = new String[] {
       "Kursawe.pf", "ZDT2.pf", "ZDT3.pf","ZDT4.pf", "DTLZ1.2D.pf", "WFG2.2D.pf"} ;
     exp.indicatorList_   = new String[] {"HV", "SPREAD", "IGD", "EPSILON"} ;
-    
+
     int numberOfAlgorithms = exp.algorithmNameList_.length ;
 
-    exp.experimentBaseDirectory_ = "/Users/augustoguimaraes/Desktop/jmetal/kk/" +
-    //exp.experimentBaseDirectory_ = "./" +
+    exp.experimentBaseDirectory_ = "/Users/renanalencar/Dropbox/POLI - UPE/Coding/TACO-MOFSS/" +
+//    exp.experimentBaseDirectory_ = "./" +
                                    exp.experimentName_;
-    exp.paretoFrontDirectory_ = "/Users/augustoguimaraes/Documents/Eclipse/java/workspace/MOFSS/paretofront";
-    //exp.paretoFrontDirectory_ = "./paretofront";
+    exp.paretoFrontDirectory_ = "/Users/renanalencar/Dropbox/POLI - UPE/Coding/TACO-MOFSS/paretofront";
+//    exp.paretoFrontDirectory_ = "./paretofront";
 
     exp.algorithmSettings_ = new Settings[numberOfAlgorithms] ;
     
@@ -122,8 +123,9 @@ public class NSGAIIStudy extends Experiment {
     prefix = new String("Problems");
     problems = new String[]{"Kursawe", "ZDT2","ZDT3", "ZDT4", "DTLZ1", "WFG2"} ;
 
-    boolean notch ;
-    exp.generateRBoxplotScripts(rows, columns, problems, prefix, notch = true, exp) ;
+    boolean notch = true;
+
+    exp.generateRBoxplotScripts(rows, columns, problems, prefix, notch, exp) ;
     exp.generateRWilcoxonScripts(problems, prefix, exp) ;  
   } // main
 } // NSGAIIStudy

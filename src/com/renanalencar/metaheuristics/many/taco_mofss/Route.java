@@ -19,6 +19,10 @@ public class Route {
 
     }
 
+    /**
+     *
+     * @param size
+     */
     public Route(int size) {
         this.max_size       = size;
         this.route_list     = new IntList(this.max_size);
@@ -26,6 +30,10 @@ public class Route {
         this.temporal_cost  = 0.0;
     }
 
+    /**
+     *
+     * @param size
+     */
     public void create(int size) {
         this.max_size       = size;
         this.route_list     = new IntList(this.max_size);
@@ -89,7 +97,6 @@ public class Route {
                 this.route_list.add(init_node);
         }
 
-        //delete [] old_route;
     }
 
     public double cost() {
@@ -163,4 +170,4 @@ public class Route {
         file_out.write("\r\n");
     }
 
-}
+} // Route

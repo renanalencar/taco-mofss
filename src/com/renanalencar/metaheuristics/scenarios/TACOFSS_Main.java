@@ -1,10 +1,9 @@
-package com.renanalencar.scenarios;
+package com.renanalencar.metaheuristics.scenarios;
 
 import com.renanalencar.metaheuristics.many.taco_mofss.ControlExperiment;
 import com.renanalencar.metaheuristics.many.taco_mofss.ControlFSS;
 import com.renanalencar.metaheuristics.many.taco_mofss.TACOFSS_Problem;
 import upe.poli.tcc.algorithm.FishSchoolSearch;
-import upe.poli.tcc.algorithm.Parameters;
 
 /**
  * Proposta 1 - Cenário 2 - MinFSS(∆Ei) + TACO para obter:

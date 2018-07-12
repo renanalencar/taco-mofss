@@ -11,7 +11,7 @@ import java.util.Vector;
  */
 public class RealMatrix implements ControlExperiment {
 
-    private String matrix_file_name; // para carregar a instância de arquivo
+    private String matrix_file_name;    // para carregar a instância de arquivo
     private BufferedReader matrix_file; // nome do arquivo
 
     private int id_register;
@@ -150,4 +150,4 @@ public class RealMatrix implements ControlExperiment {
         this.matrix_file.close();
     }
 
-}
+} // RealMatrix

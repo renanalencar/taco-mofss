@@ -7,24 +7,28 @@ package com.renanalencar.metaheuristics.many.taco_mofss;
  *
  */
 public interface ControlExperiment {
+
+    // Configurações gerais para os experimentos
     int MODE_EXECUTION         = 2;  // 1: experimento com instâncias modelo; 2: experimento com dados reais
     int TYPE_EUCLID_MATRIX     = 0;  // tipo de dados da matriz de distâncias euclidianas: (0)double, (1)int
     int DEPOT_INDEX            = 0;  // índice da instância que corresponde ao depósito
     int FLOAT_PRECISION        = 2;  // precisão decimal de impressão de pontos flutuantes
 
+    // Configurações das variáveis e objetivos os experimento
     int N_VARIABLES            = 4;    // Número de variaveis
     int N_OBJECTIVES           = 2;    // Número de objetivos
 
+    // Configurações de arquivos
     String DATA_FILE            ="data/many_data.txt";
     String COST_FILE            ="data/many_costs.txt";
-    String ORDER_FILE           ="";
+    String ORDER_FILE           ="data/many_orders.txt";
 
 
     // Parâmetros para experimentos com dados reais:
     //TODO Verificar NullPointerException para valor < 1
     int STATIC_SIMULATION      = 1;  // simulação com instâncias estáticas com todos os serviços dos dias de trabalho
     int NEAREST_TEAM           = 0;  // não usa ACO: despacha o serviço que estiver mais próximo da equipe
-    int N_SIMULATIONS_BY_DAY   = 1;  // número de execuções para cada dia de trabalho
+    int N_SIMULATIONS_BY_DAY   = 30;  // número de execuções para cada dia de trabalho
     int TYPE_COST_MATRIX       = 6;  // 1:euclidiana, 2: distâncias reais, 3: tempos reais, 4:tempo + deslocamento, 5: pesos das entregas, 6: distância + peso (multi-objetivo)
     int DESPATCH_REAL_SOL      = 1;  // definindo o horário de despacho do serviço a partir do momento que uma equipe inicia o deslocamento para ele na solução real calculada
     int INDEX_DAY_TEST         = -1;  // index do dia de trabalho para testes. Se -1, todos os dias serão simulados
@@ -53,8 +57,6 @@ public interface ControlExperiment {
     int PDCR    = 0;  // imprimir detalhes da construção das rotas
     int PART    = 0;  // imprimir todas as rotas geradas em todas as soluções
 
-    int PRM     = 0;  // imprimir resumo das métricas utilizadas
-
     int PRLS    = 0;  // imprimir melhoramento pelas buscas locais
     int PDNO    = 0;  // imprimir detalhes da busca local no cross
     int PDLS    = 0;  // imprimir detalhes das buscas locais 2 e 3-opt
@@ -62,4 +64,7 @@ public interface ControlExperiment {
     int PPOE    = 0;  // imprimir a matriz de feromônio no início e no final da execução
     int PPLU    = 0;  // imprimir a matriz de feromônio a cada atualização local
     int PPGU    = 0;  // imprimir a matriz de feromônio a cada atualização global
-}
+
+    int PRM     = 1;  // imprimir métricas
+
+} // ControlExperiment

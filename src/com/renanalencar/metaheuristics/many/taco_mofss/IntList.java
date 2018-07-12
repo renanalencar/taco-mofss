@@ -10,20 +10,28 @@ import java.io.IOException;
  *
  */
 public class IntList {
-    private int max_items; // número máximo de valores da lista
-    private int index; // aponta o último valor da lista. Se -1, a lista está vazia
-    private int values_list[]; // valores da lista
+    private int max_items;      // número máximo de valores da lista
+    private int index;          // aponta o último valor da lista. Se -1, a lista está vazia
+    private int values_list[];  // valores da lista
 
     public IntList() {
 
     }
 
+    /**
+     *
+     * @param size
+     */
     public void create(int size) {
         this.max_items      = size;
         this.index          = -1;
         this.values_list    = new int[this.max_items];
     }
 
+    /**
+     *
+     * @param size
+     */
     public IntList(int size) {
         this.max_items      = size;
         this.index          = -1;
@@ -43,6 +51,7 @@ public class IntList {
      */
     public void add(int value) {
         if (value > this.max_items) {
+            //TODO
             // "\r\n---> ADDING LARGER VALUE THAN LIST SIZE <---\r\n"
         }
         if (this.index+1 == this.max_items) {
@@ -81,7 +90,6 @@ public class IntList {
             }
         }
 
-        //delete [] values_list;
         this.values_list = new_list;
     }
 
@@ -107,6 +115,10 @@ public class IntList {
         this.values_list = new_list;
     }
 
+    /**
+     *
+     * @param value
+     */
     public void remove(int value) {
         int aux_values[]    = new int[this.max_items];
         int index_aux       = 0;
@@ -122,6 +134,11 @@ public class IntList {
         this.index--;
     }
 
+    /**
+     *
+     * @param index_i
+     * @param index_j
+     */
     public void change_values (int index_i, int index_j) {
         int aux_value = this.values_list[index_i];
         this.values_list[index_i] = this.values_list[index_j];
@@ -265,4 +282,4 @@ public class IntList {
         }
         return aux;
     }
-}
+} // IntList

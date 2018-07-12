@@ -13,9 +13,9 @@ import java.io.IOException;
  */
 public class RealExperiment implements ControlExperiment, ControlSTACS {
     private double time_ini_experiment; // instante de referẽncia do início do experimento
-    private IntList list_id_work_days; // lista com os códigos dos dias de trabalho da base de dados
-    private WorkDay current_work_day; // dia de trabalho atual
-    private long seed_random; // semente dos randomicos do experimento
+    private IntList list_id_work_days;  // lista com os códigos dos dias de trabalho da base de dados
+    private WorkDay current_work_day;   // dia de trabalho atual
+    private long seed_random;           // semente dos randomicos do experimento
     private BufferedWriter f_log_exper; // salvamento em arquivo
     private BufferedWriter f_simul_res; // arquivo com o resumo das simulações
     private BufferedWriter f_time_execs;
@@ -78,8 +78,7 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
                 this.current_work_day.load_data_work_day(counter_day_simulations);
 
                 // a semente é alterada a cada execução de um dia de trabalho
-                //seed_random = (long)time(NULL);  // gerando semente aleatória
-                this.seed_random = System.currentTimeMillis();
+                this.seed_random = System.currentTimeMillis(); // gerando semente aleatória
                 this.log.f_log_exper.write( "Semente rândomica utilizada: " + this.seed_random + "\r\n");
                 this.save_aco_parameters();
 
@@ -106,19 +105,27 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
             }
         }
         LogExperiment log = LogExperiment.getInstance();
-        //TODO Verificar tempo de execucao do experimento
+        //TODO Verificar tempo de execução do experimento
         double time_experiment = System.currentTimeMillis() - time_ini_experiment;
         this.log.f_log_exper.write("\r\n------------------------------\r\nTempo total do experimento: " + (int)time_experiment + " milissegundos\r\n");
 
         //TODO checar desvio padrão
-        double dv_ctp = Utilities.std_dev(iosource_.total_cost_r, N_SIMULATIONS_BY_DAY);
-        double dv_mrp = Utilities.std_dev(iosource_.max_cost_r, N_SIMULATIONS_BY_DAY);
-        double dv_mpp = Utilities.std_dev(iosource_.max_cost_w, N_SIMULATIONS_BY_DAY);
+        // desvio padrão do custo total dos percursos em x simulações
+        double sd_ctr = Utilities.std_dev(iosource_.total_cost_r, N_SIMULATIONS_BY_DAY);
+        // desvio padrão do máximo custo dos percursos em x simulações
+        double sd_mrr = Utilities.std_dev(iosource_.max_cost_r, N_SIMULATIONS_BY_DAY);
+        // desvio padrão do custo total dos percursos em x simulações
+        double sd_ctw = Utilities.std_dev(iosource_.total_cost_w, N_SIMULATIONS_BY_DAY);
+        // ddesvio padrão do máximo custo dos pesos em x simulações
+        double sd_mrw = Utilities.std_dev(iosource_.max_cost_w, N_SIMULATIONS_BY_DAY);
 
 //        iosource_.objectives_[0] = dv_ctp;
-//        System.out.println(dv_ctp);
 
-        this.log.f_log_exper.write("\r\nDP Custo Total: " + String.format("%."+FLOAT_PRECISION+"f", dv_ctp) +"\tDP Maior Rota: "  + String.format("%."+FLOAT_PRECISION+"f", dv_mrp) +"\tDP Maior Peso: "  + String.format("%."+FLOAT_PRECISION+"f", dv_mpp));
+        this.log.f_log_exper.write("\r\nDados estatísticos do experimento:\r\n");
+        this.log.f_log_exper.write("   D.P. custo total: " + String.format("%."+FLOAT_PRECISION+"f", sd_ctr) +
+                "\tD.P. maior rota: " + String.format("%."+FLOAT_PRECISION+"f", sd_mrr) +
+                "\tDP peso total: "  + String.format("%."+FLOAT_PRECISION+"f", sd_ctw) +
+                "\tDP Maior Peso: " + String.format("%."+FLOAT_PRECISION+"f", sd_mrw));
 
     }
 
@@ -143,8 +150,8 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         this.log.f_log_exper.write("   q0 (nível de determinismo):\t\t" + String.format("%.2f", Q0) + "\r\n");
         this.log.f_log_exper.write("   alfa (peso do feromonio):\t\t" + this.iosource_.variables_[0] + "\r\n");
         this.log.f_log_exper.write("   beta (peso da visibilidade):\t\t" + this.iosource_.variables_[1] + "\r\n");
-        this.log.f_log_exper.write("   ksi (persitencia do feromonio nas atualizações locais):\t" + String.format("%.2f", this.iosource_.variables_[2]) + "\r\n");
-        this.log.f_log_exper.write("   ro (persitencia do feromonio nas atualizações globais):\t" + String.format("%.2f", this.iosource_.variables_[3]) + "\r\n");
+        this.log.f_log_exper.write("   ksi (persitência do feromônio nas atualizações locais):\t" + String.format("%.2f", this.iosource_.variables_[2]) + "\r\n");
+        this.log.f_log_exper.write("   ro (persitência do feromônio nas atualizações globais):\t" + String.format("%.2f", this.iosource_.variables_[3]) + "\r\n");
 
         this.log.f_log_exper.write("\r\nBusca Local:\r\n");
         this.log.f_log_exper.write("   2-opt (todas as soluções criadas):\t\t");
@@ -161,4 +168,5 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
             this.log.f_log_exper.write("OFF\r\n");
 
     }
-}
+
+} // RealExperiment

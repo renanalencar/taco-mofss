@@ -22,7 +22,7 @@ import java.io.IOException;
 public class MtspProblem extends Problem implements ControlExperiment {
     private static final int K = 3;
 
-    private IOSource iosource_;
+    //private IOSource iosource_;
 
     /**
      * Constructor.
@@ -33,6 +33,12 @@ public class MtspProblem extends Problem implements ControlExperiment {
         this(solutionType, 2);
     } // MtspProblem
 
+    /**
+     *
+     * @param solutionType
+     * @param numberOfObjectives
+     * @throws ClassNotFoundException
+     */
     public MtspProblem(String solutionType, Integer numberOfObjectives) throws ClassNotFoundException {
         this(solutionType, numberOfObjectives+K-1, numberOfObjectives);
     } // MtspProblem
@@ -87,11 +93,21 @@ public class MtspProblem extends Problem implements ControlExperiment {
             x[i] = gen[i].getValue();
         }
 
+        IOSource iosource_ = null;
+        try {
+            iosource_ = IOSource.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // salva as variáveis geradas
         iosource_.variables_ = new double[numberOfVariables_];
         iosource_.variables_ = x.clone();
 
+        // salva os objetivos gerado
         iosource_.objectives_ = new double[numberOfObjectives_];
 
+        // salva os valores dos resultados de cada simulação por dia
         iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];

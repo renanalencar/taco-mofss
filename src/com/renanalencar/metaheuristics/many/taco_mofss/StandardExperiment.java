@@ -292,4 +292,5 @@ public class StandardExperiment implements ControlExperiment, ControlSTACS {
             this.log.f_log_stand_exper.write("OFF\r\n");
 
     }
-}
+
+} // StandardExperiment

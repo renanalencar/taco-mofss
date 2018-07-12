@@ -17,23 +17,47 @@ public class DoubleMatrix {
     private int dimension; // numero de valores da matriz = dimension x dimension
     double matrix[][]; // matriz
 
+    /**
+     *
+     * @param dimension
+     */
     public DoubleMatrix(int dimension) {
         this.dimension  = dimension;
         this.matrix     = new double[dimension][dimension];
     }
 
+    /**
+     *
+     * @param i
+     * @param j
+     * @param value
+     */
     public void set_value(int i, int j, double value) {
         this.matrix[i][j] = value;
     }
 
+    /**
+     *
+     * @param i
+     * @param j
+     * @return
+     */
     public double get_value(int i, int j) {
         return this.matrix[i][j];
     }
 
+    /**
+     *
+     * @param col
+     * @return
+     */
     public double[] get_col_matrix(int col) {
         return this.matrix[col];
     }
 
+    /**
+     *
+     */
     public void print_matrix() {
         System.out.print("matrix:\r\n");
 
@@ -54,6 +78,10 @@ public class DoubleMatrix {
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void save_matrix() throws IOException {
         BufferedWriter file_mat = null;
         file_mat = new BufferedWriter(new FileWriter("outs/matrix.txt"));
@@ -72,4 +100,4 @@ public class DoubleMatrix {
 
     }
 
-}
+} // DoubleMatrix

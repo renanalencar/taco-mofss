@@ -1,5 +1,11 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
+/**
+ * @author renanalencar
+ * @version 1.0
+ * @since 2017-11-01
+ *
+ */
 public interface ControlMOFSS {
 
     // Default problem
@@ -27,4 +33,4 @@ public interface ControlMOFSS {
     String MUTATION_OPERATOR    = "PolynomialMutation"; // ("PolynomialMutation", "BitFlipMutation", "SwapMutation")
     String SELECTION_OPERATOR   = "BinaryTournament2";  // Seleção de líderes do arquivo externo (AE) ("BinaryTournament", "BinaryTournament2", "PESA2Selection", "RandomSelection", "RankingAndCrowdingSelection", "DifferentialEvolutionSelection")
 
-}
+} // ControlMOFSS

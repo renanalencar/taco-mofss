@@ -17,6 +17,11 @@ public class MtspInstance implements ControlExperiment {
     private IntList initial_nodes_routes;    // lista com os índices de nós correntes nos quais as equipes se encontram, nos dados reais
     private EuclideanGraph graph;            // grafo euclidiano da instância (a partir das coordenadas UTM, nos dados reais)
 
+    /**
+     *
+     * @param n_salesmen
+     * @param depot
+     */
     public MtspInstance(int n_salesmen, int depot) {
         this.n_salesmen           = n_salesmen;
         this.depot                = depot;
@@ -24,6 +29,7 @@ public class MtspInstance implements ControlExperiment {
         this.valid_nodes          = new IntList(1);
         this.initial_nodes_routes = new IntList(1);
         this.cost_matrix          = new DoubleMatrix(1);
+
     }
 
     public int get_n_nodes() {
@@ -58,20 +64,22 @@ public class MtspInstance implements ControlExperiment {
         return valid_nodes.value(index);
     }
 
+    /**
+     *
+     * @throws IOException
+     */
     public void load_euclidean_model_instance() throws IOException {
         // carregando uma instância modelo em um objeto que representa um grafo euclidiano
         this.graph.load_model_graph();
         int n = this.graph.n_nodes_graph();
 
         // todos os nós estão disponíveis e são sequenciais nas instâncias modelo
-        //delete valid_nodes;
         this.valid_nodes = new IntList(n);
         for (int i = 0; i < n; i++ ) {
             this.valid_nodes.add(i);
         }
 
         // definindo o tipo da solução que será gerada definindo positions_teams
-        //delete initial_nodes_routes;
         this.initial_nodes_routes = new IntList(this.n_salesmen);
         for (int k = 0; k < this.n_salesmen; k++) {
             if (TYPE_MTSP_SOLS == 1){
@@ -91,16 +99,18 @@ public class MtspInstance implements ControlExperiment {
         }
     }
 
+    /**
+     *
+     * @param n_nodes
+     * @param n_teams
+     */
     public void create_empty_instance(int n_nodes, int n_teams) {
         this.graph.create_empty_graph(n_nodes);
 
-        //delete valid_nodes;
         this.valid_nodes = new IntList(n_nodes);
 
-        //delete initial_nodes_routes;
         this.initial_nodes_routes = new IntList(n_teams);
 
-        //delete cost_matrix;
         this.cost_matrix = new DoubleMatrix(n_nodes);
     }
 
@@ -140,6 +150,9 @@ public class MtspInstance implements ControlExperiment {
         this.initial_nodes_routes.add(position);
     }
 
+    /**
+     *
+     */
     public void print_instance() {
         System.out.print("\r\nCurrent instance:\r\n");
         System.out.print("  valid nodes: ");
@@ -151,29 +164,47 @@ public class MtspInstance implements ControlExperiment {
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     */
     public void print_valid_nodes() {
         System.out.print("Valid nodes: ");
         this.valid_nodes.print();
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     */
     public void print_positions_teams() {
         System.out.print("Posições das equipes: ");
         this.initial_nodes_routes.print();
         System.out.print("\r\n");
     }
 
+    /**
+     *
+     */
     public void print_cost_matrix() {
         this.cost_matrix.print_matrix();
     }
 
+    /**
+     *
+     */
     public void print_euclidean_matrix() {
         this.graph.print_euclidean_matrix();
     }
 
+    /**
+     *
+     * @param file_out
+     * @throws IOException
+     */
     public void save_positions_teams(BufferedWriter file_out) throws IOException {
         file_out.write("Posições das equipes: : ");
         initial_nodes_routes.save(file_out);
         file_out.write("\r\n");
     }
-}
+
+} // MtspInstance
