@@ -34,6 +34,8 @@ public class TACO_Main implements ControlExperiment, ControlSTACS {
 
         iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
+
+        iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
         iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
 
 

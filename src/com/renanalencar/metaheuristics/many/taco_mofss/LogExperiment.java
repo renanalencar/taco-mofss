@@ -127,7 +127,7 @@ public class LogExperiment {
 //        this.f_total_costs.flush();
 //        this.f_log_exper.flush();
 //        this.f_time_execs.flush();
-//        this.f_simul_res.flush();
+//        this.fss_simul_res.flush();
 //        this.f_day_aco_final_sols.flush();
 //
 //        //this.teste.flush();
@@ -186,4 +186,4 @@ public class LogExperiment {
 
     }
  
-} // LogExperiment
+} // LogFSS

@@ -1,14 +1,14 @@
 package com.renanalencar.metaheuristics.many.taco_mofss;
 
-import upe.poli.tcc.problem.Problem;
+import upe.poli.ecomp.problem.Problem;
 
 import java.io.IOException;
 
-public class TACOFSS_Problem extends Problem implements ControlExperiment, ControlFSS {
+public class TACOFSS_NewP extends Problem implements ControlExperiment, ControlFSS {
 
     private IOSource iosource_;
 
-	public TACOFSS_Problem(int dimensions) {
+	public TACOFSS_NewP(int dimensions) {
 		super(dimensions);
 	}
 

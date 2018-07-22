@@ -36,9 +36,9 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
         //this.log.f_log_exper = new BufferedWriter(new FileWriter("outs/log_real_experiment.txt"));
 
         // arquivo com os custos gerados para cada dia de trabalho em cada simulação:
-        //this.log.f_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
+        //this.log.fss_simul_res = new BufferedWriter(new FileWriter("outs/simulations_resume.txt"));
 
-        //f_simul_res << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
+        //fss_simul_res << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);
 
         //this.log.f_time_execs = new BufferedWriter(new FileWriter("outs/time_execs.txt"));
         //f_time_execs << setiosflags (ios::fixed) << setprecision(FLOAT_PRECISION);

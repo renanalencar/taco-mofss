@@ -621,6 +621,7 @@ public class WorkDay implements ControlExperiment {
         double sd_distance  = 0.0;
         double max_cost_w   = 0.0;
         double max_cost_r   = 0.0;
+        double tt_cost      = this.complete_final_solution.get_total_cost();
 
         //TODO Verificar peso de cada mochila
         double[] route_dists = new double[N_SALESMEN];
@@ -681,6 +682,8 @@ public class WorkDay implements ControlExperiment {
                 System.out.print("\tmáximo custo peso: " + String.format("%." + FLOAT_PRECISION + "f", max_cost_w));
                 System.out.print("\tD.P. peso: " + String.format("%." + FLOAT_PRECISION + "f", sd_weight));
                 System.out.println("\tpeso total: " + String.format("%." + FLOAT_PRECISION + "f", total_weight));
+                System.out.println("---------------------------------------------------------------------------------" +
+                        "--------------------------------------------------");
             }
 
             //TODO verificar as metricas
@@ -696,11 +699,9 @@ public class WorkDay implements ControlExperiment {
         	this.logExperiment.f_longests.write("\r\n" + this.id_work_day + "\t");
         	this.logExperiment.f_total_costs.write( "\r\n" + this.id_work_day + "\t");
         	//TODO
-//        	this.logExperiment.f_m_standard_deviation.write( "\r\n" + this.id_work_day + "\t");
-//        	this.logExperiment.f_m_max_cost.write( "\r\n" + this.id_work_day + "\t");
+//        	this.logFSS.f_m_standard_deviation.write( "\r\n" + this.id_work_day + "\t");
+//        	this.logFSS.f_m_max_cost.write( "\r\n" + this.id_work_day + "\t");
         }
-
-        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------");
 
         this.complete_final_solution.save_longest_cost(this.logExperiment.f_longests);
         this.complete_final_solution.save_total_cost(this.logExperiment.f_total_costs);
@@ -709,6 +710,7 @@ public class WorkDay implements ControlExperiment {
                 String.format("%."+FLOAT_PRECISION+"f", sd_distance)  + ";" +
                 String.format("%."+FLOAT_PRECISION+"f", sd_weight) + "\n");
         this.logExperiment.f_m_max_cost.write(this.id_work_day + ";" +
+                String.format("%."+FLOAT_PRECISION+"f", tt_cost)  + ";" +
                 String.format("%."+FLOAT_PRECISION+"f", max_cost_r)  + ";" +
                 String.format("%."+FLOAT_PRECISION+"f", max_cost_w) + "\n");
 
