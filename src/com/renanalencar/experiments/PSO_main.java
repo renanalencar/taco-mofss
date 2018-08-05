@@ -21,6 +21,9 @@
 
 package com.renanalencar.experiments;
 
+import com.renanalencar.experiments.settings.PSO_Settings;
+import com.renanalencar.metaheuristics.taco_modified.ControlExperiment;
+import com.renanalencar.problems.MTSP_JM;
 import hidra.qualityIndicator.QualityIndicator;
 import jmetal.core.Algorithm;
 import jmetal.core.Problem;
@@ -40,7 +43,7 @@ import java.util.logging.Logger;
 /**
  * Class for configuring and running a single-objective PSO algorithm
  */
-public class PSO_main {
+public class PSO_main implements ControlExperiment, PSO_Settings {
   public static Logger      logger_ ;      // Logger object
   public static FileHandler fileHandler_ ; // FileHandler object
 
@@ -73,18 +76,19 @@ public class PSO_main {
     //problem = new Easom("Real") ;
     // problem = new Griewank("Real", 10) ;
 
-    problem = new Sphere("Real", 20); 
+//    problem = new Sphere("Real", 20);
+    problem = new MTSP_JM("Real", N_OBJECTIVES);
 
     algorithm = new PSO(problem) ;
     
     // Algorithm parameters
-    algorithm.setInputParameter("swarmSize",50);
-    algorithm.setInputParameter("maxIterations",5000);
+    algorithm.setInputParameter("swarmSize",SWARM_SIZE);
+    algorithm.setInputParameter("maxIterations",MAX_INTERATIONS);
     
     parameters = new HashMap() ;
     parameters.put("probability", 1.0/problem.getNumberOfVariables()) ;
     parameters.put("distributionIndes", 20.0) ;
-    mutation = MutationFactory.getMutationOperator("PolynomialMutation", parameters);                    
+    mutation = MutationFactory.getMutationOperator(MUTATION_OPERATOR, parameters);
 
     algorithm.addOperator("mutation", mutation);
 

@@ -1,11 +1,12 @@
 package com.renanalencar.problems;
 
+import com.renanalencar.experiments.settings.FSS_Settings;
 import com.renanalencar.metaheuristics.taco_modified.*;
 import upe.poli.ecomp.problem.Problem;
 
 import java.io.IOException;
 
-public class MTSP_FSS extends Problem implements ControlExperiment, ControlFSS {
+public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings {
 
     private IOSource iosource_;
 

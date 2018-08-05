@@ -1,4 +1,4 @@
-package com.renanalencar.metaheuristics.taco_modified;
+package com.renanalencar.experiments.settings;
 
 /**
  * @author renanalencar
@@ -6,13 +6,12 @@ package com.renanalencar.metaheuristics.taco_modified;
  * @since 2017-11-01
  *
  */
-public interface ControlMOFSS {
+public interface MOFSS_Settings {
 
     // Default problem
     int DEFAULT_PROBLEM         = 1;
 
     // Algorithm parameters
-
     double MUTATION_RATE        = 0.3;      // Percentual de Mutação (M_RATE)
     double INITIAL_FITNESS      = 100.0;    // Peso inicial do peixe (Wi)
     double MIN_FITNESS          = 1.0;      // Mínimo para o peso do peixe (Wi_min)
@@ -33,4 +32,4 @@ public interface ControlMOFSS {
     String MUTATION_OPERATOR    = "PolynomialMutation"; // ("PolynomialMutation", "BitFlipMutation", "SwapMutation")
     String SELECTION_OPERATOR   = "BinaryTournament2";  // Seleção de líderes do arquivo externo (AE) ("BinaryTournament", "BinaryTournament2", "PESA2Selection", "RandomSelection", "RankingAndCrowdingSelection", "DifferentialEvolutionSelection")
 
-} // ControlMOFSS
+} // MOFSS_Settings

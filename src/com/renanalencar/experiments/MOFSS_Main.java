@@ -1,7 +1,7 @@
 package com.renanalencar.experiments;
 
 import com.renanalencar.metaheuristics.taco_modified.ControlExperiment;
-import com.renanalencar.metaheuristics.taco_modified.ControlMOFSS;
+import com.renanalencar.experiments.settings.MOFSS_Settings;
 import com.renanalencar.problems.MTSP_JM;
 import hidra.gui.MOPSOCDRSJFrame;
 import hidra.many.metaheuristics.mofssv1.MOFSSv9s1s2;
@@ -33,7 +33,7 @@ import java.util.logging.Logger;
  * Desvio Padrão da Entrega (∆Ei) e Custo Máximo Max(Ci) , i para qualquer n
  */
 
-public class MOFSS_Main implements ControlExperiment, ControlMOFSS {
+public class MOFSS_Main implements ControlExperiment, MOFSS_Settings {
     public static Logger logger_ ;      // Logger object
     public static FileHandler fileHandler_ ; // FileHandler object
 
@@ -105,9 +105,9 @@ public class MOFSS_Main implements ControlExperiment, ControlMOFSS {
 //        indicators = new QualityIndicator(problem, paretoFrontFile);
 
         // Algorithm parameters
-        algorithm.setInputParameter("swarmSize",SWARM_SIZE);
-        algorithm.setInputParameter("archiveSize",ARCHIVE_SIZE);
-        algorithm.setInputParameter("maxIterations",MAX_INTERATIONS);
+        algorithm.setInputParameter("swarmSize", SWARM_SIZE);
+        algorithm.setInputParameter("archiveSize", ARCHIVE_SIZE);
+        algorithm.setInputParameter("maxIterations", MAX_INTERATIONS);
 
         // Mutation and Crossover for Real codification
         parameters = new HashMap() ;

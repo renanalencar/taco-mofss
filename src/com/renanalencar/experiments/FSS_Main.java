@@ -1,5 +1,6 @@
 package com.renanalencar.experiments;
 
+import com.renanalencar.experiments.settings.FSS_Settings;
 import com.renanalencar.problems.MTSP_FSS;
 import upe.poli.ecomp.algorithm.LogFSS;
 import upe.poli.ecomp.algorithm.MyFSS_Padrao;
@@ -8,7 +9,7 @@ import upe.poli.ecomp.problem.Problem;
 
 import java.io.IOException;
 
-public class FSS_Main {
+public class FSS_Main implements FSS_Settings {
     
     public static void main(String[] args) throws IOException {
 	Parameters.SCHOOL_SIZE = 30;
