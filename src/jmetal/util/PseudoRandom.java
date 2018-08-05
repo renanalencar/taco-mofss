@@ -42,7 +42,7 @@ public class PseudoRandom {
    */
   private PseudoRandom() {
     if (random == null){
-      //this.random = new java.util.com.renanalencar.metaheuristics.mono.taco.Random((long)seed);
+      //this.random = new java.util.com.renanalencar.metaheuristics.singleObjective.taco.Random((long)seed);
       random = new RandomGenerator();
       randomJava = new java.util.Random();            
     }

@@ -1,4 +1,4 @@
-//  com.renanalencar.metaheuristics.mono.taco.Main.java
+//  com.renanalencar.metaheuristics.singleObjective.taco.Main.java
 //
 //  Authors:
 //       Antonio J. Nebro <antonio@lcc.uma.es>
@@ -46,9 +46,9 @@ public class Main {
    * @throws IOException
    * @throws SecurityException
    * Usage: three options
-   *      - jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName
-   *      - jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName problemName
-   *      - jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName problemName paretoFrontFile
+   *      - jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName
+   *      - jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName problemName
+   *      - jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName problemName paretoFrontFile
    * @throws ClassNotFoundException 
    */
   public static void main(String [] args) throws
@@ -71,9 +71,9 @@ public class Main {
 
     if (args.length == 0) { //
       System.err.println("Sintax error. Usage:") ;
-      System.err.println("a) jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName ") ;
-      System.err.println("b) jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName problemName") ;
-      System.err.println("c) jmetal.experiments.com.renanalencar.metaheuristics.mono.taco.TACO_main algorithmName problemName paretoFrontFile") ;
+      System.err.println("a) jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName ") ;
+      System.err.println("b) jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName problemName") ;
+      System.err.println("c) jmetal.experiments.com.renanalencar.metaheuristics.singleObjective.taco.TACO_main algorithmName problemName paretoFrontFile") ;
       System.exit(-1) ;
     } // if
     else if (args.length == 1) { // algorithmName
@@ -134,4 +134,4 @@ public class Main {
       } // if
     } // if
   } //main
-} // com.renanalencar.metaheuristics.mono.taco.TACO_main
+} // com.renanalencar.metaheuristics.singleObjective.taco.TACO_main

@@ -55,7 +55,7 @@ public abstract class Algorithm implements Serializable {
   protected Map<String,Object> inputParameters_ = null;  
   
   /** 
-   * Stores output parameters, which are retrieved by com.renanalencar.metaheuristics.mono.taco.TACO_main object to
+   * Stores output parameters, which are retrieved by com.renanalencar.metaheuristics.singleObjective.taco.TACO_main object to
    * obtain information from an algorithm.
    */
   protected Map<String,Object> outPutParameters_ = null;
@@ -109,7 +109,7 @@ public abstract class Algorithm implements Serializable {
   
  /**
   * Sets an input parameter to an algorithm. Typically,
-  * the method is invoked by a com.renanalencar.metaheuristics.mono.taco.TACO_main object before running an algorithm.
+  * the method is invoked by a com.renanalencar.metaheuristics.singleObjective.taco.TACO_main object before running an algorithm.
   * The parameters have to been inserted using their name to access them through 
   * the <code>getInputParameter</code> method.
   * @param name The parameter name
@@ -151,7 +151,7 @@ public abstract class Algorithm implements Serializable {
   
  /**
   * Gets an output parameter through its name. Typically,
-  * the method is invoked by a com.renanalencar.metaheuristics.mono.taco.TACO_main object after the execution of an algorithm.
+  * the method is invoked by a com.renanalencar.metaheuristics.singleObjective.taco.TACO_main object after the execution of an algorithm.
   * @param name The output parameter name
   * @return Object representing the output parameter, or null if the parameter
   * doesn't exist or the name is wrong.

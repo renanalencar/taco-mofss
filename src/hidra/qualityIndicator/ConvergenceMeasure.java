@@ -176,7 +176,7 @@ public class ConvergenceMeasure {
 	 **/
 	public static void main(String args[]) throws ClassNotFoundException {
 		/*if (args.length < 2) {
-			System.err.println("GenerationalDistance::com.renanalencar.metaheuristics.mono.taco.TACO_main: Usage: java " +
+			System.err.println("GenerationalDistance::com.renanalencar.metaheuristics.singleObjective.taco.TACO_main: Usage: java " +
 					"GenerationalDistance <FrontFile> " +
 					"<TrueFrontFile>  <numberOfObjectives>");
 			System.exit(1);

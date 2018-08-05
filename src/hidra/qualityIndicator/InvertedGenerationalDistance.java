@@ -112,7 +112,7 @@ public class InvertedGenerationalDistance {
    **/
   public static void main(String args[]) {
     if (args.length < 2) {
-      System.err.println("InvertedGenerationalDistance::com.renanalencar.metaheuristics.mono.taco.TACO_main: Usage: java " +
+      System.err.println("InvertedGenerationalDistance::com.renanalencar.metaheuristics.singleObjective.taco.TACO_main: Usage: java " +
       		             "InvertedGenerationalDistance <FrontFile> " +
       		             "<TrueFrontFile>  <numberOfObjectives>");
       System.exit(1);

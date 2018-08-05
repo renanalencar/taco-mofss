@@ -1,4 +1,4 @@
-//  com.renanalencar.metaheuristics.mono.taco.LocalSearch.java
+//  com.renanalencar.metaheuristics.singleObjective.taco.LocalSearch.java
 //
 //  Author:
 //       Antonio J. Nebro <antonio@lcc.uma.es>
@@ -38,4 +38,4 @@ public abstract class LocalSearch extends Operator {
    * Returns the number of evaluations made by the local search operator
    */
   public abstract int getEvaluations();
-} // com.renanalencar.metaheuristics.mono.taco.LocalSearch
+} // com.renanalencar.metaheuristics.singleObjective.taco.LocalSearch

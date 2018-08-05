@@ -136,7 +136,7 @@ public class Spread {
    */
   public static void main(String args[]) {
 	if (args.length < 2) {
-      System.err.println("Spread::com.renanalencar.metaheuristics.mono.taco.TACO_main: Error using Spread. Usage: \n java " +
+      System.err.println("Spread::com.renanalencar.metaheuristics.singleObjective.taco.TACO_main: Error using Spread. Usage: \n java " +
 			             "Spread <FrontFile> <TrueFrontFile>  " +
 		                 "<numberOfObjectives>");
       System.exit(1);
@@ -153,5 +153,5 @@ public class Spread {
 	double value = qualityIndicator.spread(solutionFront,trueFront,2);
 
 	System.out.println(value);  
-  } // com.renanalencar.metaheuristics.mono.taco.TACO_main
+  } // com.renanalencar.metaheuristics.singleObjective.taco.TACO_main
 } // Spread

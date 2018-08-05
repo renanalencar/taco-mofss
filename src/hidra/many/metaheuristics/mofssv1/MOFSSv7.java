@@ -451,9 +451,9 @@ public class MOFSSv7 extends Algorithm {
 		  					 "\nQtd dominadas: " + countD_ + " | Qtd N�o dominadas: " + countND_);
 		  iterations_++;
 	  }
-	  
+
 	  particles_.printFitnessToFile("results/PESO");
-	  
+
 	  particles_.printObjectivesToFile("results/FUN-POP-MOFSS-"+problem_.getName()+"-"+iterations_);
 	  //return particles_;
 	  return this.leaders_;
@@ -478,4 +478,4 @@ public class MOFSSv7 extends Algorithm {
     {
     	plotManager_.setChartPanelSwarm(chartPanelSwarm);
     }
-} 
+}

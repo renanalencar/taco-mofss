@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="org-netbeans-modules-swingapp">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/org-netbeans-modules-swingapp.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

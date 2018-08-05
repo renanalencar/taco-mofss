@@ -22,7 +22,7 @@
 package jmetal.metaheuristics.moead;
 
 /**
- * com.renanalencar.metaheuristics.mono.taco.Utilities methods to used by MOEA/D
+ * com.renanalencar.metaheuristics.singleObjective.taco.Utilities methods to used by MOEA/D
  */
 public class Utils {
 

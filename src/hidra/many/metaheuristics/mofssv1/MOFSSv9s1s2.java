@@ -4,6 +4,7 @@ import hidra.gui.PlotManager;
 import hidra.qualityIndicator.Hypervolume;
 import hidra.qualityIndicator.QualityIndicator;
 import jmetal.core.*;
+import jmetal.util.Configuration;
 import jmetal.util.Distance;
 import jmetal.util.JMException;
 import jmetal.util.PseudoRandom;
@@ -13,6 +14,10 @@ import jmetal.util.comparators.DominanceComparator;
 import jmetal.util.wrapper.XReal;
 import org.jfree.chart.ChartPanel;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Comparator;
 
 /**
@@ -93,6 +98,7 @@ public class MOFSSv9s1s2 extends Algorithm {
 	  indicators_ = (QualityIndicator) getInputParameter("indicators");
 	  
 	  leaders_ = new CrowdingArchive(archiveSize_, problem_.getNumberOfObjectives());
+
 	  
 	  //delta_f_ = new double[swarmSize_];
 	  delta_x_ = new double[swarmSize_][problem_.getNumberOfVariables()];
@@ -653,7 +659,8 @@ private void calculateColVolOperS2() throws JMException, ClassNotFoundException{
 	  }
 	  
 	  particles_.printDominanceToFile("results/DOMINANCE-MOFSS-"+problem_.getName(), iterations_-1, printDominance_);
-	  //return particles_;
+
+      //return particles_;
 	  return this.leaders_;
   }
   
@@ -676,4 +683,5 @@ private void calculateColVolOperS2() throws JMException, ClassNotFoundException{
     {
     	plotManager_.setChartPanelSwarm(chartPanelSwarm);
     }
+
 }

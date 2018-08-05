@@ -196,7 +196,7 @@ public class ManyObjectivesStudy extends HIDRAExperiment {
 	  } // algorithmSettings
 
 	  /**
-	   * com.renanalencar.metaheuristics.mono.taco.TACO_main method
+	   * com.renanalencar.metaheuristics.singleObjective.taco.TACO_main method
 	   * @param args
 	   * @throws JMException
 	   * @throws IOException
