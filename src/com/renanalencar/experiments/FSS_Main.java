@@ -12,6 +12,8 @@ public class FSS_Main implements FSS_Settings {
 
     public static void main(String[] args) throws IOException {
 
+        long initTime = System.currentTimeMillis();
+
         Problem p = new MTSP_FSS(DIMENSION);
 
         double bestFitness = 0;
@@ -47,6 +49,9 @@ public class FSS_Main implements FSS_Settings {
         bestFitness = bestFitness / (double) SIMULATION_NUMBER;
         System.out.println("Media do melhor fitness das " + SIMULATION_NUMBER +
                 "simulacoes = " + bestFitness);
+
+        long estimatedTime = System.currentTimeMillis() - initTime;
+        log.fss_simul_res.write("\nTempo total do experimento: " + estimatedTime);
 
         log.closeFilesRealExperiment();
     }
