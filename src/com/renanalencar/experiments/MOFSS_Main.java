@@ -145,11 +145,11 @@ public class MOFSS_Main implements ControlExperiment, MOFSS_Settings {
         // Result messages
         logger_.info("Total execution time: "+estimatedTime + "ms");
         logger_.info("Variables values have been written to file VAR"/*+"-MOFSS-"+problem.getName()*/);
-        population.printVariablesToFile("results/VAR"+"-TACOMOFSS-"+problem.getName()/*+"-"+
+        population.printVariablesToFile("results/VAR"+"-MOFSS-"+problem.getName()/*+"-"+
     								algorithm.getInputParameter("swarmSize").toString()+"|"+
     								algorithm.getInputParameter("maxIterations").toString()*/);
         logger_.info("Objectives values have been written to file FUN"/*+"-MOFSS-"+problem.getName()*/);
-        population.printObjectivesToFile("results/FUN"+"-TACOMOFSS-"+problem.getName()/*+"-"+
+        population.printObjectivesToFile("results/FUN"+"-MOFSS-"+problem.getName()/*+"-"+
 									algorithm.getInputParameter("swarmSize").toString()+"|"+
 									algorithm.getInputParameter("maxIterations").toString()*/);
 

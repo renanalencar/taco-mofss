@@ -68,7 +68,7 @@ public class PSO_main implements ControlExperiment, PSO_Settings {
 
     // Logger object and file to store log messages
     logger_      = Configuration.logger_ ;
-    fileHandler_ = new FileHandler("PSO_main.log"); 
+    fileHandler_ = new FileHandler("log/PSO_main.log");
     logger_.addHandler(fileHandler_) ;
 
     //problem = new Sphere("Real", 20) ;
@@ -99,8 +99,10 @@ public class PSO_main implements ControlExperiment, PSO_Settings {
     // Result messages 
     logger_.info("Total execution time: "+estimatedTime + "ms");
     logger_.info("Objectives values have been writen to file FUN");
-    population.printObjectivesToFile("FUN");
+//    population.printObjectivesToFile("FUN");
+    population.printObjectivesToFile("results/FUN"+"-PSO-"+problem.getName());
     logger_.info("Variables values have been writen to file VAR");
-    population.printVariablesToFile("VAR");                         
+//    population.printVariablesToFile("VAR");
+    population.printVariablesToFile("results/VAR"+"-PSO-"+problem.getName());
   } //main
 } // PSO_main
