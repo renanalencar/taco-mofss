@@ -65,7 +65,7 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
             for (int counter_day_simulations = 1; counter_day_simulations <= N_SIMULATIONS_BY_DAY; counter_day_simulations++) {
 
                 //TODO
-                iosource_.sim_counter = counter_day_simulations - 1;
+                this.iosource_.sim_counter = counter_day_simulations - 1;
 
                 double time_ini_execution_day = (double) System.currentTimeMillis();  // instante do início do experimento
 
@@ -111,13 +111,13 @@ public class RealExperiment implements ControlExperiment, ControlSTACS {
 
         //TODO checar desvio padrão
         // desvio padrão do custo total dos percursos em x simulações
-        double sd_ctr = Utilities.std_dev(iosource_.total_cost_r, N_SIMULATIONS_BY_DAY);
+        double sd_ctr = Utilities.std_dev(this.iosource_.total_cost_r, N_SIMULATIONS_BY_DAY);
         // desvio padrão do máximo custo dos percursos em x simulações
-        double sd_mrr = Utilities.std_dev(iosource_.max_cost_r, N_SIMULATIONS_BY_DAY);
+        double sd_mrr = Utilities.std_dev(this.iosource_.max_cost_r, N_SIMULATIONS_BY_DAY);
         // desvio padrão do custo total dos percursos em x simulações
-        double sd_ctw = Utilities.std_dev(iosource_.total_cost_w, N_SIMULATIONS_BY_DAY);
+        double sd_ctw = Utilities.std_dev(this.iosource_.total_cost_w, N_SIMULATIONS_BY_DAY);
         // ddesvio padrão do máximo custo dos pesos em x simulações
-        double sd_mrw = Utilities.std_dev(iosource_.max_cost_w, N_SIMULATIONS_BY_DAY);
+        double sd_mrw = Utilities.std_dev(this.iosource_.max_cost_w, N_SIMULATIONS_BY_DAY);
 
 //        iosource_.objectives_[0] = dv_ctp;
 

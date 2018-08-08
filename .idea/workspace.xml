@@ -2,22 +2,22 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="33" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="93" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="131" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="136" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="154" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="159" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="172" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="100" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="133" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="138" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="156" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="161" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="174" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealData.java" line="35" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="717" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="718" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="807" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="874" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="616" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="591" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="486" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="363" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="222" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="719" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="808" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="875" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="617" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="592" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="487" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="364" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="223" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/singleObjective/taco/WorkDay.java" line="150" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" line="150" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" line="151" />
@@ -45,60 +45,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd48990f-5305-4e16-a2e2-92e123baca37" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/many/metaheuristics/mofssv1/MOFSSv9s1s2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/many/metaheuristics/mofssv1/MOFSSv9s1s2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/metaheuristics/cssmopso/CSSArchive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/metaheuristics/cssmopso/CSSArchive.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/many/taco_mofss/MOFSS_main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/AcoMtspAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/AcsAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Ant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Colony.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/ControlExperiment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/ControlSTACS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/DoubleMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/EuclideanGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/IntList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Intersection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/LocalSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/LogExperiment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/MtspInstance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/MtspNearestNeighbor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/MtspSolution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Random.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/RealData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/RealExperiment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/RealMatrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Route.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/ServiceOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/StandardExperiment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/TacoAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/com/renanalencar/metaheuristics/mono/taco/WorkDay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/GenerationalDistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/GenerationalDistance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/InvertedGenerationalDistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/InvertedGenerationalDistance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/Spread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/qualityIndicator/Spread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/jmetal/experiments/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/jmetal/experiments/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/log_real_experiment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/log_real_experiment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/longests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/longests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/plot_final_created_sols_day.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/plot_final_created_sols_day.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/plot_real_sols.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/plot_real_sols.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/simulations_resume.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/simulations_resume.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/time_execs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/time_execs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outs/total_costs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outs/total_costs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlFSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlMOFSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/MOFSS_Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/algorithm/Fish.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/algorithm/FishSchoolSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/algorithm/Parameters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/MainAllFunctions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/MainCEC2013.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF10.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/main/cec2013/MainF9.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Ackley.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Griewank.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/PID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Problem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Rastrigin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Rosenbrock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Schwefel12.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/Sphere.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/EF8F2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/EqualMaxima.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/FiveUnevenPeakTrap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/Himmelblau.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/ModifiedRastriginAll.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/Shubert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/SixHumpCamelBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/UnevenDecreasingMaxima.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/Vincent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/Weierstrass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/CF1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/CF2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/CF3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/CF4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/CFunc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/problem/cec2013/compositefunction/ClosedInterval.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/testing/FishSchoolSearchTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/util/MyFileReaderWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/util/Statistics.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upe/poli/tcc/util/VectorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,11 +109,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PSO_Settings.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
+      <file leaf-file-name="FSS_Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="156">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PSO_main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MTSP_JM.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="122" column="32" lean-forward="true" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlExperiment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlSTACS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -137,14 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>switch</find>
-      <find>sim_co</find>
-      <find>sim_counter</find>
-      <find>iosource_</find>
-      <find>comput</find>
-      <find>evaluate</find>
-      <find>ciclo</find>
-      <find>melhoria</find>
       <find>Melhoria</find>
       <find>Spacer</find>
       <find>iosource_.sim_counter</find>
@@ -167,6 +198,14 @@
       <find>solutionsList_</find>
       <find>leaders_</find>
       <find>printDominanceToFile</find>
+      <find>package com\.renanalencar\.experiments\;\n\nimport com\.renanalencar\.experiments\.settings\.FSS_Settings\;\nimport com\.renanalencar\.problems\.MTSP_FSS\;\nimport upe\.poli\.ecomp\.algorithm\.LogFSS\;\nimport upe\.poli\.ecomp\.algorithm\.MyFSS_Padrao\;\nimport upe\.poli\.ecomp\.problem\.Problem\;\n\nimport java\.io\.IOException\;\n\npublic class FSS_Main implements FSS_Settings \{\n    \n    public static void main\(String\[\] args\) throws IOException \{\n\	\n\	Problem p \= new MTSP_FSS\(DIMENSION\)\;\n\	\n\	double bestFitness \= 0\;\n\n\	LogFSS log \= LogFSS\.getInstance\(\)\;\n\	log\.loadBuffersdRealExperiment\(\)\;\n\n\	log\.fss_simul_res\.write\(\&quot;FSS Simulation Resume\:\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;School Size\: \&quot; \+ SCHOOL_SIZE \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Simulation\: \&quot; \+ SIMULATION_NUMBER \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Iteration\: \&quot; \+ ITERATION_NUMBER \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Dimension\: \&quot; \+ DIMENSION \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Step Individual \- Initial\: \&quot; \+ STEP_IND_INIT \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Step Individual \- Final\: \&quot; \+ STEP_IND_FINAL \+ \&quot;\\n\&quot;\)\;\n\n\	for \(int i \= 0\; i \&lt; SIMULATION_NUMBER\; i\+\+\) \{\n\	\	System\.out\.println\(\&quot;Simulation \#\&quot; \+ \(i\+1\) \+ \&quot;\\n\&quot;\)\;\n\	\	MyFSS_Padrao fss \= new MyFSS_Padrao\(\)\;\n\	\	fss\.init\(p\)\;\n\n\	\	for \(int j \= 0\; j \&lt; ITERATION_NUMBER\; j\+\+\) \{\n\	\	\	System\.out\.println\(\&quot;Iteration \#\&quot; \+ \(j\+1\) \+ \&quot;\\n\&quot;\)\;\n\	\	\	fss\.iterate\(\)\;\n\	\	\}\n\n\	\	bestFitness \+\= fss\.getBestFitness\(\)\;\n\	\	System\.out\.println\(\&quot;simulacao \&quot;\+i\+\&quot; bestFitness \= \&quot;\+fss\.getBestFitness\(\)\)\;\n\	\	log\.fss_simul_res\.write\(\&quot;Simulação \&quot;\+ \(i\+1\) \+ \&quot;\\tMelhor fitness\: \&quot; \+ fss\.getBestFitness\(\) \+ \&quot;\\n\&quot;\)\;\n\n\	\}\n\n\	System\.out\.println\(\&quot;soma bestFitness \= \&quot;\+bestFitness\)\;\n\	bestFitness \= bestFitness\/\(double\)SIMULATION_NUMBER\;\n\	System\.out\.println\(\&quot;Media do melhor fitness das \&quot;\+SIMULATION_NUMBER\+\n\	\	\&quot;simulacoes \= \&quot;\+bestFitness\)\;\n\n\	log\.closeFilesRealExperiment\(\)\;\n    \}\n\}\n</find>
+      <find>deb</find>
+      <find>iosource_.total_cost_w</find>
+      <find>sim_counter</find>
+      <find>iosour</find>
+      <find>logExperiment</find>
+      <find>iosource</find>
+      <find>iosource_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,14 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/Route.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/ServiceOrder.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/StandardExperiment.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/TacoAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/RealExperiment.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/statistics/BoxAndWhiskerDemo.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/statistics/LineChartDemo6.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/MtspSolution.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/MtspInstance.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/IOSource.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/LogExperiment.java" />
@@ -222,10 +253,18 @@
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/ControlFSS.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSSSettings.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/MOFSS_Settings.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java" />
       </list>
     </option>
   </component>
@@ -246,18 +285,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="TACO-MOFSS" type="cbb8eebc:String" user="TACO-MOFSS" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,12 +344,17 @@
               <item name="metaheuristics" type="1f31426a:PackageElementNode" />
               <item name="taco_modified" type="1f31426a:PackageElementNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
             <path>
-              <item name="TACO-MOFSS" type="58d84e3e:PackageViewProjectNode" />
-              <item name="TACO-MOFSS" type="616d4139:PackageViewModuleNode" />
-              <item name="com" type="1f31426a:PackageElementNode" />
-              <item name="renanalencar" type="1f31426a:PackageElementNode" />
-              <item name="problems" type="1f31426a:PackageElementNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="TACO-MOFSS" type="cbb8eebc:String" user="TACO-MOFSS" />
             </path>
           </expand>
           <select />
@@ -377,7 +409,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.PSO_main (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -392,13 +424,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="upe.poli.ecomp.main.Main" />
+    <configuration name="MOFSS_Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.renanalencar.experiments.MOFSS_Main" />
       <module name="TACO-MOFSS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="upe.poli.ecomp.main.*" />
+          <option name="PATTERN" value="com.renanalencar.experiments.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -414,13 +446,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="PSO_main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jmetal.metaheuristics.singleObjective.particleSwarmOptimization.PSO_main" />
+    <configuration name="PSO_main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.renanalencar.experiments.PSO_main" />
       <module name="TACO-MOFSS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jmetal.metaheuristics.singleObjective.particleSwarmOptimization.*" />
+          <option name="PATTERN" value="com.renanalencar.experiments.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -491,19 +523,18 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list>
-      <item itemvalue="Application.TACO_Main" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TACO_Main" />
       <item itemvalue="Application.FSS_Main" />
-      <item itemvalue="Application.PSO_main" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.PSO_main (1)" />
+      <item itemvalue="Application.MOFSS_Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.PSO_main" />
-        <item itemvalue="Application.FSS_Main" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.PSO_main (1)" />
         <item itemvalue="Application.TACO_Main" />
+        <item itemvalue="Application.FSS_Main" />
+        <item itemvalue="Application.MOFSS_Main" />
       </list>
     </recent_temporary>
   </component>
@@ -552,7 +583,8 @@
       <workItem from="1533168185308" duration="3183000" />
       <workItem from="1533172754763" duration="10736000" />
       <workItem from="1533184727995" duration="833000" />
-      <workItem from="1533490892426" duration="3990000" />
+      <workItem from="1533490892426" duration="5002000" />
+      <workItem from="1533716485049" duration="5923000" />
     </task>
     <task id="LOCAL-00001" summary="Correções feitas no pacote TACO.">
       <created>1521558479497</created>
@@ -673,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533493946514</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adicionado configuracoes do experimento com PSO">
+      <created>1533498449460</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1533498449460</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -685,7 +724,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="244371000" />
+    <option name="totallyTimeSpent" value="251306000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,16 +752,15 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986207" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4838449" weight="0.37931034" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47738287" weight="0.32189542" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47738287" weight="0.3213793" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48303714" weight="0.28413793" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48303714" visible="true" weight="0.28413793" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49676898" weight="0.328" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49030694" weight="0.28198075" />
       <window_info anchor="bottom" id="Run with VisualVM" order="9" weight="0.27724138" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.39579967" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32551724" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.4022617" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="9" />
@@ -733,15 +771,17 @@
       <window_info anchor="right" x="0" y="0" width="270" height="600" id="Documentation" order="4" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32551724" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="Image Layers" order="3" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4838449" visible="true" weight="0.32689655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32956383" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49030694" weight="0.28198075" />
@@ -762,7 +802,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Atlassian " order="11" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827586" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986207" />
     </layout-to-restore>
@@ -791,14 +830,15 @@
     <MESSAGE value="Added some libs." />
     <MESSAGE value="Correção do TACO-FSS." />
     <MESSAGE value="Adiacao do PSO como experimento para otimizador externo." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adiacao do PSO como experimento para otimizador externo." />
+    <MESSAGE value="Adicionado configuracoes do experimento com PSO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionado configuracoes do experimento com PSO" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="102" />
+      <option name="time" value="106" />
     </breakpoint-manager>
   </component>
   <component name="atlassian-ide-plugin-workspace-issues">
@@ -809,29 +849,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/smpso/SMPSO_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="92" column="34" lean-forward="true" selection-start-line="92" selection-start-column="34" selection-end-line="92" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hidra/problems/DTLZ/DTLZ.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/jmetal-4.5.2.jar!/jmetal/core/Solution.class" />
-    <entry file="file://$PROJECT_DIR$/src/hidra/metaheuristics/mDNPSO/M_DNPSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="248" column="44" selection-start-line="248" selection-start-column="44" selection-end-line="248" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hidra/gui/PlotManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="143" column="8" lean-forward="true" selection-start-line="143" selection-start-column="8" selection-end-line="143" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hidra/util/archive/Archive.java" />
     <entry file="file://$PROJECT_DIR$/src/hidra/util/archive/CrowdingArchive.java" />
     <entry file="file://$PROJECT_DIR$/src/hidra/core/Solution.java" />
@@ -958,16 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jmetal/core/Problem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -978,53 +985,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACOFSS_Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/TACOFSS_Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/TACOMOFSS_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1706">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACOFSS_Main.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/TACOFSS_Problem.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/TACOMOFSS_main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/TACO_main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1032,33 +995,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/MOFSS_main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="212" column="14" selection-start-line="212" selection-start-column="14" selection-end-line="212" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/Parameters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="44" column="9" selection-start-line="40" selection-end-line="44" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/MOFSS_main.java" />
     <entry file="file://$PROJECT_DIR$/src/jmetal/experiments/settings/SMPSO_Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-431">
@@ -1073,10 +1010,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/MyFSS_Padrao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="240" column="50" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="693" selection-start-line="693" selection-end-line="693" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/Parameters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,55 +1103,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/core/Algorithm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="465">
+          <caret line="122" column="32" lean-forward="true" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
+    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+        <state relative-caret-position="321">
+          <caret line="336" selection-start-line="336" selection-end-line="336" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="20" column="63" lean-forward="true" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="90" column="68" selection-start-line="90" selection-start-column="68" selection-end-line="90" selection-end-column="68" />
+        <state relative-caret-position="423">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
+        <state relative-caret-position="-56">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="210">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>

@@ -23,7 +23,7 @@ import java.io.IOException;
 public class MTSP_JM extends Problem implements ControlExperiment {
     private static final int K = 3;
 
-    //private IOSource iosource_;
+    private IOSource iosource_;
 
     /**
      * Constructor.
@@ -75,6 +75,13 @@ public class MTSP_JM extends Problem implements ControlExperiment {
             System.out.println("Error: solution type " + solutionType + " invalid") ;
             System.exit(-1) ;
         }
+
+        try {
+            this.iosource_ = IOSource.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     } // MTSP_JM
 
     /**
@@ -94,24 +101,19 @@ public class MTSP_JM extends Problem implements ControlExperiment {
             x[i] = gen[i].getValue();
         }
 
-        IOSource iosource_ = null;
-        try {
-            iosource_ = IOSource.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         // salva as variáveis geradas
-        iosource_.variables_ = new double[numberOfVariables_];
-        iosource_.variables_ = x.clone();
+        this.iosource_.variables_ = new double[numberOfVariables_];
+        this.iosource_.variables_ = x.clone();
 
         // salva os objetivos gerado
-        iosource_.objectives_ = new double[numberOfObjectives_];
+        this.iosource_.objectives_ = new double[numberOfObjectives_];
 
         // salva os valores dos resultados de cada simulação por dia
-        iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
-        iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
-        iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.max_cost_r   = new double[N_SIMULATIONS_BY_DAY];
+
+        this.iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.max_cost_w   = new double[N_SIMULATIONS_BY_DAY];
 
 
         LogExperiment log = null;
@@ -134,7 +136,7 @@ public class MTSP_JM extends Problem implements ControlExperiment {
                 e.printStackTrace();
             }
             try {
-                se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo defida em control.cpp
+                se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo definida em control.cpp
             } catch (IOException e) {
                 e.printStackTrace();
             }

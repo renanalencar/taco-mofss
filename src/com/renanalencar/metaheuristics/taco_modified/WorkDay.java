@@ -120,8 +120,9 @@ public class WorkDay implements ControlExperiment {
         this.real_matrix.load_real_weight_matrix(this.id_work_day, this.real_weight_matrix);
 
         //TODO
-        iosource_.real_weight_matrix = new DoubleMatrix(this.n_points);
-        this.real_matrix.load_real_weight_matrix(this.id_work_day, iosource_.real_weight_matrix);
+        this.iosource_ = IOSource.getInstance();
+        this.iosource_.real_weight_matrix = new DoubleMatrix(this.n_points);
+        this.real_matrix.load_real_weight_matrix(this.id_work_day, this.iosource_.real_weight_matrix);
 
         if (PRINT_COSTS_MATRIX == 1) {
             System.out.print("\r\nReal weight ");

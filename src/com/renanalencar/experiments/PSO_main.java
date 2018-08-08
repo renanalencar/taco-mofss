@@ -31,7 +31,6 @@ import jmetal.core.SolutionSet;
 import jmetal.metaheuristics.singleObjective.particleSwarmOptimization.PSO;
 import jmetal.operators.mutation.Mutation;
 import jmetal.operators.mutation.MutationFactory;
-import jmetal.problems.singleObjective.Sphere;
 import jmetal.util.Configuration;
 import jmetal.util.JMException;
 

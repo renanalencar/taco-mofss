@@ -12,7 +12,14 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
 
 	public MTSP_FSS(int dimensions) {
 		super(dimensions);
-	}
+
+        try {
+            this.iosource_ = IOSource.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 	@Override
 	public void init() {
@@ -40,12 +47,6 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
         int numberOfVariables_ = 4;
         int numberOfObjectives_ = 2;
 
-        try {
-            iosource_ = IOSource.getInstance();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         iosource_.variables_ = new double[numberOfVariables_];
         iosource_.variables_ = solution.clone();
 
@@ -60,15 +61,15 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
         System.out.print("\tksi: " + iosource_.variables_[2]);
         System.out.println("\tro: " + iosource_.variables_[3]);
 
-        iosource_.objectives_ = new double[numberOfObjectives_];
+        this.iosource_.objectives_  = new double[numberOfObjectives_];
 
-        iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
-        iosource_.max_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.max_cost_r   = new double[N_SIMULATIONS_BY_DAY];
 
-        iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
-        iosource_.max_cost_w = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
+        this.iosource_.max_cost_w   = new double[N_SIMULATIONS_BY_DAY];
 
-		double standard_deviation = 0.0;
+		double total_cost = 0.0;
 		double max_cost = 0.0;
 		double r = 0.0;
 
@@ -93,7 +94,7 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
                 e.printStackTrace();
             }
             try {
-                se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo defida em control.cpp
+                se.run_standard_experiment();  // sem uma instância como parâmetro é carregada a instância modelo definida em control.cpp
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -128,11 +129,12 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
             }
         }
 
-        standard_deviation = iosource_.objectives_[0];
+        total_cost = iosource_.objectives_[0];
         max_cost = iosource_.objectives_[1];
 
+        // retorna o objetivo minimizado escolhido nas configurações
         if (MIN_VAR == 0)
-            r = standard_deviation;
+            r = total_cost;
         else
             r = max_cost;
 
