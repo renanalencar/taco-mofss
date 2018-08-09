@@ -1,4 +1,4 @@
-//  NSGAII_Settings.java 
+//  PSO_Settings.java
 //
 //  Authors:
 //       Antonio J. Nebro <antonio@lcc.uma.es>
@@ -70,7 +70,7 @@ public class HIDRA_NSGAII_Settings extends HIDRASettings {
     crossoverProbability_        = GlobalSettings.crossoverProbability_  ;
     mutationDistributionIndex_   = GlobalSettings.mutationDistributionIndex_ ;
     crossoverDistributionIndex_  = GlobalSettings.crossoverDistributionIndex_ ;
-  } // NSGAII_Settings
+  } // PSO_Settings
 
   
   /**
@@ -126,4 +126,4 @@ public class HIDRA_NSGAII_Settings extends HIDRASettings {
    
     return algorithm ;
   } // configure
-} // NSGAII_Settings
+} // PSO_Settings

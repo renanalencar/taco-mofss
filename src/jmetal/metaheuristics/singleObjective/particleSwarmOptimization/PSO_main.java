@@ -70,7 +70,7 @@ public class PSO_main {
 
     // Logger object and file to store log messages
     logger_      = Configuration.logger_ ;
-    fileHandler_ = new FileHandler("PSO_main.log"); 
+    fileHandler_ = new FileHandler("PSO_main.log");
     logger_.addHandler(fileHandler_) ;
 
     //problem = new Sphere("Real", 20) ;

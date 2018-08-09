@@ -64,7 +64,7 @@ public class MOFSS_Main implements ControlExperiment, MOFSS_Settings {
 
         // Logger object and file to store log messages
         logger_      = Configuration.logger_ ;
-        fileHandler_ = new FileHandler("log/TACOMOFSS_main.log");
+        fileHandler_ = new FileHandler("log/MOFSS_main.log");
         logger_.addHandler(fileHandler_) ;
 
         indicators = null ;
@@ -88,7 +88,7 @@ public class MOFSS_Main implements ControlExperiment, MOFSS_Settings {
             //problem = new ConstrEx("Real");
             //problem = new Fonseca("Real");
             //problem = new Schaffer("Real");
-            problem = new MTSP_JM("Real", N_OBJECTIVES);
+            problem = new MTSP_JM("Real", N_VARIABLES, N_OBJECTIVES);
         } // else
 
         /*
@@ -184,4 +184,4 @@ public class MOFSS_Main implements ControlExperiment, MOFSS_Settings {
 
     } //main
 
-} // TACOMOFSS
+} // MOFSS_Main

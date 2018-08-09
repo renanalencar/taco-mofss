@@ -8,9 +8,6 @@ package com.renanalencar.experiments.settings;
  */
 public interface FSS_Settings {
 
-    // Parametros para configuração do TACO + FSS
-    int MIN_VAR             = 0; // 0: minimizar o custo total; 1: minimizar o custo máximo
-
     // Experiment parameters
     int SIMULATION_NUMBER   = 30;
     int ITERATION_NUMBER    = 1000;

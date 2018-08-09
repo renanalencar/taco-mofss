@@ -19,7 +19,8 @@ public class IOSource {
 
     public static double [] total_cost_w; // valores do peso total de cada simulação
     public static double [] max_cost_w;   // valores do maior custo de peso de cada simulação
-    public static int sim_counter;        // contador do número de simulações
+    public static int sim_counter;        // contador do número de simulações para o TACO
+    public static int independent_run;    // contador do número de simulações para o JMETAL
 
     public static DoubleMatrix real_weight_matrix;
 

@@ -38,11 +38,6 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
 
 	@Override
 	public double evaluateSolution(double[] solution) {
-//		double sumSquare = 0.0;
-//		for (int i = 0; i < solution.length; i++) {
-//			sumSquare += (Math.pow((solution[i] + 30), 2.0));
-//		}
-//		return sumSquare;
 
         int numberOfVariables_ = 4;
         int numberOfObjectives_ = 2;
@@ -50,16 +45,11 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
         iosource_.variables_ = new double[numberOfVariables_];
         iosource_.variables_ = solution.clone();
 
-        //TODO Corrigir o problema NaN gerado pelo FSS
-//        for (int i = 0; i < iosource_.variables_.length; i++) {
-//            if (Math.abs(iosource_.variables_[i]) < TOLERANCE || Math.abs(iosource_.variables_[i]) == Double.POSITIVE_INFINITY)  // TOLERANCE = 0.00001
-//                iosource_.variables_[i] = TOLERANCE;
-//        }
 
-        System.out.print("alfa: " + iosource_.variables_[0]);
-        System.out.print("\tbeta: " + iosource_.variables_[1]);
-        System.out.print("\tksi: " + iosource_.variables_[2]);
-        System.out.println("\tro: " + iosource_.variables_[3]);
+//        System.out.print("alfa: " + iosource_.variables_[0]);
+//        System.out.print("\tbeta: " + iosource_.variables_[1]);
+//        System.out.print("\tksi: " + iosource_.variables_[2]);
+//        System.out.println("\tro: " + iosource_.variables_[3]);
 
         this.iosource_.objectives_  = new double[numberOfObjectives_];
 
@@ -69,9 +59,7 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
         this.iosource_.total_cost_w = new double[N_SIMULATIONS_BY_DAY];
         this.iosource_.max_cost_w   = new double[N_SIMULATIONS_BY_DAY];
 
-		double total_cost = 0.0;
-		double max_cost = 0.0;
-		double r = 0.0;
+		double result = 0.0;
 
 		LogExperiment log = null;
 
@@ -129,16 +117,13 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
             }
         }
 
-        total_cost = iosource_.objectives_[0];
-        max_cost = iosource_.objectives_[1];
-
-        // retorna o objetivo minimizado escolhido nas configurações
-        if (MIN_VAR == 0)
-            r = total_cost;
+        // retorna o objetivo minimizado escolhido nas configurações ControlExperiment.java
+        if (MINIMIZATION_TYPE == 0)
+            result = iosource_.objectives_[0]; // minizar o custo total
         else
-            r = max_cost;
+            result = iosource_.objectives_[1]; // minimizar o custo máximo
 
-        return r;
+        return result;
 
 	}
 

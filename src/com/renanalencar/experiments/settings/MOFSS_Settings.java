@@ -10,6 +10,7 @@ public interface MOFSS_Settings {
 
     // Default problem
     int DEFAULT_PROBLEM         = 1;
+    int N_SIMULATIONS           = 30;
 
     // Algorithm parameters
     double MUTATION_RATE        = 0.3;      // Percentual de Mutação (M_RATE)
@@ -23,7 +24,7 @@ public interface MOFSS_Settings {
     double MAX_STEP_IND         = 0.005;    // Passo Individual Final (Sf)
     int SWARM_SIZE              = 100;      // Tamanho do cardume
     int ARCHIVE_SIZE            = 100;      // Tamanho do arquivo externo (AE)
-    int MAX_INTERATIONS         = 1000;       // Quantidade de iterações. Default: 2500
+    int MAX_INTERATIONS         = 1000;     // Quantidade de iterações. Default: 2500
 
 
 

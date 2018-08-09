@@ -21,7 +21,7 @@ import java.io.IOException;
  * Class representing problem MTSP
  */
 public class MTSP_JM extends Problem implements ControlExperiment {
-    private static final int K = 3;
+//    private static final int K = 3;
 
     private IOSource iosource_;
 
@@ -30,9 +30,9 @@ public class MTSP_JM extends Problem implements ControlExperiment {
      * Creates a default instance of the MTSP problem.
      * @param solutionType The solution type must "Real", "BinaryReal, and "ArrayReal".
      */
-    public MTSP_JM(String solutionType) throws ClassNotFoundException {
-        this(solutionType, 2);
-    } // MTSP_JM
+//    public MTSP_JM(String solutionType) throws ClassNotFoundException {
+//        this(solutionType, 2);
+//    } // MTSP_JM
 
     /**
      *
@@ -40,9 +40,9 @@ public class MTSP_JM extends Problem implements ControlExperiment {
      * @param numberOfObjectives
      * @throws ClassNotFoundException
      */
-    public MTSP_JM(String solutionType, Integer numberOfObjectives) throws ClassNotFoundException {
-        this(solutionType, numberOfObjectives+K-1, numberOfObjectives);
-    } // MTSP_JM
+//    public MTSP_JM(String solutionType, Integer numberOfObjectives) throws ClassNotFoundException {
+//        this(solutionType, numberOfObjectives+K-1, numberOfObjectives);
+//    } // MTSP_JM
 
     /**
      * Constructor.
@@ -55,14 +55,14 @@ public class MTSP_JM extends Problem implements ControlExperiment {
         numberOfVariables_   = numberOfVariables.intValue() ;
         numberOfObjectives_  = numberOfObjectives.intValue();
         numberOfConstraints_ = 0                            ;
-        problemName_         = "MTSP_JM"                ;
+        problemName_         = "MTSP"                       ;
 
         upperLimit_ = new double[numberOfVariables_] ;
         lowerLimit_ = new double[numberOfVariables_] ;
 
         for (int i = 0; i < numberOfVariables_; i++) {
             lowerLimit_[i] = 0.0 ;
-            upperLimit_[i] = 1.0  ;
+            upperLimit_[i] = 2.0  ;
         } // for
 
         if (solutionType.compareTo("BinaryReal") == 0)
@@ -94,7 +94,7 @@ public class MTSP_JM extends Problem implements ControlExperiment {
 
         Variable[] gen  = solution.getDecisionVariables();
 
-        double [] x = new double[numberOfVariables_]; // numberOfVariables_ = 4 (ALFA, BETA, KSI, RO)
+        double [] x = new double[numberOfVariables_];
         double [] f = new double[numberOfObjectives_];
 
         for (int i = 0; i < numberOfVariables_; i++) {
@@ -171,13 +171,26 @@ public class MTSP_JM extends Problem implements ControlExperiment {
             }
         }
 
-        for (int i = 0; i < numberOfObjectives_; i++)
-            solution.setObjective(i,iosource_.objectives_[i]);
+
+//        for (int i = 0; i < numberOfObjectives_; i++)
+//            solution.setObjective(i,iosource_.objectives_[i]);
+
+        // retorna o(s) objetivo(s) minimizado(s) escolhido(s) nas configurações ControlExperiment.java
+        if (OBJECTIVE_MODE == 1) { // minimização multi-objetivo
+            for (int i = 0; i < numberOfObjectives_; i++)
+                solution.setObjective(i,iosource_.objectives_[i]);
+        } else { // minimização mono-objetivo
+            if (MINIMIZATION_TYPE == 0) {
+                solution.setObjective(0, iosource_.objectives_[0]); // minimizar o custo total
+            } else {
+                solution.setObjective(0, iosource_.objectives_[1]); // minimizar o maximo custo
+            }
+        }
 
     } // evaluate
 
     public String toString() {
-        return "MTSP_JM";
+        return "MTSP";
     }
 
 } // MTSP_JM

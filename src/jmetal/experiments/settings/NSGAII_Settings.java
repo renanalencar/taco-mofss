@@ -1,4 +1,4 @@
-//  NSGAII_Settings.java 
+//  PSO_Settings.java
 //
 //  Authors:
 //       Antonio J. Nebro <antonio@lcc.uma.es>
@@ -69,7 +69,7 @@ public class NSGAII_Settings extends Settings {
     crossoverProbability_        = 0.9   ;
     mutationDistributionIndex_   = 20.0  ;
     crossoverDistributionIndex_  = 20.0  ;
-  } // NSGAII_Settings
+  } // PSO_Settings
 
   
   /**
@@ -125,4 +125,4 @@ public class NSGAII_Settings extends Settings {
    
     return algorithm ;
   } // configure
-} // NSGAII_Settings
+} // PSO_Settings

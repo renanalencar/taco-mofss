@@ -21,24 +21,19 @@
 
 package jmetal.metaheuristics.singleObjective.particleSwarmOptimization;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import jmetal.util.archive.CrowdingArchive;
+import com.renanalencar.metaheuristics.taco_modified.IOSource;
 import jmetal.core.*;
-import jmetal.util.comparators.*;
-import jmetal.operators.mutation.*;
 import jmetal.operators.selection.BestSolutionSelection;
-import jmetal.operators.selection.WorstSolutionSelection;
-import hidra.qualityIndicator.Hypervolume;
-import jmetal.util.*;
+import jmetal.util.JMException;
+import jmetal.util.PseudoRandom;
+import jmetal.util.comparators.ObjectiveComparator;
 import jmetal.util.wrapper.XReal;
 
+import java.io.IOException;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Vector;
-import hidra.qualityIndicator.QualityIndicator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Class implementing a single-objective PSO algorithm
@@ -331,7 +326,16 @@ public class PSO extends Algorithm {
 
     success_ = false;
     globalBest_ =  null ;
-    //->Step 1 (and 3) Create the initial population and evaluate
+
+    //TODO Added by Renan Alencar
+      IOSource ioSource = null;
+      try {
+          ioSource = IOSource.getInstance();
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+
+      //->Step 1 (and 3) Create the initial population and evaluate
     for (int i = 0; i < particlesSize_; i++) {
       Solution particle = new Solution(problem_);
       problem_.evaluate(particle);
@@ -356,6 +360,8 @@ public class PSO extends Algorithm {
 
     //-> Step 7. Iterations ..        
     while (iteration_ < maxIterations_) {
+        //TODO Added by Renan Alencar
+      System.out.println("Simulation #" + (ioSource.independent_run+1) + "\tIteration #" + (iteration_ + 1));
       int bestIndividual = (Integer)findBestSolution_.execute(particles_) ;
       try {
         //Compute the speed_

@@ -8,10 +8,13 @@ import upe.poli.ecomp.problem.Problem;
 
 import java.io.IOException;
 
+import static com.renanalencar.metaheuristics.taco_modified.ControlExperiment.MINIMIZATION_TYPE;
+
 public class FSS_Main implements FSS_Settings {
 
     public static void main(String[] args) throws IOException {
 
+        // Execute the Algorithm
         long initTime = System.currentTimeMillis();
 
         Problem p = new MTSP_FSS(DIMENSION);
@@ -25,9 +28,15 @@ public class FSS_Main implements FSS_Settings {
         log.fss_simul_res.write("School Size: " + SCHOOL_SIZE + "\n");
         log.fss_simul_res.write("Simulation: " + SIMULATION_NUMBER + "\n");
         log.fss_simul_res.write("Iteration: " + ITERATION_NUMBER + "\n");
-        log.fss_simul_res.write("Dimension: " + DIMENSION + "\n");
+        log.fss_simul_res.write("Number of variables: " + DIMENSION + "\n");
         log.fss_simul_res.write("Step Individual - Initial: " + STEP_IND_INIT + "\n");
         log.fss_simul_res.write("Step Individual - Final: " + STEP_IND_FINAL + "\n");
+
+        if (MINIMIZATION_TYPE == 0) {
+            log.fss_simul_res.write("Minimization Type: Minimize the total cost\n");
+        } else {
+            log.fss_simul_res.write("FSS Simulation Resume: Minimize the longest route\n");
+        }
 
         for (int i = 0; i < SIMULATION_NUMBER; i++) {
             MyFSS_Padrao fss = new MyFSS_Padrao();
@@ -40,17 +49,19 @@ public class FSS_Main implements FSS_Settings {
             }
 
             bestFitness += fss.getBestFitness();
-            System.out.println("simulacao " + i + " bestFitness = " + fss.getBestFitness());
+            System.out.println("Simulação " + i + " bestFitness = " + fss.getBestFitness());
             log.fss_simul_res.write("Simulação " + (i + 1) + "\tMelhor fitness: " + fss.getBestFitness() + "\n");
 
         }
 
-        System.out.println("soma bestFitness = " + bestFitness);
+        System.out.println("Soma do bestFitness = " + bestFitness);
         bestFitness = bestFitness / (double) SIMULATION_NUMBER;
-        System.out.println("Media do melhor fitness das " + SIMULATION_NUMBER +
-                "simulacoes = " + bestFitness);
+        System.out.println("Média do melhor fitness das " + SIMULATION_NUMBER +
+                "simulações = " + bestFitness);
 
+        // Result messages
         long estimatedTime = System.currentTimeMillis() - initTime;
+        System.out.println("\nTempo total do experimento: " + estimatedTime);
         log.fss_simul_res.write("\nTempo total do experimento: " + estimatedTime);
 
         log.closeFilesRealExperiment();

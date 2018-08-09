@@ -46,7 +46,7 @@ public class HIDRA_CEGA_Settings extends HIDRASettings {
 	    crossoverProbability_        = GlobalSettings.crossoverProbability_  ;
 	    mutationDistributionIndex_   = GlobalSettings.mutationDistributionIndex_ ;
 	    crossoverDistributionIndex_  = GlobalSettings.crossoverDistributionIndex_ ;
-	  } // NSGAII_Settings
+	  } // PSO_Settings
 
 	  
 	  /**

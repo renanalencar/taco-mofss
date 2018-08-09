@@ -11,6 +11,7 @@ public interface PSO_Settings {
 
     // Default problem
     int DEFAULT_PROBLEM         = 1;
+    int N_SIMULATIONS           = 30;
 
     // Algorithm parameters
     int SWARM_SIZE              = 30;      // Tamanho do cardume

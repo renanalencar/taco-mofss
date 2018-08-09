@@ -218,7 +218,7 @@ public class ManyObjectivesStudy extends HIDRAExperiment {
 			    
 			    
 			    exp.algorithmNameList_ = (String[]) out.get("algorithms");
-			    exp.problemList_       = (String[]) out.get("problems");
+			    exp.problemList_       = (String[]) out.get("ManyObjectivesStudy.java");
 				   
 				 
 			    int numObj = num_objs.get(idxObj);
