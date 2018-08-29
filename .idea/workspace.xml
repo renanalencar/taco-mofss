@@ -7,7 +7,6 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="138" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="156" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="161" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" line="175" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealData.java" line="35" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="718" />
     <bookmark url="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" line="719" />
@@ -45,274 +44,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd48990f-5305-4e16-a2e2-92e123baca37" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/SMPSO_Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/studies/ManyObjectivesStudy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/studies/SingleObjectiveStudy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/Epsilon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/GeneralizedSpread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/GenerationalDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/Hypervolume.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/InvertedGenerationalDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/QualityIndicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/Spread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/util/LexicoGraphicalComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/util/MetricsUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jmetal/qualityIndicator/util/ValueComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/MOFSS_main.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/experiments/ManyObjectivesStudy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TACO-MOFSS/hidra/experiments/ManyObjectivesStudy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/log_real_experiment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/longests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/plot_final_created_sols_day.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/plot_real_sols.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/simulations_resume.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/time_execs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outs/total_costs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ20" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ30" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-DTLZ32" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Fonseca0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Fonseca1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Fonseca2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Kursawe0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Kursawe1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-Kursawe2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-WFG10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-WFG11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/DOMINANCE-MOFSS-WFG12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-DTLZ2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-DTLZ3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-OKA2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-Schaffer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOFSS-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOPSOCDR-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOPSOCDR-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOPSOCDR-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-MOPSOCDR-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-NSGAII-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-NSGAII-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-NSGAII-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-NSGAII-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SMPSO-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SMPSO-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SMPSO-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SMPSO-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SPEA2-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SPEA2-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SPEA2-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/FUN-SPEA2-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOFSS-DTLZ1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOFSS-DTLZ1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOFSS-DTLZ1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOFSS-DTLZ1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOPOSCDR-DTLZ1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOPOSCDR-DTLZ1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOPOSCDR-DTLZ1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/MOPOSCDR-DTLZ1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/NSGAII-DTLZ1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/NSGAII-DTLZ1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/NSGAII-DTLZ1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/NSGAII-DTLZ1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SMPSO-DTLZ1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SMPSO-DTLZ1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SMPSO-DTLZ1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SMPSO-DTLZ1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SPEA2-DTLZ1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SPEA2-DTLZ1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SPEA2-DTLZ1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/DTLZ1 (p100-i25000-o2-d6)/SPEA2-DTLZ1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOFSS-Fonseca-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOFSS-Fonseca-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOFSS-Fonseca-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOFSS-Fonseca-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOPOSCDR-Fonseca-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOPOSCDR-Fonseca-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOPOSCDR-Fonseca-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/MOPOSCDR-Fonseca-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/NSGAII-Fonseca-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/NSGAII-Fonseca-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/NSGAII-Fonseca-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/NSGAII-Fonseca-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SMPSO-Fonseca-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SMPSO-Fonseca-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SMPSO-Fonseca-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SMPSO-Fonseca-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SPEA2-Fonseca-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SPEA2-Fonseca-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SPEA2-Fonseca-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Fonseca (p100-i25000-o2-d3)/SPEA2-Fonseca-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOFSS-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOFSS-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOFSS-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOFSS-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOPOSCDR-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOPOSCDR-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOPOSCDR-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/MOPOSCDR-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/NSGAII-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/NSGAII-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/NSGAII-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/NSGAII-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SMPSO-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SMPSO-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SMPSO-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SMPSO-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SPEA2-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SPEA2-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SPEA2-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d3)/SPEA2-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOFSS-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOFSS-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOFSS-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOFSS-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOPOSCDR-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOPOSCDR-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOPOSCDR-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/MOPOSCDR-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/NSGAII-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/NSGAII-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/NSGAII-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/NSGAII-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SMPSO-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SMPSO-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SMPSO-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SMPSO-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SPEA2-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SPEA2-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SPEA2-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d5)/SPEA2-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOFSS-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOFSS-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOFSS-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOFSS-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOPOSCDR-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOPOSCDR-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOPOSCDR-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/MOPOSCDR-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/NSGAII-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/NSGAII-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/NSGAII-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/NSGAII-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SMPSO-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SMPSO-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SMPSO-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SMPSO-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SPEA2-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SPEA2-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SPEA2-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/Kursawe (p100-i25000-o2-d8)/SPEA2-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/NSGAII-Kursawe-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/NSGAII-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/NSGAII-Kursawe-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/NSGAII-Kursawe-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOFSS-WFG1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOFSS-WFG1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOFSS-WFG1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOFSS-WFG1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOPOSCDR-WFG1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOPOSCDR-WFG1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOPOSCDR-WFG1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/MOPOSCDR-WFG1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/NSGAII-WFG1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/NSGAII-WFG1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/NSGAII-WFG1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/NSGAII-WFG1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SMPSO-WFG1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SMPSO-WFG1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SMPSO-WFG1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SMPSO-WFG1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SPEA2-WFG1-EPSILON" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SPEA2-WFG1-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SPEA2-WFG1-SPACING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/Graphs/WFG1 (p100-i25000-o2-d6)/SPEA2-WFG1-SPREAD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-DTLZ1-100|250" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-DTLZ1-100|2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-DTLZ1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-DTLZ2-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-DTLZ3-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-Fonseca-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-Kursawe-100|250" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-Kursawe-100|2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-Kursawe-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-OKA2-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOFSS-WFG1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-DTLZ1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-Fonseca-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-Kursawe-100|250" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-Kursawe-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-MOPSOCDR-WFG1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-DTLZ1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-Fonseca-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-Kursawe-100|2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-Kursawe-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-NSGAII-WFG1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-DTLZ1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-Fonseca-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-Kursawe-100|250" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-Kursawe-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SMPSO-WFG1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-DTLZ1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-Fonseca-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-Kursawe-100|2500" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-Kursawe-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-Kursawe-HYPERVOLUME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/IND-SPEA2-WFG1-100|25000" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-DTLZ2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-DTLZ3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-OKA2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-Schaffer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOFSS-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOPSOCDR-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOPSOCDR-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOPSOCDR-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-MOPSOCDR-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-NSGAII-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-NSGAII-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-NSGAII-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-NSGAII-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SMPSO-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SMPSO-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SMPSO-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SMPSO-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SPEA2-DTLZ1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SPEA2-Fonseca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SPEA2-Kursawe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/VAR-SPEA2-WFG1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/MOFSS_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/MOFSS_Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/LogExperiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/LogExperiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/ManyObjectivesStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/ManyObjectivesStudy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/Paramenters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/Paramenters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_CEGA_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_CEGA_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_MDFA_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_MDFA_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_MSOPS_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_MSOPS_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_NSGAII_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hidra/experiments/settings/HIDRA_NSGAII_Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jmetal/experiments/settings/NSGAII_Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jmetal/experiments/settings/NSGAII_Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO_main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO_main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -328,7 +68,110 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="IOSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlSTACS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PSO_Settings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlExperiment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PSO_main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-9">
+              <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PSO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="381" column="93" selection-start-line="381" selection-start-column="93" selection-end-line="381" selection-end-column="93" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MTSP_JM.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="176" column="13" lean-forward="true" selection-start-line="172" selection-start-column="12" selection-end-line="176" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkDay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-46">
+              <caret line="659" column="89" selection-start-line="659" selection-start-column="89" selection-end-line="659" selection-end-column="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogExperiment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/LogExperiment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="53" column="111" selection-start-line="53" selection-start-column="111" selection-end-line="53" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TACO_Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -341,10 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>equals</find>
-      <find>flag</find>
-      <find>protected</find>
-      <find>leaders</find>
       <find>leaders_.f</find>
       <find>setScores</find>
       <find>scores</find>
@@ -356,7 +195,6 @@
       <find>package com\.renanalencar\.experiments\;\n\nimport com\.renanalencar\.experiments\.settings\.FSS_Settings\;\nimport com\.renanalencar\.problems\.MTSP_FSS\;\nimport upe\.poli\.ecomp\.algorithm\.LogFSS\;\nimport upe\.poli\.ecomp\.algorithm\.MyFSS_Padrao\;\nimport upe\.poli\.ecomp\.problem\.Problem\;\n\nimport java\.io\.IOException\;\n\npublic class FSS_Main implements FSS_Settings \{\n    \n    public static void main\(String\[\] args\) throws IOException \{\n\	\n\	Problem p \= new MTSP_FSS\(DIMENSION\)\;\n\	\n\	double bestFitness \= 0\;\n\n\	LogFSS log \= LogFSS\.getInstance\(\)\;\n\	log\.loadBuffersdRealExperiment\(\)\;\n\n\	log\.fss_simul_res\.write\(\&quot;FSS Simulation Resume\:\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;School Size\: \&quot; \+ SCHOOL_SIZE \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Simulation\: \&quot; \+ SIMULATION_NUMBER \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Iteration\: \&quot; \+ ITERATION_NUMBER \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Dimension\: \&quot; \+ DIMENSION \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Step Individual \- Initial\: \&quot; \+ STEP_IND_INIT \+ \&quot;\\n\&quot;\)\;\n\	log\.fss_simul_res\.write\(\&quot;Step Individual \- Final\: \&quot; \+ STEP_IND_FINAL \+ \&quot;\\n\&quot;\)\;\n\n\	for \(int i \= 0\; i \&lt; SIMULATION_NUMBER\; i\+\+\) \{\n\	\	System\.out\.println\(\&quot;Simulation \#\&quot; \+ \(i\+1\) \+ \&quot;\\n\&quot;\)\;\n\	\	MyFSS_Padrao fss \= new MyFSS_Padrao\(\)\;\n\	\	fss\.init\(p\)\;\n\n\	\	for \(int j \= 0\; j \&lt; ITERATION_NUMBER\; j\+\+\) \{\n\	\	\	System\.out\.println\(\&quot;Iteration \#\&quot; \+ \(j\+1\) \+ \&quot;\\n\&quot;\)\;\n\	\	\	fss\.iterate\(\)\;\n\	\	\}\n\n\	\	bestFitness \+\= fss\.getBestFitness\(\)\;\n\	\	System\.out\.println\(\&quot;simulacao \&quot;\+i\+\&quot; bestFitness \= \&quot;\+fss\.getBestFitness\(\)\)\;\n\	\	log\.fss_simul_res\.write\(\&quot;Simulação \&quot;\+ \(i\+1\) \+ \&quot;\\tMelhor fitness\: \&quot; \+ fss\.getBestFitness\(\) \+ \&quot;\\n\&quot;\)\;\n\n\	\}\n\n\	System\.out\.println\(\&quot;soma bestFitness \= \&quot;\+bestFitness\)\;\n\	bestFitness \= bestFitness\/\(double\)SIMULATION_NUMBER\;\n\	System\.out\.println\(\&quot;Media do melhor fitness das \&quot;\+SIMULATION_NUMBER\+\n\	\	\&quot;simulacoes \= \&quot;\+bestFitness\)\;\n\n\	log\.closeFilesRealExperiment\(\)\;\n    \}\n\}\n</find>
       <find>deb</find>
       <find>iosource_.total_cost_w</find>
-      <find>sim_counter</find>
       <find>iosour</find>
       <find>logExperiment</find>
       <find>iosource</find>
@@ -365,12 +203,17 @@
       <find>max</find>
       <find>MOFSS</find>
       <find>Factory</find>
-      <find>problem</find>
       <find>numObj</find>
       <find>idxObj</find>
       <find>num_objs</find>
       <find>execute</find>
       <find>Simulation</find>
+      <find>sim_counter</find>
+      <find>cycle_counter</find>
+      <find>numberOfObjectives_</find>
+      <find>Step 1</find>
+      <find>log</find>
+      <find>problem</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -379,7 +222,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/LogExperiment.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/TACOFSS_NewP.java" />
         <option value="$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/LogFSS.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/many/taco_mofss/TACOFSS_Problem.java" />
@@ -404,14 +246,10 @@
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/ControlFSS.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSSSettings.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/MOFSS_Settings.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java" />
-        <option value="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/NSGAII_Settings.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/studies/NSGAII_Settings.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/studies/PSO_Settings.java" />
@@ -422,14 +260,19 @@
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/SMPSO_Settings.java" />
         <option value="$PROJECT_DIR$/src/hidra/experiments/Paramenters.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/FSS_Settings.java" />
-        <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/FSS_Main.java" />
         <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java" />
         <option value="$PROJECT_DIR$/src/jmetal/qualityIndicator/Epsilon.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/LogExperiment.java" />
+        <option value="$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java" />
+        <option value="$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java" />
       </list>
     </option>
   </component>
@@ -439,7 +282,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
@@ -451,17 +294,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TACO-MOFSS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TACO-MOFSS" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -518,7 +350,26 @@
               <item name="TACO-MOFSS" type="616d4139:PackageViewModuleNode" />
               <item name="com" type="1f31426a:PackageElementNode" />
               <item name="renanalencar" type="1f31426a:PackageElementNode" />
+              <item name="metaheuristics" type="1f31426a:PackageElementNode" />
+              <item name="taco_modified" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="TACO-MOFSS" type="58d84e3e:PackageViewProjectNode" />
+              <item name="TACO-MOFSS" type="616d4139:PackageViewModuleNode" />
+              <item name="com" type="1f31426a:PackageElementNode" />
+              <item name="renanalencar" type="1f31426a:PackageElementNode" />
               <item name="problems" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TACO-MOFSS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TACO-MOFSS" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -574,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MOFSS_Main">
+  <component name="RunManager" selected="Application.PSO_main">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -696,10 +547,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MOFSS_Main" />
         <item itemvalue="Application.PSO_main" />
-        <item itemvalue="Application.FSS_Main" />
         <item itemvalue="Application.TACO_Main" />
+        <item itemvalue="Application.MOFSS_Main" />
+        <item itemvalue="Application.FSS_Main" />
         <item itemvalue="Application.SingleObjectiveStudy" />
       </list>
     </recent_temporary>
@@ -751,7 +602,9 @@
       <workItem from="1533184727995" duration="833000" />
       <workItem from="1533490892426" duration="5002000" />
       <workItem from="1533716485049" duration="18851000" />
-      <workItem from="1533815294124" duration="2082000" />
+      <workItem from="1533815294124" duration="2486000" />
+      <workItem from="1534380358964" duration="2034000" />
+      <workItem from="1535551827320" duration="6724000" />
     </task>
     <task id="LOCAL-00001" summary="Correções feitas no pacote TACO.">
       <created>1521558479497</created>
@@ -900,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533736312750</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Correcoes no pacote de problemas FSS e JM">
+      <created>1533817408814</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1533817408814</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -912,7 +772,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266316000" />
+    <option name="totallyTimeSpent" value="275478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -924,7 +784,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5169628" side_tool="true" weight="0.6689655" />
@@ -939,26 +800,26 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3986207" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4838449" weight="0.37931034" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47738287" weight="0.38071895" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.47738287" weight="0.38068965" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48303714" weight="0.28267974" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49676898" weight="0.328" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48303714" visible="true" weight="0.2813793" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49030694" weight="0.28198075" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4979592" weight="0.41518578" />
       <window_info anchor="bottom" id="Run with VisualVM" order="9" weight="0.27724138" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4979592" visible="true" weight="0.40872374" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3251634" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug with VisualVM" order="9" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" x="0" y="0" width="270" height="600" id="Documentation" order="4" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3251634" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32956383" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="2" />
@@ -1026,10 +887,66 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java</url>
+          <line>9</line>
+          <properties field="APP_OBJECTIVE" class="com.renanalencar.metaheuristics.taco_modified.ControlSTACS" />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java</url>
+          <line>14</line>
+          <properties field="MAX_CYCLES" class="com.renanalencar.metaheuristics.taco_modified.ControlSTACS" />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java</url>
+          <line>13</line>
+          <properties field="N_SIMULATIONS" class="com.renanalencar.experiments.settings.PSO_Settings" />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java</url>
+          <line>17</line>
+          <properties field="MAX_INTERATIONS" class="com.renanalencar.experiments.settings.PSO_Settings" />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java</url>
+          <line>17</line>
+          <properties field="N_VARIABLES" class="com.renanalencar.metaheuristics.taco_modified.ControlExperiment" />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java</url>
+          <line>18</line>
+          <properties field="N_OBJECTIVES" class="com.renanalencar.metaheuristics.taco_modified.ControlExperiment" />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java</url>
+          <line>20</line>
+          <properties field="MINIMIZATION_TYPE" class="com.renanalencar.metaheuristics.taco_modified.ControlExperiment" />
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java</url>
+          <line>19</line>
+          <properties field="OBJECTIVE_MODE" class="com.renanalencar.metaheuristics.taco_modified.ControlExperiment" />
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="107" />
+      <option name="time" value="118" />
     </breakpoint-manager>
   </component>
   <component name="atlassian-ide-plugin-workspace-issues">
@@ -1040,7 +957,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hidra/core/SolutionSet.java" />
     <entry file="file://$PROJECT_DIR$/src/hidra/metaheuristics/nsgaII/NSGAII_main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1094,13 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="240" column="50" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/RealExperiment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -1108,24 +1017,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="693" selection-start-line="693" selection-end-line="693" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/upe/poli/ecomp/algorithm/Parameters.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1161,9 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-77">
           <caret line="70" column="44" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,9 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9383">
           <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,30 +1092,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="33" lean-forward="true" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#6234#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/studies/ManyObjectivesStudy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#6234#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/studies/ManyObjectivesStudy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-953">
           <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#6234#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,20 +1126,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="91" selection-start-line="22" selection-start-column="91" selection-end-line="22" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hidra/experiments/ManyObjectivesStudy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="208" column="34" selection-start-line="208" selection-start-column="26" selection-end-line="208" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1282,16 +1147,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/MOFSS_Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2790">
@@ -1306,30 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <caret line="363" column="34" lean-forward="true" selection-start-line="363" selection-start-column="34" selection-end-line="363" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1357,28 +1188,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
+    <entry file="file://$PROJECT_DIR$/src/jmetal/qualityIndicator/Epsilon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="180" column="66" lean-forward="true" selection-start-line="180" selection-start-column="66" selection-end-line="180" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
-            <element signature="e#6332#6333#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-148">
+          <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/AcoMtspAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="269" column="76" selection-start-line="269" selection-start-column="76" selection-end-line="269" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_FSS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
+        <state relative-caret-position="430">
           <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1386,20 +1219,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/TACO_Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="134">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jmetal/qualityIndicator/Epsilon.java">
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/WorkDay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-148">
-          <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+        <state relative-caret-position="-46">
+          <caret line="659" column="89" selection-start-line="659" selection-start-column="89" selection-end-line="659" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/IOSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/PSO_main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="82" column="30" lean-forward="true" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/LogExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="53" column="111" selection-start-line="53" selection-start-column="111" selection-end-line="53" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/problems/MTSP_JM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="176" column="13" lean-forward="true" selection-start-line="172" selection-start-column="12" selection-end-line="176" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jmetal/metaheuristics/singleObjective/particleSwarmOptimization/PSO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="381" column="93" selection-start-line="381" selection-start-column="93" selection-end-line="381" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlExperiment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/experiments/settings/PSO_Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/renanalencar/metaheuristics/taco_modified/ControlSTACS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>

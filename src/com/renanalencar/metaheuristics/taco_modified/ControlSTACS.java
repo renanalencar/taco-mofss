@@ -12,7 +12,7 @@ public interface ControlSTACS {
     // Critérios de parada de cada execução (o que ocorrer primeiro; se todos = -1, loop infinito):
     int NO_IMP_CYCLES   = -1;    // ciclos sem que a solução seja melhorada. Se -1, não há limitação de não melhoramento
     int MAX_TIME_EXEC   = -1;    // tempo máximo de execução, em segundos. Se -1, não há limitação de tempo
-    int MAX_CYCLES      = 500;   // Default: 1000, número máximo de iterações por execução do algorimto ACO. Se -1, não há limitação de número de iterações
+    int MAX_CYCLES      = 1000;   // Default: 1000, número máximo de iterações por execução do algorimto ACO. Se -1, não há limitação de número de iterações
 
     // parâmetros ACO:
     int N               = 10;    // ACS = 10 (número de formigas que geram soluções simultaneamente). Aqui, número de soluções geradas num ciclo

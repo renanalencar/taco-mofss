@@ -22,6 +22,7 @@
 package jmetal.metaheuristics.singleObjective.particleSwarmOptimization;
 
 import com.renanalencar.metaheuristics.taco_modified.IOSource;
+import com.renanalencar.metaheuristics.taco_modified.LogExperiment;
 import jmetal.core.*;
 import jmetal.operators.selection.BestSolutionSelection;
 import jmetal.util.JMException;
@@ -328,14 +329,15 @@ public class PSO extends Algorithm {
     globalBest_ =  null ;
 
     //TODO Added by Renan Alencar
-      IOSource ioSource = null;
+      IOSource iosource_ = null;
       try {
-          ioSource = IOSource.getInstance();
+          iosource_ = IOSource.getInstance();
       } catch (IOException e) {
           e.printStackTrace();
       }
 
       //->Step 1 (and 3) Create the initial population and evaluate
+      System.out.println("Create the initial population and evaluate");
     for (int i = 0; i < particlesSize_; i++) {
       Solution particle = new Solution(problem_);
       problem_.evaluate(particle);
@@ -346,6 +348,7 @@ public class PSO extends Algorithm {
     }
 
     //-> Step2. Initialize the speed_ of each particle to 0
+      System.out.println("Initialize the speed_ of each particle to 0");
     for (int i = 0; i < particlesSize_; i++) {
       for (int j = 0; j < problem_.getNumberOfVariables(); j++) {
         speed_[i][j] = 0.0;
@@ -353,6 +356,7 @@ public class PSO extends Algorithm {
     }
 
     //-> Step 6. Initialize the memory of each particle
+      System.out.println("Initialize the speed_ of each particle to 0");
     for (int i = 0; i < particles_.size(); i++) {
       Solution particle = new Solution(particles_.get(i));
       localBest_[i] = particle;
@@ -360,8 +364,31 @@ public class PSO extends Algorithm {
 
     //-> Step 7. Iterations ..        
     while (iteration_ < maxIterations_) {
+        // Added by Renan Alencar
         //TODO Added by Renan Alencar
-      System.out.println("Simulation #" + (ioSource.independent_run+1) + "\tIteration #" + (iteration_ + 1));
+      System.out.println("Simulation #" + (iosource_.independent_run+1) + "\tIteration #" + (iteration_ + 1));
+        LogExperiment log = null;
+        try {
+            log = LogExperiment.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            log.loadOptimizerExperiment();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            log.f_resume_optimizer.write((iosource_.independent_run+1) + "," + (iteration_+1) + "," + iosource_.objectives_[0] + "," + iosource_.objectives_[1] + "\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            log.closeOptimizerExperiment();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // Added by Renan Alencar
       int bestIndividual = (Integer)findBestSolution_.execute(particles_) ;
       try {
         //Compute the speed_

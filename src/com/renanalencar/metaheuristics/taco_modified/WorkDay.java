@@ -657,7 +657,7 @@ public class WorkDay implements ControlExperiment {
             max_index   = Utilities.argmax(route_dists.length, route_dists);
             max_cost_r  = route_dists[max_index];
             sd_distance = Utilities.std_dev(route_dists, route_dists.length);
-            this.iosource_.objectives_[0] = sd_distance;
+            this.iosource_.objectives_[0] = this.complete_final_solution.get_total_cost();
 
             // calculando as métricas para o peso
             max_index   = Utilities.argmax(bag_weights.length, bag_weights);

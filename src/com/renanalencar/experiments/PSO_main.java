@@ -77,7 +77,8 @@ public class PSO_main implements ControlExperiment, PSO_Settings {
             fileHandler_ = new FileHandler("log/PSO_main-" + (iosource.independent_run + 1) + ".log");
             logger_.addHandler(fileHandler_);
 
-            problem = new MTSP_JM("Real", N_VARIABLES, N_OBJECTIVES);
+//            problem = new MTSP_JM("Real", N_VARIABLES, N_OBJECTIVES);
+            problem = new MTSP_JM("Real", N_VARIABLES, 1);
 
             algorithm = new PSO(problem);
 

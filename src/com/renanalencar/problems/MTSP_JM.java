@@ -106,7 +106,7 @@ public class MTSP_JM extends Problem implements ControlExperiment {
         this.iosource_.variables_ = x.clone();
 
         // salva os objetivos gerado
-        this.iosource_.objectives_ = new double[numberOfObjectives_];
+        this.iosource_.objectives_ = new double[N_OBJECTIVES];
 
         // salva os valores dos resultados de cada simulação por dia
         this.iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
@@ -164,16 +164,18 @@ public class MTSP_JM extends Problem implements ControlExperiment {
                 e.printStackTrace();
             }
 
+//            try {
+//                log.f_resume_optimizer.write(iosource_.objectives_[0] + "," + iosource_.objectives_[1] + "\n");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+
             try {
                 log.closeFilesRealExperiment();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
-
-//        for (int i = 0; i < numberOfObjectives_; i++)
-//            solution.setObjective(i,iosource_.objectives_[i]);
 
         // retorna o(s) objetivo(s) minimizado(s) escolhido(s) nas configurações ControlExperiment.java
         if (OBJECTIVE_MODE == 1) { // minimização multi-objetivo

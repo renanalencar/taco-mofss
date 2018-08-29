@@ -31,6 +31,7 @@ public class LogExperiment {
      public static BufferedWriter f_m_max_cost;           // custo máximo de cada simulação
 
     public static BufferedWriter f_m_convergency;         // convergência do algoritmo
+    public static BufferedWriter f_resume_optimizer;         // convergência do algoritmo
 
      public static BufferedWriter f_log_exper;
      static int i = 0;
@@ -77,6 +78,10 @@ public class LogExperiment {
          this.f_day_aco_final_sols = new BufferedWriter(new FileWriter("outs/plot_final_created_sols_day.txt"));
      }
 
+    public void loadOptimizerExperiment() throws IOException{
+        this.f_resume_optimizer        = new BufferedWriter(new FileWriter("outs/f_resume_optimizer.txt", true));
+    }
+
     /**
      *
      * @return
@@ -121,25 +126,6 @@ public class LogExperiment {
      *
      * @throws IOException
      */
-//    public void flushFilesRealExperiment() throws IOException {
-//        this.f_longests.flush();
-//        this.f_real_sols.flush();
-//        this.f_total_costs.flush();
-//        this.f_log_exper.flush();
-//        this.f_time_execs.flush();
-//        this.fss_simul_res.flush();
-//        this.f_day_aco_final_sols.flush();
-//
-//        //this.teste.flush();
-//        this.f_m_standard_deviation.flush();
-//        this.f_m_max_cost.flush();
-//
-//    }
-
-    /**
-     *
-     * @throws IOException
-     */
     public void closeFilesRealExperiment() throws IOException {
         this.f_longests.close();
         this.f_real_sols.close();
@@ -154,6 +140,10 @@ public class LogExperiment {
         this.f_m_max_cost.close();
         this.f_m_convergency.close();
 
+    }
+
+    public void closeOptimizerExperiment() throws IOException {
+        this.f_resume_optimizer.close();
     }
 
     /**

@@ -267,7 +267,7 @@ public class AcoMtspAlgorithm implements ControlExperiment, ControlSTACS {
             int max_w_index = Utilities.argmax(bag_weights.length, bag_weights);
 
             try {
-                if ((sim_counter+1) % 10 == 0) { // pegar a convergência de uma única simulação.
+                if ((cycle_counter == 0) || ((cycle_counter + 1) % 25 == 0)) { // pegar a convergência de uma única simulação.
                     //TODO colocar um if para determinar qual melhor pegar: maior rota ou custo total
                     logExperiment.f_m_convergency.write((sim_counter + 1) + ";" +
                             (cycle_counter + 1) + ";" +
