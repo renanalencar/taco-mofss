@@ -55,6 +55,7 @@ public class MyFSS_Padrao {
 		updateStepVolPercentage();
 		calculateSchoolWeight();
 
+		// Added by Renan
 		IOSource iosource_ = null;
 		try {
 			iosource_ = IOSource.getInstance();
@@ -93,6 +94,7 @@ public class MyFSS_Padrao {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		// Added by Renan
 
 		iterationCounter++;
 

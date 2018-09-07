@@ -63,6 +63,7 @@ public class FSS_Main implements FSS_Settings {
             log.fss_simul_res.write("Simulação " + (i + 1) + "\tMelhor fitness: " + fss.getBestFitness() + "\n");
 
         }
+        // Added by Renan
 
         System.out.println("Soma do bestFitness = " + bestFitness);
         bestFitness = bestFitness / (double) SIMULATION_NUMBER;
