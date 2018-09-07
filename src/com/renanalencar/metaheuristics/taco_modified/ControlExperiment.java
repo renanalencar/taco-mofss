@@ -18,7 +18,7 @@ public interface ControlExperiment {
     int N_VARIABLES            = 4;  // Número de variáveis
     int N_OBJECTIVES           = 2;  // Número de objetivos observáveis
     int OBJECTIVE_MODE         = 0;  // 0: mono-objetivo; 1: multi-objetivo
-    int MINIMIZATION_TYPE      = 1;  // 1: minimizar rota mais longa (workload balance); 2: minimizar total da solução (soma das rotas)
+    int MINIMIZATION_TYPE      = 2;  // 1: minimizar rota mais longa (workload balance); 2: minimizar total da solução (soma das rotas)
 
     // Configurações de arquivos
     String DATA_FILE            ="data/many_data.txt";
