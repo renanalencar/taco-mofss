@@ -1,6 +1,7 @@
 package com.renanalencar.experiments;
 
 import com.renanalencar.experiments.settings.FSS_Settings;
+import com.renanalencar.metaheuristics.taco_modified.IOSource;
 import com.renanalencar.problems.MTSP_FSS;
 import upe.poli.ecomp.algorithm.LogFSS;
 import upe.poli.ecomp.algorithm.MyFSS_Padrao;
@@ -24,6 +25,13 @@ public class FSS_Main implements FSS_Settings {
         LogFSS log = LogFSS.getInstance();
         log.loadBuffersdRealExperiment();
 
+        IOSource iosource_ = null;
+        try {
+            iosource_ = IOSource.getInstance();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         log.fss_simul_res.write("FSS Simulation Resume:\n");
         log.fss_simul_res.write("School Size: " + SCHOOL_SIZE + "\n");
         log.fss_simul_res.write("Simulation: " + SIMULATION_NUMBER + "\n");
@@ -32,13 +40,15 @@ public class FSS_Main implements FSS_Settings {
         log.fss_simul_res.write("Step Individual - Initial: " + STEP_IND_INIT + "\n");
         log.fss_simul_res.write("Step Individual - Final: " + STEP_IND_FINAL + "\n");
 
-        if (MINIMIZATION_TYPE == 0) {
+        if (MINIMIZATION_TYPE == 2) {
             log.fss_simul_res.write("Minimization Type: Minimize the total cost\n");
         } else {
             log.fss_simul_res.write("FSS Simulation Resume: Minimize the longest route\n");
         }
 
         for (int i = 0; i < SIMULATION_NUMBER; i++) {
+            iosource_.independent_run = i;
+
             MyFSS_Padrao fss = new MyFSS_Padrao();
             fss.init(p);
 

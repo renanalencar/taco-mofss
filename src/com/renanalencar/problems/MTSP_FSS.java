@@ -40,7 +40,7 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
 	public double evaluateSolution(double[] solution) {
 
         int numberOfVariables_ = 4;
-        int numberOfObjectives_ = 2;
+        int numberOfObjectives_ = 1;
 
         iosource_.variables_ = new double[numberOfVariables_];
         iosource_.variables_ = solution.clone();
@@ -51,7 +51,7 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
 //        System.out.print("\tksi: " + iosource_.variables_[2]);
 //        System.out.println("\tro: " + iosource_.variables_[3]);
 
-        this.iosource_.objectives_  = new double[numberOfObjectives_];
+        this.iosource_.objectives_  = new double[2];
 
         this.iosource_.total_cost_r = new double[N_SIMULATIONS_BY_DAY];
         this.iosource_.max_cost_r   = new double[N_SIMULATIONS_BY_DAY];
@@ -118,7 +118,7 @@ public class MTSP_FSS extends Problem implements ControlExperiment, FSS_Settings
         }
 
         // retorna o objetivo minimizado escolhido nas configurações ControlExperiment.java
-        if (MINIMIZATION_TYPE == 0)
+        if (MINIMIZATION_TYPE == 2)
             result = iosource_.objectives_[0]; // minizar o custo total
         else
             result = iosource_.objectives_[1]; // minimizar o custo máximo

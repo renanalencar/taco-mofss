@@ -9,7 +9,7 @@ package com.renanalencar.experiments.settings;
 public interface FSS_Settings {
 
     // Experiment parameters
-    int SIMULATION_NUMBER   = 30;
+    int SIMULATION_NUMBER   = 1;
     int ITERATION_NUMBER    = 1000;
 
     // Algorithm parameters

@@ -31,7 +31,8 @@ public class LogExperiment {
      public static BufferedWriter f_m_max_cost;           // custo máximo de cada simulação
 
     public static BufferedWriter f_m_convergency;         // convergência do algoritmo
-    public static BufferedWriter f_resume_optimizer;         // convergência do algoritmo
+    public static BufferedWriter f_resume_optimizer;      // convergência do algoritmo
+    public static BufferedWriter fss_var;                 // convergência do algoritmo
 
      public static BufferedWriter f_log_exper;
      static int i = 0;
@@ -80,6 +81,7 @@ public class LogExperiment {
 
     public void loadOptimizerExperiment() throws IOException{
         this.f_resume_optimizer        = new BufferedWriter(new FileWriter("outs/f_resume_optimizer.txt", true));
+        this.fss_var                    = new BufferedWriter(new FileWriter("outs/fss_var.txt", true));
     }
 
     /**
@@ -144,6 +146,7 @@ public class LogExperiment {
 
     public void closeOptimizerExperiment() throws IOException {
         this.f_resume_optimizer.close();
+        this.fss_var.close();
     }
 
     /**

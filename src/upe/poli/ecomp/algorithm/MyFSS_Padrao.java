@@ -1,7 +1,10 @@
 package upe.poli.ecomp.algorithm;
 
+import com.renanalencar.metaheuristics.taco_modified.IOSource;
+import com.renanalencar.metaheuristics.taco_modified.LogExperiment;
 import upe.poli.ecomp.problem.Problem;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class MyFSS_Padrao {
@@ -51,6 +54,46 @@ public class MyFSS_Padrao {
 		updateStepIndPercentage();
 		updateStepVolPercentage();
 		calculateSchoolWeight();
+
+		IOSource iosource_ = null;
+		try {
+			iosource_ = IOSource.getInstance();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		LogExperiment log = null;
+		try {
+			log = LogExperiment.getInstance();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			log.loadOptimizerExperiment();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			log.f_resume_optimizer.write((iosource_.independent_run+1) + "," + (iterationCounter+1) + "," + iosource_.objectives_[0] + "," + iosource_.objectives_[1] + "\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			log.fss_var.write((iterationCounter+1) + ",");
+			for (double d: bestPosition
+				 ) {
+				log.fss_var.write(d + ",");
+			}
+			log.fss_var.write( "\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			log.closeOptimizerExperiment();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 		iterationCounter++;
 
 	}
